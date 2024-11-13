@@ -37,3 +37,20 @@ def test_hand_melds():
     for tile in meld:
         assert tile.suit == TileSuit.CHARACTERS
         assert tile.value == 1
+
+def test_remove_tile():
+    """测试移除手牌"""
+    hand = Hand()
+    tile = Tile(TileSuit.CHARACTERS, 1)
+    
+    # 添加牌
+    hand.add_tile(tile)
+    assert len(hand.tiles) == 1
+    
+    # 移除牌
+    hand.discard_tile(0)
+    assert len(hand.tiles) == 0
+    
+    # 移除不存在的牌
+    hand.discard_tile(0)  # 不应该抛出异常
+    assert len(hand.tiles) == 0

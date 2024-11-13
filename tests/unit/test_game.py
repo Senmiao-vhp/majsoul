@@ -61,12 +61,13 @@ def test_handle_tile_click():
     
     # 测试有效点击
     game.handle_tile_click(0)
-    assert len(current_player.hand.tiles) == initial_tiles - 1
+    assert len(current_player.hand.tiles) == initial_tiles
+    assert current_player.selected_tile_index == 0
     
     # 测试无效点击（索引越界）
     game.handle_tile_click(100)
-    assert len(current_player.hand.tiles) == initial_tiles - 1
-    
+    assert len(current_player.hand.tiles) == initial_tiles
+
 def test_skip_current_action():
     """测试跳过当前操作"""
     game = Game()

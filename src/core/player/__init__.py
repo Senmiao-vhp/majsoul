@@ -13,6 +13,7 @@ class Player:
         self.state = PlayerState.WAITING
         self.discards: List[Tile] = []  # 存储打出的牌
         self.is_riichi = False  # 是否立直
+        self.selected_tile_index = -1  # 添加选中牌的索引，-1表示未选中
         
     def set_points(self, points: int) -> None:
         """设置分数"""
@@ -28,6 +29,8 @@ class Player:
         
     def set_state(self, state: PlayerState) -> None:
         """设置玩家状态"""
+        if not isinstance(state, PlayerState):
+            raise ValueError("Invalid player state")
         self.state = state
         
     def discard_tile(self, index: int) -> Optional[Tile]:
@@ -39,6 +42,8 @@ class Player:
         Returns:
             打出的牌，如果失败返回None
         """
+        if index < 0 or index >= len(self.hand.tiles):
+            return None
         tile = self.hand.discard_tile(index)
         if tile:
             self.discards.append(tile)

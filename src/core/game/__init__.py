@@ -1,11 +1,13 @@
 import json
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from ..player import Player
 from ..rules import Rules
 from .state import GameState
 from ..table import Table
 from .controller import GameController
+from .flow import GameFlow
+from ..player.state import PlayerState
 
 class Game:
     def __init__(self):
@@ -14,6 +16,7 @@ class Game:
         self.rules = Rules()
         self.config: Dict[str, Any] = {}
         self._load_config()
+        self.flow = GameFlow(self)
         
     @property
     def players(self):
@@ -75,10 +78,10 @@ class Game:
         """更新游戏状态"""
         if self.controller.state != GameState.PLAYING:
             return
-            
+        
         current_player = self.table.get_current_player()
-        if current_player:
-            self.controller.process_turn(current_player)
+        if current_player and current_player.state == PlayerState.WAITING:
+            self.flow.start_turn(current_player)
         
     def get_state(self) -> GameState:
         """获取当前游戏状态"""
@@ -102,11 +105,7 @@ class Game:
                 self.controller.process_turn(next_player)
         
     def handle_tile_click(self, tile_index: int) -> None:
-        """处理牌的点击事件
-        
-        Args:
-            tile_index: 被点击的牌的索引
-        """
+        """处理牌的点击事件"""
         if self.controller.state != GameState.PLAYING:
             return
         
@@ -114,10 +113,8 @@ class Game:
         if not current_player or tile_index >= len(current_player.hand.tiles):
             return
         
-        # 打出选中的牌
-        discarded = current_player.discard_tile(tile_index)
-        if discarded:
-            # 进入下一个玩家回合
-            next_player = self.table.next_player()
-            if next_player:
-                self.controller.process_turn(next_player)
+        # 先设置选中的牌
+        current_player.selected_tile_index = tile_index
+        
+        # 然后处理打牌
+        self.flow.process_discard(current_player, tile_index)

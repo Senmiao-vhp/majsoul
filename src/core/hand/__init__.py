@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Optional, Union
 from ..tile import Tile
 
 class Hand:
@@ -12,10 +12,20 @@ class Hand:
         self.tiles.append(tile)
         self._sort_tiles()
         
-    def discard_tile(self, index: int) -> Optional[Tile]:
-        """打出一张牌"""
-        if 0 <= index < len(self.tiles):
-            return self.tiles.pop(index)
+    def discard_tile(self, tile_or_index: Union[Tile, int]) -> Optional[Tile]:
+        """打出一张牌
+        Args:
+            tile_or_index: 可以是Tile对象或者索引
+        Returns:
+            打出的牌，如果失败返回None
+        """
+        if isinstance(tile_or_index, int):
+            if 0 <= tile_or_index < len(self.tiles):
+                return self.tiles.pop(tile_or_index)
+        elif isinstance(tile_or_index, Tile):
+            if tile_or_index in self.tiles:
+                self.tiles.remove(tile_or_index)
+                return tile_or_index
         return None
         
     def _sort_tiles(self) -> None:
