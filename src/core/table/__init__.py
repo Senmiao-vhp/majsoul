@@ -3,6 +3,7 @@ from typing import List, Optional, Dict
 from ..player import Player
 from ..hand import Hand
 from ..wall import Wall
+from ..tile import Tile
 
 class Wind(Enum):
     """座位方位"""
@@ -19,6 +20,7 @@ class Table:
         self.round: int = 1
         self.max_players = player_count
         self.wind_assignments: Dict[Player, Wind] = {}
+        self.initialize_wall()
         
     def add_player(self, player: Player) -> bool:
         """添加玩家到牌桌"""
@@ -66,11 +68,15 @@ class Table:
 
     def start_round(self) -> bool:
         """开始新的一轮"""
-        if len(self.players) != self.max_players:
+        if len(self.players) != 4:
             return False
+            
         self.round += 1
         self.current_player_index = self.dealer_index
-        return True
+        self.initialize_wall()
+        
+        # 发牌
+        return self.deal_initial_tiles()
 
     def reset_round(self) -> None:
         """重置当前轮"""

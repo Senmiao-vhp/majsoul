@@ -89,3 +89,35 @@ class Game:
         if not isinstance(state, GameState):
             raise ValueError("Invalid game state")
         self.controller.state = state
+        
+    def skip_current_action(self) -> None:
+        """跳过当前操作"""
+        if self.controller.state != GameState.PLAYING:
+            return
+        
+        if self.table and self.table.get_current_player():
+            # 进入下一个玩家回合
+            next_player = self.table.next_player()
+            if next_player:
+                self.controller.process_turn(next_player)
+        
+    def handle_tile_click(self, tile_index: int) -> None:
+        """处理牌的点击事件
+        
+        Args:
+            tile_index: 被点击的牌的索引
+        """
+        if self.controller.state != GameState.PLAYING:
+            return
+        
+        current_player = self.table.get_current_player()
+        if not current_player or tile_index >= len(current_player.hand.tiles):
+            return
+        
+        # 打出选中的牌
+        discarded = current_player.discard_tile(tile_index)
+        if discarded:
+            # 进入下一个玩家回合
+            next_player = self.table.next_player()
+            if next_player:
+                self.controller.process_turn(next_player)

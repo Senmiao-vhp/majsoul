@@ -1,41 +1,45 @@
-from typing import Optional
+from typing import List, Optional
+from ..tile import Tile, TileSuit
 from ..hand import Hand
-from ..tile import Tile
 from .state import PlayerState
 
 class Player:
+    """玩家类"""
+    
     def __init__(self, name: str):
-        """初始化玩家"""
         self.name = name
         self.hand = Hand()
         self.points = 0
-        self.seat_wind = None  # 自风
-        self.state = PlayerState.WAITING  # 添加状态属性
-        
-    def get_points(self) -> int:
-        """获取玩家分数"""
-        return self.points
+        self.state = PlayerState.WAITING
+        self.discards: List[Tile] = []  # 存储打出的牌
+        self.is_riichi = False  # 是否立直
         
     def set_points(self, points: int) -> None:
-        """设置玩家分数"""
+        """设置分数"""
         self.points = points
         
+    def get_points(self) -> int:
+        """获取分数"""
+        return self.points
+        
     def add_points(self, points: int) -> None:
-        """增加玩家分数"""
+        """增加分数"""
         self.points += points
         
-    def take_action(self) -> None:
-        """玩家行动"""
-        pass 
-        
-    def draw_tile(self, tile: Tile) -> None:
-        """摸牌"""
-        self.hand.add_tile(tile)
+    def set_state(self, state: PlayerState) -> None:
+        """设置玩家状态"""
+        self.state = state
         
     def discard_tile(self, index: int) -> Optional[Tile]:
-        """打牌"""
-        return self.hand.discard_tile(index)
+        """打出一张牌
         
-    def set_state(self, new_state: PlayerState) -> None:
-        """设置玩家状态"""
-        self.state = new_state
+        Args:
+            index: 要打出的牌的索引
+            
+        Returns:
+            打出的牌，如果失败返回None
+        """
+        tile = self.hand.discard_tile(index)
+        if tile:
+            self.discards.append(tile)
+        return tile

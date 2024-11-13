@@ -47,3 +47,38 @@ def test_game_state_transitions():
     # 游戏结束
     game.set_state(GameState.FINISHED)
     assert game.get_state() == GameState.FINISHED 
+
+def test_handle_tile_click():
+    """测试牌点击处理"""
+    game = Game()
+    game.initialize()
+    game.start()
+    game.set_state(GameState.PLAYING)
+    
+    # 获取当前玩家
+    current_player = game.table.get_current_player()
+    initial_tiles = len(current_player.hand.tiles)
+    
+    # 测试有效点击
+    game.handle_tile_click(0)
+    assert len(current_player.hand.tiles) == initial_tiles - 1
+    
+    # 测试无效点击（索引越界）
+    game.handle_tile_click(100)
+    assert len(current_player.hand.tiles) == initial_tiles - 1
+    
+def test_skip_current_action():
+    """测试跳过当前操作"""
+    game = Game()
+    game.initialize()
+    game.start()
+    
+    # 非PLAYING状态下跳过
+    initial_player = game.table.get_current_player()
+    game.skip_current_action()
+    assert game.table.get_current_player() == initial_player
+    
+    # PLAYING状态下跳过
+    game.set_state(GameState.PLAYING)
+    game.skip_current_action()
+    assert game.table.get_current_player() != initial_player 

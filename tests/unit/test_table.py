@@ -16,11 +16,21 @@ def test_table_seat_assignment():
 def test_table_initialization():
     """测试牌桌初始化"""
     table = Table()
-    assert table.max_players == 4
     assert len(table.players) == 0
-    assert table.current_player_index == 0
-    assert table.dealer_index == 0
+    assert table.wall is not None
     assert table.round == 1
+    assert table.dealer_index == 0
+    assert table.current_player_index == 0
+    
+def test_wall_operations():
+    """测试牌山操作"""
+    table = Table()
+    assert table.wall.get_remaining_count() == 136  # 初始136张牌
+    
+    # 测试发牌
+    tile = table.wall.draw()
+    assert tile is not None
+    assert table.wall.get_remaining_count() == 135
 
 def test_add_player():
     """测试添加玩家"""
