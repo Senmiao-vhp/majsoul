@@ -183,3 +183,34 @@ def test_turn_end_handling():
     assert next_player != current_player
     assert next_player.state == PlayerState.THINKING
     assert current_player.state == PlayerState.WAITING
+
+def test_ron_check():
+    """测试荣和检查"""
+    game = Game()
+    flow = GameFlow(game)
+    
+    # 添加玩家
+    players = [Player(f"Player_{i}") for i in range(4)]
+    for player in players:
+        game.table.add_player(player)
+        
+    # 设置游戏状态
+    game.set_state(GameState.PLAYING)
+    
+    # 添加一个和牌型
+    tiles = [
+        Tile(TileSuit.CHARACTERS, 1), Tile(TileSuit.CHARACTERS, 1),
+        Tile(TileSuit.CHARACTERS, 2), Tile(TileSuit.CHARACTERS, 3),
+        Tile(TileSuit.CHARACTERS, 4), Tile(TileSuit.CHARACTERS, 5),
+        Tile(TileSuit.CHARACTERS, 6), Tile(TileSuit.CHARACTERS, 7),
+        Tile(TileSuit.CHARACTERS, 8), Tile(TileSuit.CIRCLES, 1),
+        Tile(TileSuit.CIRCLES, 2), Tile(TileSuit.CIRCLES, 3),
+        Tile(TileSuit.BAMBOO, 1)
+    ]
+    
+    for tile in tiles:
+        players[1].hand.add_tile(tile)
+        
+    # 测试荣和
+    flow.check_other_players_win(players[0], Tile(TileSuit.BAMBOO, 1))
+    assert players[1].state == PlayerState.WAITING_RON

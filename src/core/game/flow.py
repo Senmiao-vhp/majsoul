@@ -262,35 +262,44 @@ class GameFlow:
         return count >= 3
     
     def check_win(self, player: Player, tile: Optional[Tile] = None) -> bool:
-        """检查是否和牌"""
-        if not player or self.game.get_state() != GameState.PLAYING:
+        """检查玩家是否和牌
+        Args:
+            player: 要检查的玩家
+            tile: 要检查的牌(荣和时传入)
+        Returns:
+            bool: 是否和牌
+        """
+        # 检查游戏状态
+        if self.game.get_state() != GameState.PLAYING:
+            return False
+        
+        # 检查玩家状态
+        if player.state not in [PlayerState.THINKING, PlayerState.WAITING_RON]:
             return False
         
         # 检查是否振听
-        if player.is_furiten:
-            return False
-        
-        # 检查是否有效和牌
-        if tile:
-            # 荣和检查
-            return self._check_ron(player, tile)
-        else:
-            # 自摸检查
-            return self._check_tsumo(player)
-        
-    def _check_ron(self, player: Player, tile: Tile) -> bool:
-        """检查是否可以荣和"""
-        # 立直状态下检查振听
         if player.is_riichi and self._is_furiten(player, tile):
             return False
         
-        # TODO: 调用和牌判定系统检查是否可以和牌
+        # 调用手牌类的和牌判定
+        return player.hand.check_win(tile)
+    
+    def _check_ron(self, player: Player, tile: Tile) -> bool:
+        """检查是否可以荣和
+        Args:
+            player: 要检查的玩家
+            tile: 打出的牌
+        Returns:
+            bool: 是否可以荣和
+        """
+        # 检查是否可以和牌
+        if player.hand.check_win(tile):
+            return True
         return False
     
     def _check_tsumo(self, player: Player) -> bool:
         """检查是否可以自摸"""
-        # TODO: 调用和牌判定系统检查是否可以和牌
-        return False
+        return player.hand.check_win()
     
     def _is_furiten(self, player: Player, tile: Tile) -> bool:
         """检查是否振听"""
@@ -366,3 +375,59 @@ class GameFlow:
         next_player = self.next_turn()
         if next_player:
             next_player.set_state(PlayerState.THINKING)
+    
+    def check_furiten(self, player: Player) -> bool:
+        """检查振听
+        Args:
+            player: 要检查的玩家
+        Returns:
+            bool: 是否振听
+        """
+        # 获取听牌列表
+        tenpai_tiles = player.hand.check_tenpai()
+        if not tenpai_tiles:
+            return False
+        
+        # 检查最近一巡的打牌记录
+        for discard in player.discards[-4:]:
+            if discard in tenpai_tiles:
+                return True
+        
+        return False
+    
+    def check_other_players_win(self, discard_player: Player, tile: Tile) -> bool:
+        """检查其他玩家是否可以荣和"""
+        has_winner = False
+        for player in self.game.table.players:
+            if player != discard_player and self._check_ron(player, tile):
+                player.set_state(PlayerState.WAITING_RON)
+                has_winner = True
+        return has_winner
+    
+    def handle_ron(self, player: Player, tile: Tile) -> bool:
+        """处理荣和"""
+        if player.state != PlayerState.WAITING_RON:
+            return False
+        
+        # 检查是否可以荣和
+        if not self._check_ron(player, tile):
+            return False
+        
+        # 设置和牌状态
+        player.set_state(PlayerState.WIN)
+        self.game.set_state(GameState.FINISHED)
+        return True
+    
+    def handle_tsumo(self, player: Player) -> bool:
+        """处理自摸"""
+        if player.state != PlayerState.THINKING:
+            return False
+        
+        # 检查是否可以自摸
+        if not self._check_tsumo(player):
+            return False
+        
+        # 设置和牌状态
+        player.set_state(PlayerState.WIN)
+        self.game.set_state(GameState.FINISHED)
+        return True

@@ -1,0 +1,174 @@
+{
+    "yaku": {
+        "riichi": {
+            "name": "立直",
+            "han": 1,
+            "closed_only": true
+        },
+        "ippatsu": {
+            "name": "一发",
+            "han": 1,
+            "closed_only": true
+        },
+        "tsumo": {
+            "name": "门前清自摸和",
+            "han": 1,
+            "closed_only": true
+        },
+        "pinfu": {
+            "name": "平和",
+            "han": 1,
+            "closed_only": true
+        },
+        "tanyao": {
+            "name": "断幺九",
+            "han": 1,
+            "closed_only": false
+        },
+        "iipeikou": {
+            "name": "一杯口",
+            "han": 1,
+            "closed_only": true
+        },
+        "haku": {
+            "name": "役牌白",
+            "han": 1,
+            "closed_only": false
+        },
+        "hatsu": {
+            "name": "役牌发",
+            "han": 1,
+            "closed_only": false
+        },
+        "chun": {
+            "name": "役牌中",
+            "han": 1,
+            "closed_only": false
+        },
+        "seat_wind": {
+            "name": "自风",
+            "han": 1,
+            "closed_only": false
+        },
+        "prevalent_wind": {
+            "name": "场风",
+            "han": 1,
+            "closed_only": false
+        },
+        "sanshoku": {
+            "name": "三色同顺",
+            "han": 2,
+            "closed_only": false,
+            "closed_han": 2
+        },
+        "ittsu": {
+            "name": "一气通贯",
+            "han": 2,
+            "closed_only": false,
+            "closed_han": 2
+        },
+        "chanta": {
+            "name": "混全带幺九",
+            "han": 2,
+            "closed_only": false,
+            "closed_han": 2
+        },
+        "chitoitsu": {
+            "name": "七对子",
+            "han": 2,
+            "closed_only": true
+        },
+        "toitoi": {
+            "name": "对对和",
+            "han": 2,
+            "closed_only": false
+        },
+        "sanankou": {
+            "name": "三暗刻",
+            "han": 2,
+            "closed_only": false
+        },
+        "sankantsu": {
+            "name": "三杠子",
+            "han": 2,
+            "closed_only": false
+        },
+        "honitsu": {
+            "name": "混一色",
+            "han": 3,
+            "closed_only": false,
+            "closed_han": 3
+        },
+        "ryanpeikou": {
+            "name": "二杯口",
+            "han": 3,
+            "closed_only": true
+        },
+        "junchan": {
+            "name": "纯全带幺九",
+            "han": 3,
+            "closed_only": false,
+            "closed_han": 3
+        },
+        "chinitsu": {
+            "name": "清一色",
+            "han": 6,
+            "closed_only": false,
+            "closed_han": 6
+        },
+        "daisangen": {
+            "name": "大三元",
+            "han": 13,
+            "closed_only": false,
+            "yakuman": true
+        },
+        "suuankou": {
+            "name": "四暗刻",
+            "han": 13,
+            "closed_only": true,
+            "yakuman": true
+        },
+        "tsuuiisou": {
+            "name": "字一色",
+            "han": 13,
+            "closed_only": false,
+            "yakuman": true
+        },
+        "ryuuiisou": {
+            "name": "绿一色",
+            "han": 13,
+            "closed_only": false,
+            "yakuman": true
+        },
+        "suukantsu": {
+            "name": "四杠子",
+            "han": 13,
+            "closed_only": false,
+            "yakuman": true
+        },
+        "kokushi": {
+            "name": "国士无双",
+            "han": 13,
+            "closed_only": true,
+            "yakuman": true
+        },
+        "daishuushi": {
+            "name": "大四喜",
+            "han": 13,
+            "closed_only": false,
+            "yakuman": true
+        },
+        "shousuushii": {
+            "name": "小四喜",
+            "han": 13,
+            "closed_only": false,
+            "yakuman": true
+        },
+        "chinroutou": {
+            "name": "清老头",
+            "han": 13,
+            "closed_only": false,
+            "yakuman": true
+        }
+    }
+} 

@@ -11,9 +11,22 @@ class TileSuit(Enum):
 
 class Tile:
     def __init__(self, suit: TileSuit, value: int, is_red: bool = False):
-        self.suit = suit
-        self.value = value
-        self.is_red = is_red  # 是否为赤牌
+        self._suit = suit
+        self._value = value
+        self._is_red = is_red  # 是否为赤牌
+        self._hash = hash((suit, value, is_red))
+        
+    @property
+    def suit(self):
+        return self._suit
+        
+    @property
+    def value(self):
+        return self._value
+        
+    @property
+    def is_red(self):
+        return self._is_red
         
     @property
     def is_valid(self) -> bool:
@@ -29,7 +42,21 @@ class Tile:
     def __eq__(self, other):
         if not isinstance(other, Tile):
             return False
-        return self.suit == other.suit and self.value == other.value
+        return (self.suit == other.suit and 
+                self.value == other.value and 
+                self.is_red == other.is_red)
+                
+    def __hash__(self):
+        return self._hash
         
     def __str__(self):
-        return f"{self.suit}{self.value}" 
+        base = f"{self.suit.value}{self.value}"
+        return f"{base}红" if self.is_red else base
+        
+    def __lt__(self, other):
+        if not isinstance(other, Tile):
+            return NotImplemented
+        # 先按花色排序，再按数值排序
+        if self.suit != other.suit:
+            return self.suit.value < other.suit.value
+        return self.value < other.value
