@@ -3,25 +3,25 @@ from src.core.tile import Tile, TileSuit
 
 def test_tile_creation():
     """测试麻将牌创建"""
-    tile = Tile(TileSuit.CHARACTERS, 5)
-    assert tile.suit == TileSuit.CHARACTERS
+    tile = Tile(TileSuit.MAN, 5)
+    assert tile.suit == TileSuit.MAN
     assert tile.value == 5
     assert tile.is_valid
 
 def test_invalid_tile():
     """测试非法麻将牌"""
-    tile = Tile(TileSuit.CHARACTERS, 10)
+    tile = Tile(TileSuit.MAN, 10)
     assert not tile.is_valid
 
 def test_tile_comparison():
     """测试麻将牌比较"""
-    tile1 = Tile(TileSuit.CHARACTERS, 1)
-    tile2 = Tile(TileSuit.CHARACTERS, 2)
-    tile3 = Tile(TileSuit.BAMBOO, 1)
-    tile4 = Tile(TileSuit.CHARACTERS, 1, True)  # 赤牌
+    tile1 = Tile(TileSuit.MAN, 1)
+    tile2 = Tile(TileSuit.MAN, 2)
+    tile3 = Tile(TileSuit.SOU, 1)
+    tile4 = Tile(TileSuit.MAN, 1, True)  # 赤牌
     
     # 测试相等
-    assert tile1 == Tile(TileSuit.CHARACTERS, 1)
+    assert tile1 == Tile(TileSuit.MAN, 1)
     assert tile1 != tile4  # 赤牌不等于普通牌
     
     # 测试大小比较
@@ -31,9 +31,9 @@ def test_tile_comparison():
     
 def test_tile_hash():
     """测试麻将牌哈希"""
-    tile1 = Tile(TileSuit.CHARACTERS, 1)
-    tile2 = Tile(TileSuit.CHARACTERS, 1)
-    tile3 = Tile(TileSuit.CHARACTERS, 1, True)  # 赤牌
+    tile1 = Tile(TileSuit.MAN, 1)
+    tile2 = Tile(TileSuit.MAN, 1)
+    tile3 = Tile(TileSuit.MAN, 1, True)  # 赤牌
     
     # 相同牌应该有相同的哈希值
     assert hash(tile1) == hash(tile2)
@@ -48,8 +48,30 @@ def test_tile_hash():
     
 def test_tile_string_representation():
     """测试麻将牌字符串表示"""
-    tile1 = Tile(TileSuit.CHARACTERS, 5)
-    tile2 = Tile(TileSuit.CHARACTERS, 5, True)
+    tile1 = Tile(TileSuit.MAN, 5)
+    tile2 = Tile(TileSuit.MAN, 5, True)
     
     assert str(tile1) == "万5"
-    assert str(tile2) == "万5红" 
+    assert str(tile2) == "万5红"
+
+def test_tile_34_index():
+    """测试34编码索引转换"""
+    # 测试万子
+    assert Tile(TileSuit.MAN, 1).get_34_index() == 0
+    assert Tile(TileSuit.MAN, 9).get_34_index() == 8
+    
+    # 测试筒子
+    assert Tile(TileSuit.PIN, 1).get_34_index() == 9
+    assert Tile(TileSuit.PIN, 9).get_34_index() == 17
+    
+    # 测试索子
+    assert Tile(TileSuit.SOU, 1).get_34_index() == 18
+    assert Tile(TileSuit.SOU, 9).get_34_index() == 26
+    
+    # 测试字牌
+    assert Tile(TileSuit.HONOR, 1).get_34_index() == 27  # 东
+    assert Tile(TileSuit.HONOR, 7).get_34_index() == 33  # 中
+    
+    # 测试非法牌
+    with pytest.raises(ValueError):
+        Tile(TileSuit.HONOR, 8).get_34_index() 

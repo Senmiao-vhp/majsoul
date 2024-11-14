@@ -1,13 +1,24 @@
 from typing import List, Optional, Union, Dict
 from collections import Counter
 from ..tile import Tile, TileSuit
+from mahjong.shanten import Shanten
+from ..utils.logger import setup_logger
+from mahjong.hand_calculating.hand import HandCalculator
+from mahjong.tile import TilesConverter
+from mahjong.hand_calculating.hand_config import HandConfig
+from mahjong.meld import Meld
+from src.core.yaku.judger import YakuJudger
+import logging
 
 class Hand:
-    def __init__(self):
+    def __init__(self, player=None):
         """初始化手牌"""
         self.tiles: List[Tile] = []
         self.melds: List[List[Tile]] = []  # 副露
         self.waiting_tiles: List[Tile] = []  # 听牌列表
+        self.shanten = Shanten()
+        self.player = player
+        self.logger = logging.getLogger(__name__)
         
     def add_tile(self, tile: Tile) -> None:
         """添加一张牌"""
@@ -15,12 +26,7 @@ class Hand:
         self._sort_tiles()
         
     def discard_tile(self, tile_or_index: Union[Tile, int]) -> Optional[Tile]:
-        """打出一张牌
-        Args:
-            tile_or_index: 可以是Tile对象或者索引
-        Returns:
-            打出的牌，如果失败返回None
-        """
+        """打出一张牌"""
         if isinstance(tile_or_index, int):
             if 0 <= tile_or_index < len(self.tiles):
                 return self.tiles.pop(tile_or_index)
@@ -38,152 +44,140 @@ class Hand:
         """添加一组副露"""
         if len(tiles) >= 3:  # 副露至少需要3张牌
             self.melds.append(tiles)
-            self._sort_tiles()
+            
+    def remove_tile(self, tile: Tile) -> bool:
+        """从手牌中移除一张牌
         
-    def get_melds(self) -> List[List[Tile]]:
-        """获取所有副露"""
-        return self.melds
+        Args:
+            tile: 要移除的牌
+            
+        Returns:
+            bool: 是否移除成功
+        """
+        if tile in self.tiles:
+            self.tiles.remove(tile)
+            return True
+        return False
         
-    def check_win(self, new_tile: Optional[Tile] = None) -> bool:
+    def check_win(self, tile: Optional[Tile] = None) -> bool:
         """检查是否和牌"""
-        # 复制手牌进行检查
         test_tiles = self.tiles.copy()
-        if new_tile:
-            test_tiles.append(new_tile)
+        if tile:
+            test_tiles.append(tile)
             
-        # 检查牌数是否正确
-        if len(test_tiles) != 14:
-            return False
-            
-        # 排序手牌
-        test_tiles.sort()
-        
-        # 检查特殊和牌型
-        if self._check_seven_pairs(test_tiles):
+        # 检查国士无双
+        if len(test_tiles) == 13 and self._check_thirteen_orphans(test_tiles):
             return True
             
-        if self._check_thirteen_orphans(test_tiles):
+        # 检查七对子
+        if len(test_tiles) == 14 and self._check_seven_pairs(test_tiles):
             return True
             
         # 检查普通和牌型
-        return self._check_normal_win(test_tiles)
-        
-    def _check_seven_pairs(self, tiles: List[Tile]) -> bool:
-        """检查七对和牌"""
-        if len(tiles) != 14:
-            return False
-            
-        # 使用Counter来统计每种牌的数量
-        tile_str_counts = Counter(str(tile) for tile in tiles)
-        # 检查是否恰好有7个对子
-        return all(count == 2 for count in tile_str_counts.values()) and len(tile_str_counts) == 7
-        
-    def _check_thirteen_orphans(self, tiles: List[Tile]) -> bool:
-        """检查国士无双和牌"""
-        if len(tiles) != 14:
-            return False
-            
-        # 幺九牌列表
-        terminals = [
-            Tile(TileSuit.CHARACTERS, 1), Tile(TileSuit.CHARACTERS, 9),
-            Tile(TileSuit.CIRCLES, 1), Tile(TileSuit.CIRCLES, 9),
-            Tile(TileSuit.BAMBOO, 1), Tile(TileSuit.BAMBOO, 9),
-            # 字牌
-            Tile(TileSuit.HONOR, 1), Tile(TileSuit.HONOR, 2),
-            Tile(TileSuit.HONOR, 3), Tile(TileSuit.HONOR, 4),
-            Tile(TileSuit.HONOR, 5), Tile(TileSuit.HONOR, 6),
-            Tile(TileSuit.HONOR, 7)
-        ]
-        
-        # 使用Counter统计牌的数量
-        tile_str_counts = Counter(str(tile) for tile in tiles)
-        # 检查是否包含所有幺九牌
-        return all(str(tile) in tile_str_counts for tile in terminals)
-        
-    def _check_normal_win(self, tiles: List[Tile]) -> bool:
-        """检查普通和牌型"""
-        if len(tiles) != 14:
-            return False
-            
-        # 排序手牌
-        tiles.sort()
-        
-        # 检查雀头
-        for i in range(len(tiles) - 1):
-            if tiles[i] == tiles[i + 1]:
-                # 复制剩余牌进行检查
-                remaining = tiles.copy()
-                # 移除雀头
-                remaining.pop(i + 1)
-                remaining.pop(i)
-                # 检查剩余牌是否可以组成面子
-                if self._check_mentsu(remaining):
-                    return True
+        if len(test_tiles) == 14:
+            tiles_34 = self._convert_tiles_to_34_array(test_tiles)
+            return self.shanten.calculate_shanten(tiles_34) == -1
+                
         return False
         
-    def _check_mentsu(self, tiles: List[Tile]) -> bool:
-        """检查剩余牌是否可以组成面子"""
-        if not tiles:
-            return True
-            
-        # 排序手牌
-        tiles.sort()
-        
-        # 1. 尝试刻子
-        if len(tiles) >= 3 and tiles[0] == tiles[1] == tiles[2]:
-            return self._check_mentsu(tiles[3:])
-        
-        # 2. 尝试顺子
-        if len(tiles) >= 3 and tiles[0].suit in [TileSuit.CHARACTERS, TileSuit.CIRCLES, TileSuit.BAMBOO]:
-            if (tiles[0].suit == tiles[1].suit == tiles[2].suit and
-                tiles[1].value == tiles[0].value + 1 and
-                tiles[2].value == tiles[1].value + 1):
-                return self._check_mentsu(tiles[3:])
-            
-        # 3. 如果第一张牌无法组成面子，尝试从下一张牌开始
-        if len(tiles) > 1:
-            return self._check_mentsu(tiles[1:])
-            
-        return False
+    def _convert_tiles_to_34_array(self, tiles: List[Tile]) -> List[int]:
+        """将手牌转换为34编码数组"""
+        array = [0] * 34
+        for tile in tiles:
+            index = tile.get_34_index()
+            if index is not None:
+                array[index] += 1
+        return array
         
     def check_tenpai(self) -> List[Tile]:
-        """检查听牌
-        Returns:
-            List[Tile]: 可能的和牌列表
-        """
+        """检查听牌，返回能让手牌听牌的进张"""
         waiting_tiles = []
-        # 复制手牌进行测试
-        test_tiles = self.tiles.copy()
+        self.logger.debug("开始检查听牌")
+        self.logger.debug(f"当前手牌: {[str(t) for t in self.tiles]}")
         
-        # 检查当前手牌是否已经有对子
-        tile_counts = Counter(str(tile) for tile in test_tiles)
-        pairs_count = sum(1 for count in tile_counts.values() if count == 2)
+        # 转换手牌格式
+        tiles_34 = self._convert_tiles_to_34_array(self.tiles)
+        self.logger.debug(f"转换后的34数组: {tiles_34}")
         
-        # 遍历所有可能的牌
+        # 计算当前向听数
+        current_shanten = self.shanten.calculate_shanten(tiles_34)
+        self.logger.debug(f"当前向听数: {current_shanten}")
+        
+        # 如果已经和牌或向听数大于1，则不是听牌状态
+        if current_shanten < 0 or current_shanten > 1:
+            self.logger.debug(f"非听牌状态，当前向听数: {current_shanten}")
+            return []
+        
+        # 检查所有可能的牌
         for suit in TileSuit:
-            for value in range(1, 10):
-                if suit == TileSuit.HONOR and value > 7:
+            max_value = 7 if suit == TileSuit.HONOR else 9
+            for value in range(1, max_value + 1):
+                test_tile = Tile(suit, value)
+                if not test_tile.is_valid:
                     continue
                     
-                test_tile = Tile(suit, value)
-                # 添加测试牌
+                # 复制当前手牌并添加测试牌
+                test_tiles = self.tiles.copy()
                 test_tiles.append(test_tile)
-                # 检查是否和牌
-                if self.check_win(test_tile):
-                    # 对于七对子听牌，只有一种可能
-                    if pairs_count == 6:
-                        # 检查是否是七对子和牌
-                        if self._check_seven_pairs(test_tiles):
-                            waiting_tiles = [test_tile]
-                            break
-                    else:
-                        waiting_tiles.append(test_tile)
-                # 移除测试牌
-                test_tiles.remove(test_tile)
+                test_tiles_34 = self._convert_tiles_to_34_array(test_tiles)
+                test_shanten = self.shanten.calculate_shanten(test_tiles_34)
                 
-        self.waiting_tiles = waiting_tiles
+                # 如果当前是一向听，则找能让向听数变为0的牌
+                # 如果当前是听牌，则找能让向听数变为-1的牌
+                if test_shanten < current_shanten:
+                    self.logger.debug(f"找到有效进张: {test_tile}")
+                    waiting_tiles.append(test_tile)
+        
+        self.logger.debug(f"听牌检查完成，进张数: {len(waiting_tiles)}")
         return waiting_tiles
         
-    def is_tenpai(self) -> bool:
-        """检查是否听牌"""
-        return len(self.check_tenpai()) > 0
+    def _check_thirteen_orphans(self, tiles: List[Tile]) -> bool:
+        """检查国士无双"""
+        if len(tiles) != 13:
+            return False
+            
+        # 幺九牌和字牌列表
+        required_tiles = [
+            (TileSuit.MAN, 1), (TileSuit.MAN, 9),
+            (TileSuit.PIN, 1), (TileSuit.PIN, 9),
+            (TileSuit.SOU, 1), (TileSuit.SOU, 9),
+            (TileSuit.HONOR, 1), (TileSuit.HONOR, 2),
+            (TileSuit.HONOR, 3), (TileSuit.HONOR, 4),
+            (TileSuit.HONOR, 5), (TileSuit.HONOR, 6),
+            (TileSuit.HONOR, 7)
+        ]
+        
+        # 检查每种幺九牌是否都存在
+        for suit, value in required_tiles:
+            if not any(t.suit == suit and t.value == value for t in tiles):
+                return False
+                
+        return True
+        
+    def _check_seven_pairs(self, tiles: List[Tile]) -> bool:
+        """检查七对子"""
+        if len(tiles) != 14:
+            return False
+            
+        counter = Counter(tiles)
+        return all(count == 2 for count in counter.values()) and len(counter) == 7
+        
+    def check_yaku(self, win_tile: Tile, is_tsumo: bool = False) -> Dict:
+        """检查和牌役种
+        
+        Args:
+            win_tile: 和牌
+            is_tsumo: 是否自摸
+            
+        Returns:
+            Dict: 役种列表，如果没有役种返回空字典
+        """
+        judger = YakuJudger()
+        result = judger.judge(
+            tiles=self.tiles,
+            melds=self.melds,
+            win_tile=win_tile,
+            is_tsumo=is_tsumo,
+            is_riichi=self.player.is_riichi if self.player else False
+        )
+        return result if result is not None else {}  # 如果没有役种返回空字典

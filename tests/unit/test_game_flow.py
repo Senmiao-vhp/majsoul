@@ -133,7 +133,7 @@ def test_discard_phase():
     current_player.set_state(PlayerState.THINKING)
     
     # 添加测试用牌
-    tile = Tile(TileSuit.CHARACTERS, 1)
+    tile = Tile(TileSuit.MAN, 1)
     current_player.hand.add_tile(tile)
     
     # 测试出牌
@@ -155,7 +155,7 @@ def test_player_state_transitions():
     
     # 测试思考->出牌状态切换
     player.set_state(PlayerState.THINKING)
-    tile = Tile(TileSuit.CHARACTERS, 1)
+    tile = Tile(TileSuit.MAN, 1)
     player.hand.add_tile(tile)
     flow.handle_discard(player, tile)
     assert player.state == PlayerState.DISCARDING
@@ -190,27 +190,23 @@ def test_ron_check():
     flow = GameFlow(game)
     
     # 添加玩家
-    players = [Player(f"Player_{i}") for i in range(4)]
-    for player in players:
-        game.table.add_player(player)
-        
-    # 设置游戏状态
-    game.set_state(GameState.PLAYING)
+    for i in range(4):
+        game.table.add_player(Player(f"Player_{i}"))
     
-    # 添加一个和牌型
+    # 设置玩家手牌为听牌状态
+    player = game.table.players[1]
     tiles = [
-        Tile(TileSuit.CHARACTERS, 1), Tile(TileSuit.CHARACTERS, 1),
-        Tile(TileSuit.CHARACTERS, 2), Tile(TileSuit.CHARACTERS, 3),
-        Tile(TileSuit.CHARACTERS, 4), Tile(TileSuit.CHARACTERS, 5),
-        Tile(TileSuit.CHARACTERS, 6), Tile(TileSuit.CHARACTERS, 7),
-        Tile(TileSuit.CHARACTERS, 8), Tile(TileSuit.CIRCLES, 1),
-        Tile(TileSuit.CIRCLES, 2), Tile(TileSuit.CIRCLES, 3),
-        Tile(TileSuit.BAMBOO, 1)
+        Tile(TileSuit.SOU, 2), Tile(TileSuit.SOU, 3),
+        Tile(TileSuit.SOU, 4), Tile(TileSuit.SOU, 5),
+        Tile(TileSuit.SOU, 6), Tile(TileSuit.SOU, 7),
+        Tile(TileSuit.SOU, 8), Tile(TileSuit.SOU, 9),
+        Tile(TileSuit.MAN, 1), Tile(TileSuit.MAN, 1),
+        Tile(TileSuit.MAN, 1), Tile(TileSuit.PIN, 1),
+        Tile(TileSuit.PIN, 1)
     ]
-    
     for tile in tiles:
-        players[1].hand.add_tile(tile)
-        
+        player.hand.add_tile(tile)
+    
     # 测试荣和
-    flow.check_other_players_win(players[0], Tile(TileSuit.BAMBOO, 1))
-    assert players[1].state == PlayerState.WAITING_RON
+    flow.check_other_players_win(game.table.players[0], Tile(TileSuit.SOU, 1))
+    assert player.state == PlayerState.WAITING_RON

@@ -24,7 +24,7 @@ def test_player_points():
 def test_player_discards():
     """测试玩家打出的牌"""
     player = Player("Test Player")
-    tile = Tile(TileSuit.CHARACTERS, 1)
+    tile = Tile(TileSuit.MAN, 1)
     
     # 添加并打出一张牌
     player.hand.add_tile(tile)

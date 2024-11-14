@@ -14,7 +14,7 @@ class Wall:
     def _initialize_tiles(self) -> None:
         """初始化所有麻将牌"""
         # 生成数牌
-        for suit in [TileSuit.CHARACTERS, TileSuit.CIRCLES, TileSuit.BAMBOO]:
+        for suit in [TileSuit.MAN, TileSuit.PIN, TileSuit.SOU]:
             for value in range(1, 10):
                 for _ in range(4):
                     self.tiles.append(Tile(suit, value))

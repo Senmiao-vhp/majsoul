@@ -1,42 +1,44 @@
 from enum import Enum
 from functools import total_ordering
+from typing import Optional
+from .utils.logger import setup_logger
 
 class TileSuit(Enum):
-    CHARACTERS = 1  # 万子
-    CIRCLES = 2     # 筒子
-    BAMBOO = 3      # 索子
-    HONOR = 4       # 字牌
+    """牌的花色枚举"""
+    CHARACTERS = "万"  # 万子
+    CIRCLES = "筒"     # 筒子
+    BAMBOO = "索"      # 索子
+    HONOR = "字"       # 字牌
+    # BONUS = "花"     # 移除 BONUS，因为当前规则不需要花牌
 
 @total_ordering
 class Tile:
-    def __init__(self, suit: TileSuit, value: int):
-        self._suit = suit
-        self._value = value
-        self._key = (suit, value)
+    def __init__(self, suit: TileSuit, value: int, is_red: bool = False):
+        self.logger = setup_logger(__name__)
+        self.suit = suit
+        self.value = value
+        self.is_red = is_red
+        self.is_valid = self._validate()
         
-    @property
-    def suit(self):
-        return self._suit
+    def _validate(self) -> bool:
+        """验证牌的合法性"""
+        if self.suit in [TileSuit.CHARACTERS, TileSuit.CIRCLES, TileSuit.BAMBOO]:
+            return 1 <= self.value <= 9
+        elif self.suit == TileSuit.HONOR:
+            return 1 <= self.value <= 7
+        return False
         
-    @property
-    def value(self):
-        return self._value
-    
-    def __eq__(self, other):
-        if not isinstance(other, Tile):
-            return NotImplemented
-        return self._key == other._key
-        
-    def __lt__(self, other):
-        if not isinstance(other, Tile):
-            return NotImplemented
-        return (self.suit.value, self.value) < (other.suit.value, other.value)
-        
-    def __hash__(self):
-        return hash(self._key)
-        
-    def __str__(self):
-        return f"{self.suit.name}_{self.value}"
-        
-    def __repr__(self):
-        return f"Tile({self.suit.name}, {self.value})"
+    def get_34_index(self) -> Optional[int]:
+        """获取牌在34编码中的索引"""
+        if not self.is_valid:
+            raise ValueError("Invalid tile cannot be converted to 34-array index")
+            
+        if self.suit == TileSuit.CHARACTERS:
+            return self.value - 1
+        elif self.suit == TileSuit.CIRCLES:
+            return self.value - 1 + 9
+        elif self.suit == TileSuit.BAMBOO:
+            return self.value - 1 + 18
+        elif self.suit == TileSuit.HONOR:
+            return self.value - 1 + 27
+        return None

@@ -2,19 +2,18 @@ from enum import Enum
 from typing import Optional
 
 class TileSuit(Enum):
-    """麻将牌的花色"""
-    CHARACTERS = "万"  # 万子
-    CIRCLES = "筒"     # 筒子
-    BAMBOO = "条"      # 条子
-    HONOR = "字"       # 字牌
-    BONUS = "花"       # 花牌
+    """牌的花色枚举"""
+    MAN = "万"      # 万子
+    PIN = "筒"      # 筒子
+    SOU = "索"      # 索子
+    HONOR = "字"    # 字牌
 
 class Tile:
     def __init__(self, suit: TileSuit, value: int, is_red: bool = False):
         self._suit = suit
         self._value = value
-        self._is_red = is_red  # 是否为赤牌
-        self._hash = hash((suit, value, is_red))
+        self._is_red = is_red
+        self._hash = hash((suit, value, is_red))  # 预计算哈希值
         
     @property
     def suit(self):
@@ -31,12 +30,10 @@ class Tile:
     @property
     def is_valid(self) -> bool:
         """检查牌是否合法"""
-        if self.suit in [TileSuit.CHARACTERS, TileSuit.CIRCLES, TileSuit.BAMBOO]:
+        if self.suit in [TileSuit.MAN, TileSuit.PIN, TileSuit.SOU]:
             return 1 <= self.value <= 9
         elif self.suit == TileSuit.HONOR:
-            return 1 <= self.value <= 7  # 东南西北白发中
-        elif self.suit == TileSuit.BONUS:
-            return 1 <= self.value <= 8  # 春夏秋冬梅兰竹菊
+            return 1 <= self.value <= 7
         return False
         
     def __eq__(self, other):
@@ -46,17 +43,49 @@ class Tile:
                 self.value == other.value and 
                 self.is_red == other.is_red)
                 
-    def __hash__(self):
-        return self._hash
-        
-    def __str__(self):
-        base = f"{self.suit.value}{self.value}"
-        return f"{base}红" if self.is_red else base
-        
     def __lt__(self, other):
+        """实现小于比较，用于排序"""
         if not isinstance(other, Tile):
             return NotImplemented
         # 先按花色排序，再按数值排序
         if self.suit != other.suit:
             return self.suit.value < other.suit.value
         return self.value < other.value
+                
+    def __hash__(self):
+        """实现哈希方法，使Tile可以作为字典键或集合元素"""
+        return self._hash
+                
+    def __str__(self):
+        base = f"{self.suit.value}{self.value}"
+        return f"{base}红" if self.is_red else base
+        
+    def get_34_index(self) -> Optional[int]:
+        """获取牌在34编码中的索引
+        
+        返回:
+            int: 牌在34编码数组中的索引位置
+            None: 如果是非法牌
+            
+        说明:
+            - 万子(MAN): 0-8 (1-9)
+            - 筒子(PIN): 9-17 (1-9)
+            - 索子(SOU): 18-26 (1-9)
+            - 字牌(HONOR): 27-33 (东南西北白发中)
+        """
+        if not self.is_valid:
+            raise ValueError("Invalid tile cannot be converted to 34-array index")
+            
+        # 数牌: 0-26
+        if self.suit == TileSuit.MAN:
+            return self.value - 1
+        elif self.suit == TileSuit.PIN:
+            return self.value - 1 + 9
+        elif self.suit == TileSuit.SOU:
+            return self.value - 1 + 18
+        # 字牌: 27-33 (东南西北白发中)
+        elif self.suit == TileSuit.HONOR:
+            if 1 <= self.value <= 7:
+                return self.value - 1 + 27
+                
+        return None

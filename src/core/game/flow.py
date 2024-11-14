@@ -14,6 +14,7 @@ class GameFlow:
         if not isinstance(game, Game):
             raise TypeError("game must be an instance of Game")
         self.game = game
+        self.controller = game.controller
         
     def start_turn(self, player: Player) -> None:
         """开始玩家回合"""
@@ -107,7 +108,7 @@ class GameFlow:
         """检查玩家是否可以吃"""
         if player.is_riichi:  # 立直状态下不能吃
             return False
-        if tile.suit in [TileSuit.HONOR, TileSuit.BONUS]:  # 字牌和花牌不能吃
+        if tile.suit == TileSuit.HONOR:  # 字牌不能吃
             return False
         
         values = [t.value for t in player.hand.tiles if t.suit == tile.suit]
@@ -119,27 +120,17 @@ class GameFlow:
                (target+1 in values and target+2 in values)
     
     def handle_chi(self, player: Player, tiles: List[Tile]) -> bool:
-        """处理吃牌"""
-        if player.state != PlayerState.WAITING_CHI:
-            return False
+        """处理吃牌
         
-        if len(tiles) != 3:
-            return False
-        
-        # 检查是否是同一花色
-        suit = tiles[0].suit
-        if not all(tile.suit == suit for tile in tiles):
-            return False
-        
-        # 检查是否是连续的数字
-        values = sorted([tile.value for tile in tiles])
-        if values[1] != values[0] + 1 or values[2] != values[1] + 1:
-            return False
-        
-        # 添加吃牌到玩家副露
-        player.hand.add_meld(tiles)
-        player.set_state(PlayerState.THINKING)
-        return True
+        Args:
+            player: 要吃牌的玩家
+            tiles: 吃牌组合(3张)
+            
+        Returns:
+            bool: 吃牌是否成功
+        """
+        # 使用 controller 的实现
+        return self.controller.handle_chi(player, tiles)
     
     def handle_pon(self, player: Player, tiles: List[Tile]) -> bool:
         """处理碰牌"""
@@ -352,6 +343,7 @@ class GameFlow:
         player.set_state(PlayerState.DISCARDING)
         
         # 检查其他玩家响应
+        self.check_other_players_win(player, tile)
         self.check_other_players_response(player, tile)
         return True
     
@@ -395,14 +387,15 @@ class GameFlow:
         
         return False
     
-    def check_other_players_win(self, discard_player: Player, tile: Tile) -> bool:
+    def check_other_players_win(self, discard_player: Player, tile: Tile) -> None:
         """检查其他玩家是否可以荣和"""
-        has_winner = False
         for player in self.game.table.players:
-            if player != discard_player and self._check_ron(player, tile):
-                player.set_state(PlayerState.WAITING_RON)
-                has_winner = True
-        return has_winner
+            if player != discard_player:
+                # 检查是否可以和牌
+                if player.hand.check_win(tile) and not self.check_furiten(player):
+                    player.set_state(PlayerState.WAITING_RON)
+                    # 可以添加事件通知
+                    self.game.events.emit("ron_available", player, tile)
     
     def handle_ron(self, player: Player, tile: Tile) -> bool:
         """处理荣和"""

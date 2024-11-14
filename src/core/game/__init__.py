@@ -8,6 +8,7 @@ from ..table import Table
 from .controller import GameController
 from .flow import GameFlow
 from ..player.state import PlayerState
+from ..events import EventEmitter
 
 class Game:
     def __init__(self):
@@ -17,6 +18,7 @@ class Game:
         self.config: Dict[str, Any] = {}
         self._load_config()
         self.flow = GameFlow(self)
+        self.events = EventEmitter()
         
     @property
     def players(self):

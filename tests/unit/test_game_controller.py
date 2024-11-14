@@ -61,7 +61,7 @@ def test_handle_discard():
     player.set_state(PlayerState.THINKING)
     
     # 添加测试用牌
-    tile = Tile(TileSuit.CHARACTERS, 1)
+    tile = Tile(TileSuit.MAN, 1)
     player.hand.add_tile(tile)
     
     # 测试打牌
@@ -99,10 +99,10 @@ def test_handle_kan():
     
     # 创建杠牌组
     tiles = [
-        Tile(TileSuit.CHARACTERS, 1),
-        Tile(TileSuit.CHARACTERS, 1),
-        Tile(TileSuit.CHARACTERS, 1),
-        Tile(TileSuit.CHARACTERS, 1)
+        Tile(TileSuit.MAN, 1),
+        Tile(TileSuit.MAN, 1),
+        Tile(TileSuit.MAN, 1),
+        Tile(TileSuit.MAN, 1)
     ]
     
     # 测试杠
@@ -184,7 +184,7 @@ def test_player_response():
     
     # 设置玩家手牌以测试碰
     player = table.players[1]  # 第二个玩家
-    tile = Tile(TileSuit.CHARACTERS, 1)
+    tile = Tile(TileSuit.MAN, 1)
     player.hand.add_tile(tile)
     player.hand.add_tile(tile)
     
@@ -199,17 +199,17 @@ def test_can_chi():
     player = Player("Test")
     
     # 添加手牌
-    player.hand.add_tile(Tile(TileSuit.CHARACTERS, 1))
-    player.hand.add_tile(Tile(TileSuit.CHARACTERS, 2))
+    player.hand.add_tile(Tile(TileSuit.MAN, 1))
+    player.hand.add_tile(Tile(TileSuit.MAN, 2))
     
     # 测试可以吃的情况
-    assert controller._can_chi(player, Tile(TileSuit.CHARACTERS, 3)) is True
+    assert controller._can_chi(player, Tile(TileSuit.MAN, 3)) is True
     
     # 测试不能吃的情况（字牌）
     assert controller._can_chi(player, Tile(TileSuit.HONOR, 1)) is False
     
     # 测试不能吃的情况（不连续的数字）
-    assert controller._can_chi(player, Tile(TileSuit.CHARACTERS, 5)) is False
+    assert controller._can_chi(player, Tile(TileSuit.MAN, 5)) is False
 
 def test_handle_chi():
     """测试吃牌处理"""
@@ -224,7 +224,22 @@ def test_handle_chi():
     
     # 创建吃牌组合
     tiles = [
-        Tile(TileSuit.CHARACTERS, 1),
-        Tile(TileSuit.CHARACTERS, 2),
-        Tile(TileSuit.CHARACTERS, 3)
+        Tile(TileSuit.MAN, 1),
+        Tile(TileSuit.MAN, 2),
+        Tile(TileSuit.MAN, 3)
     ]
+    
+    # 添加牌到玩家手牌
+    player.hand.add_tile(tiles[0])
+    player.hand.add_tile(tiles[1])
+    
+    # 测试吃牌
+    result = controller.handle_chi(player, tiles)
+    assert result is True, "吃牌处理失败"
+    assert len(player.hand.melds) == 1, "副露数量不正确"
+    assert player.state == PlayerState.THINKING, "玩家状态未正确更新"
+    
+    # 验证副露内容
+    meld = player.hand.melds[0]
+    assert len(meld) == 3, "副露牌数量不正确"
+    assert all(t1 == t2 for t1, t2 in zip(sorted(meld), sorted(tiles))), "副露牌内容不正确"

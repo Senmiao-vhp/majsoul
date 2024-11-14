@@ -5,6 +5,7 @@ from src.core.game.state import GameState
 from src.core.player.state import PlayerState
 from src.core.events import EventEmitter
 from enum import IntEnum
+from src.core.hand import Hand
 
 class ActionPriority(IntEnum):
     """玩家操作优先级"""
@@ -199,27 +200,58 @@ class GameController:
         return next_player
         
     def handle_chi(self, player: Player, tiles: List[Tile]) -> bool:
-        """处理吃牌"""
-        if not self.handle_player_action(player, ActionPriority.CHI):
-            return False
+        """处理吃牌
+        
+        Args:
+            player: 要吃牌的玩家
+            tiles: 吃牌组合(3张)
             
+        Returns:
+            bool: 吃牌是否成功
+        """
+        # 1. 检查游戏状态
+        if self.state != GameState.PLAYING:
+            self.logger.debug("Game not in PLAYING state")
+            return False
+        
+        # 2. 检查玩家状态
+        if player.state != PlayerState.WAITING_CHI:
+            self.logger.debug(f"Player not in WAITING_CHI state, current state: {player.state}")
+            return False
+        
+        # 3. 检查牌组是否合法
         if len(tiles) != 3:
+            self.logger.debug(f"Invalid tiles count: {len(tiles)}")
             return False
-            
-        # 检查是否是同一花色
-        suit = tiles[0].suit
-        if not all(tile.suit == suit for tile in tiles):
+        
+        # 4. 检查是否是顺子
+        sorted_tiles = sorted(tiles, key=lambda t: t.value)
+        if not (sorted_tiles[0].suit == sorted_tiles[1].suit == sorted_tiles[2].suit):
+            self.logger.debug("Tiles not in same suit")
             return False
-            
-        # 检查是否是连续的数字
-        values = sorted([tile.value for tile in tiles])
-        if values[1] != values[0] + 1 or values[2] != values[1] + 1:
+        
+        if not (sorted_tiles[0].value + 1 == sorted_tiles[1].value and 
+                sorted_tiles[1].value + 1 == sorted_tiles[2].value):
+            self.logger.debug("Tiles not in sequence")
             return False
-            
-        # 添加吃牌到玩家副露
+        
+        # 5. 检查玩家手牌中是否有对应的牌
+        player_tiles = player.hand.tiles
+        for tile in tiles[:-1]:  # 最后一张是其他玩家打出的牌
+            if tile not in player_tiles:
+                self.logger.debug(f"Player does not have tile: {tile}")
+                return False
+        # 6. 添加吃牌到玩家副露
+        for tile in tiles[:-1]:
+            player.hand.remove_tile(tile)
         player.hand.add_meld(tiles)
+        
+        # 7. 更新玩家状态
         player.set_state(PlayerState.THINKING)
+        
+        # 8. 发送事件
         self.events.emit("chi_declared", player, tiles)
+        
         return True
         
     def handle_pon(self, player: Player, tiles: List[Tile]) -> bool:
