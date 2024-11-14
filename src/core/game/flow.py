@@ -1,9 +1,10 @@
-from typing import Optional, List
+from typing import Optional, List, Dict
 from src.core.game.controller import ActionPriority
 from src.core.player import Player
 from src.core.player.state import PlayerState
 from src.core.game.state import GameState
 from src.core.tile import Tile, TileSuit
+from src.core.game.score import ScoreCalculator
 
 class GameFlow:
     """游戏流程控制类"""
@@ -30,16 +31,8 @@ class GameFlow:
             # 牌山摸完,进入流局
             self.game.set_state(GameState.FINISHED)
     
-    def end_turn(self, player: Player) -> None:
-        """结束玩家回合"""
-        if not player or self.game.get_state() != GameState.PLAYING:
-            return
-            
-        # 玩家回合结束,进入下一个玩家回合
-        self.game.next_turn()
-    
     def get_current_player(self) -> Optional[Player]:
-        """获取当前玩家"""
+        """获取当前玩"""
         return self.game.get_current_player() 
     
     def process_discard(self, player: Player, tile_index: int) -> None:
@@ -186,7 +179,7 @@ class GameFlow:
         if player.points < 1000:
             return False
         
-        # 扣除立直点数
+        # 除立直点数
         player.points -= 1000
         player.is_riichi = True
         return True
@@ -253,7 +246,7 @@ class GameFlow:
         return count >= 3
     
     def check_win(self, player: Player, tile: Optional[Tile] = None) -> bool:
-        """检查玩家是否和牌
+        """检查玩家是否和
         Args:
             player: 要检查的玩家
             tile: 要检查的牌(荣和时传入)
@@ -331,6 +324,15 @@ class GameFlow:
     
     def handle_discard(self, player: Player, tile: Tile) -> bool:
         """处理出牌"""
+        if player is None:
+            raise ValueError("Player cannot be None")
+        
+        if not isinstance(player, Player):
+            raise TypeError("player must be an instance of Player")
+        
+        if not isinstance(tile, Tile):
+            raise TypeError("tile must be an instance of Tile")
+        
         if player.state != PlayerState.THINKING:
             return False
         
@@ -424,3 +426,27 @@ class GameFlow:
         player.set_state(PlayerState.WIN)
         self.game.set_state(GameState.FINISHED)
         return True
+    
+    def handle_game_end(self) -> Dict[str, int]:
+        """处理终局结算"""
+        if self.game.get_state() != GameState.FINISHED:
+            return {}
+        
+        # 获取和牌玩家
+        winner = next((p for p in self.game.table.players if p.state == PlayerState.WIN), None)
+        
+        # 计算最终得分
+        is_dealer_win = winner == self.game.table.dealer if winner else False
+        final_scores = self.score_calculator.calculate_final_scores(
+            self.game.table.players,
+            is_dealer_win
+        )
+        
+        # 更新玩家点数
+        for player in self.game.table.players:
+            player.points = final_scores[player.name]
+        
+        # 发送终局事件
+        self.game.events.emit("game_end", final_scores)
+        
+        return final_scores

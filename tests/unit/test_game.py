@@ -1,6 +1,7 @@
 import pytest
 from src.core.game import Game
 from src.core.game.state import GameState
+from src.core.player.state import PlayerState
 
 def test_game_initialization():
     """测试Game类初始化"""
@@ -55,12 +56,13 @@ def test_handle_tile_click():
     game.start()
     game.set_state(GameState.PLAYING)
     
-    # 获取当前玩家
+    # 获取当前玩家并设置状态
     current_player = game.table.get_current_player()
+    current_player.set_state(PlayerState.THINKING)
     initial_tiles = len(current_player.hand.tiles)
     
     # 测试有效点击
-    game.handle_tile_click(0)
+    assert game.handle_tile_click(0) is True
     assert len(current_player.hand.tiles) == initial_tiles
     assert current_player.selected_tile_index == 0
     

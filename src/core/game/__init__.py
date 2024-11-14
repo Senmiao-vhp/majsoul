@@ -65,6 +65,14 @@ class Game:
                 player.set_points(initial_points)
                 self.table.add_player(player)
             
+            # 初始化牌山并发牌
+            self.table.wall.initialize()
+            for player in self.players:
+                for _ in range(13):  # 每个玩家发13张牌
+                    tile = self.table.wall.draw()
+                    if tile:
+                        player.hand.add_tile(tile)
+            
             return True
         except Exception as e:
             print(f"游戏初始化失败: {e}")
@@ -106,17 +114,19 @@ class Game:
             if next_player:
                 self.controller.process_turn(next_player)
         
-    def handle_tile_click(self, tile_index: int) -> None:
-        """处理牌的点击事件"""
-        if self.controller.state != GameState.PLAYING:
-            return
+    def handle_tile_click(self, index: int) -> bool:
+        """处理牌点击"""
+        if self.get_state() != GameState.PLAYING:
+            return False
         
         current_player = self.table.get_current_player()
-        if not current_player or tile_index >= len(current_player.hand.tiles):
-            return
+        if current_player is None or current_player.state != PlayerState.THINKING:
+            return False
         
-        # 先设置选中的牌
-        current_player.selected_tile_index = tile_index
+        if 0 <= index < len(current_player.hand.tiles):
+            current_player.selected_tile_index = index
+            return True
+        return False
         
-        # 然后处理打牌
-        self.flow.process_discard(current_player, tile_index)
+    def get_current_player(self) -> Optional[Player]:
+        return self.table.get_current_player()

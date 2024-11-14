@@ -1,4 +1,5 @@
 import pytest
+from src.core import tile
 from src.core.game import Game
 from src.core.game.flow import GameFlow
 from src.core.game.controller import ActionPriority
@@ -210,3 +211,26 @@ def test_ron_check():
     # 测试荣和
     flow.check_other_players_win(game.table.players[0], Tile(TileSuit.SOU, 1))
     assert player.state == PlayerState.WAITING_RON
+
+def test_player_action():
+    """测试玩家行动"""
+    game = Game()
+    flow = GameFlow(game)
+    
+    # 添加玩家
+    for i in range(4):
+        game.table.add_player(Player(f"Player_{i}"))
+    
+    # 设置游戏状态
+    game.set_state(GameState.PLAYING)
+    player = game.table.get_current_player()
+    
+    if player is None:
+        pytest.fail("Current player should not be None")
+        
+    # 设置玩家状态为思考中
+    player.set_state(PlayerState.THINKING)
+    
+    tile = Tile(TileSuit.MAN, 1)
+    player.hand.add_tile(tile)
+    assert flow.handle_discard(player, tile) is True

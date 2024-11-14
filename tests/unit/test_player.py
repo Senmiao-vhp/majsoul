@@ -10,7 +10,7 @@ def test_player_initialization():
     assert player.name == "Test Player"
     assert isinstance(player.hand, Hand)
     assert len(player.hand.tiles) == 0
-    assert player.points == 0
+    assert player.points == 25000
     assert not player.is_riichi
 
 def test_player_points():

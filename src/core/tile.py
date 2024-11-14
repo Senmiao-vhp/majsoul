@@ -42,3 +42,13 @@ class Tile:
         elif self.suit == TileSuit.HONOR:
             return self.value - 1 + 27
         return None
+        
+    def __eq__(self, other):
+        if not isinstance(other, Tile):
+            return NotImplemented
+        return self.value == other.value
+        
+    def __lt__(self, other):
+        if not isinstance(other, Tile):
+            return NotImplemented
+        return self.value < other.value

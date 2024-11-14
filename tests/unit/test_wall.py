@@ -5,7 +5,7 @@ from src.core.tile import TileSuit
 def test_wall_initialization():
     """测试牌墙初始化"""
     wall = Wall()
-    assert wall.get_remaining_count() == 136  # 总共136张牌
+    assert wall.remaining_count == 136  # 总共136张牌
     
     # 验证牌的分布
     suit_counts = {
@@ -17,24 +17,23 @@ def test_wall_initialization():
     
     for tile in wall.tiles:
         suit_counts[tile.suit] += 1
-        
-    # 每种数牌应该有36张
+    
     assert suit_counts[TileSuit.MAN] == 36
     assert suit_counts[TileSuit.PIN] == 36
     assert suit_counts[TileSuit.SOU] == 36
-    # 字牌应该有28张
     assert suit_counts[TileSuit.HONOR] == 28
 
 def test_wall_draw():
     """测试摸牌"""
     wall = Wall()
-    initial_count = wall.get_remaining_count()
+    initial_count = wall.remaining_count
     tile = wall.draw()
+    
     assert tile is not None
-    assert wall.get_remaining_count() == initial_count - 1
+    assert wall.remaining_count == initial_count - 1
     
     # 测试摸完所有牌
-    while wall.get_remaining_count() > 0:
+    while wall.remaining_count > 0:
         wall.draw()
     assert wall.draw() is None
 

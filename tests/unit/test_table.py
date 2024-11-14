@@ -51,7 +51,13 @@ def test_player_rotation():
         table.add_player(Player(f"Player_{i}"))
         
     first_player = table.get_current_player()
+    if first_player is None:
+        pytest.fail("First player should not be None")
+        
     next_player = table.next_player()
+    if next_player is None:
+        pytest.fail("Next player should not be None")
+        
     assert first_player != next_player
 
 def test_seat_assignment():
@@ -93,6 +99,7 @@ def test_incomplete_table():
         table.add_player(Player(f"Player_{i}"))
     
     assert table.start_round() is False
+    assert table.get_current_player() is None
 
 def test_table_round_management():
     """测试牌局管理"""
@@ -141,13 +148,14 @@ def test_wind_rotation():
     
     # 初始分配座位
     table.assign_seats()
-    initial_winds = table.wind_assignments.copy()
+    initial_winds = {player.name: table.get_player_wind(player) 
+                    for player in table.players}
     
     # 进行一次风位轮转
     table.rotate_winds()
     
     # 验证风位变化
     for player in table.players:
-        old_wind = initial_winds[player]
+        old_wind = initial_winds[player.name]
         new_wind = table.get_player_wind(player)
         assert old_wind != new_wind

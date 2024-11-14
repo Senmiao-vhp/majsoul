@@ -243,3 +243,23 @@ def test_handle_chi():
     meld = player.hand.melds[0]
     assert len(meld) == 3, "副露牌数量不正确"
     assert all(t1 == t2 for t1, t2 in zip(sorted(meld), sorted(tiles))), "副露牌内容不正确"
+
+def test_special_draw():
+    """测试特殊流局"""
+    table = Table()
+    controller = GameController(table)
+    
+    # 添加玩家
+    for i in range(4):
+        player = Player(f"Player_{i}")
+        table.add_player(player)
+        player.is_riichi = True  # 设置所有玩家立直
+    
+    # 设置游戏状态
+    controller.state = GameState.PLAYING
+    
+    # 测试四家立直流局
+    assert controller.check_special_draw() == 'four_riichi'
+    assert controller.handle_exhaustive_draw() is True
+    assert controller.state == GameState.FINISHED
+    assert controller.score_calculator.honba_sticks == 1

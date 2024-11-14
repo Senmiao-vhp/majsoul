@@ -3417,3 +3417,387 @@ TypeError: 'NoneType' object is not subscriptable
 2024-11-14 11:54:30,268 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
 2024-11-14 11:54:30,269 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
 2024-11-14 11:54:30,270 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:09:53,383 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:09:53,385 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:09:53,388 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:09:53,390 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:09:53,393 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:09:53,394 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:09:53,397 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:09:53,400 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:09:53,403 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:09:53,404 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:09:53,414 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:09:53,415 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:09:53,416 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:09:53,418 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:09:53,418 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:09:53,420 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:19:26,795 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:19:26,798 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:19:26,802 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:19:26,804 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:19:26,808 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:19:26,817 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:19:26,820 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:19:26,823 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:19:26,828 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:19:26,829 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:19:26,832 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:19:26,833 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:19:26,833 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:19:26,834 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:19:26,835 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:19:26,836 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:28:09,635 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:28:09,637 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:28:09,640 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:28:09,641 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:28:09,644 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:28:09,646 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:28:09,650 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:28:09,653 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:28:09,656 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:28:09,658 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:28:09,662 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:28:09,664 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:28:09,665 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:28:09,666 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:28:09,667 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:28:09,668 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:29:28,919 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:29:28,921 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:29:28,924 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:29:28,926 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:29:28,929 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:29:28,939 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:29:28,942 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:29:28,944 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:29:28,949 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:29:28,950 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:29:28,953 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:29:28,954 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:29:28,955 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:29:28,956 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:29:28,956 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:29:28,957 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:31:07,019 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:31:07,020 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:31:07,023 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:31:07,025 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:31:07,038 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:31:07,039 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:31:07,043 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:31:07,046 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:31:07,049 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:31:07,051 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:31:07,054 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:31:07,055 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:31:07,056 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:31:07,056 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:31:07,057 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:31:07,058 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:33:19,724 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:33:19,727 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:33:19,730 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:33:19,732 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:33:19,741 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:33:19,743 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:33:19,746 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:33:19,748 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:33:19,752 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:33:19,753 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:33:19,755 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:33:19,757 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:33:19,758 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:33:19,759 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:33:19,760 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:33:19,761 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:34:48,450 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:34:48,452 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:34:48,455 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:34:48,457 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:34:48,460 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:34:48,462 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:34:48,590 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:34:48,634 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:34:48,705 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:34:48,706 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:34:48,710 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:34:48,712 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:34:48,712 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:34:48,715 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:34:48,720 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:34:48,721 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:48:26,627 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:48:26,629 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:48:26,633 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:48:26,634 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:48:26,638 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:48:26,640 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:48:26,645 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:48:26,649 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:48:26,652 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:48:26,653 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:48:26,657 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:48:26,658 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:48:26,659 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:48:26,660 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:48:26,661 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:48:26,662 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:49:09,242 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:49:09,244 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:49:09,248 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:49:09,250 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:49:09,253 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:49:09,255 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:49:09,258 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:49:09,262 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:49:09,278 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:49:09,279 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:49:09,284 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:49:09,286 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:49:09,286 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:49:09,288 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:49:09,290 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:49:09,291 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:50:19,419 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:50:19,422 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:50:19,427 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:50:19,429 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:50:19,435 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:50:19,437 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:50:19,443 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:50:19,446 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:50:19,462 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:50:19,464 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:50:19,468 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:50:19,471 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:50:19,472 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:50:19,474 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:50:19,475 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:50:19,476 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:51:15,629 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:51:15,631 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:51:15,634 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:51:15,636 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:51:15,640 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:51:15,641 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:51:15,645 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:51:15,647 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:51:15,650 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:51:15,651 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:51:15,655 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:51:15,660 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:51:15,660 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:51:15,661 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:51:15,662 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:51:15,663 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:52:28,796 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:52:28,807 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:52:28,810 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:52:28,811 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:52:28,816 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:52:28,817 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:52:28,821 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:52:28,825 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:52:28,829 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:52:28,831 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:52:28,835 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:52:28,836 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:52:28,837 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:52:28,839 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:52:28,839 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:52:28,842 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:55:50,146 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:55:50,148 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:55:50,151 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:55:50,153 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:55:50,155 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:55:50,157 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:55:50,161 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:55:50,164 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:55:50,167 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:55:50,168 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:55:50,171 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:55:50,172 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:55:50,173 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:55:50,174 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:55:50,175 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:55:50,176 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 15:59:17,982 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:59:17,987 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 15:59:17,990 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:59:17,992 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 15:59:17,995 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:59:17,997 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 15:59:18,000 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:59:18,003 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 15:59:18,007 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:59:18,009 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 15:59:18,016 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:59:18,018 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 15:59:18,019 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:59:18,020 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 15:59:18,020 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 15:59:18,022 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 16:01:34,212 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:01:34,215 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 16:01:34,219 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:01:34,220 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 16:01:34,223 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:01:34,224 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 16:01:34,227 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:01:34,230 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 16:01:34,233 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:01:34,244 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 16:01:34,247 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:01:34,248 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 16:01:34,249 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:01:34,250 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 16:01:34,251 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:01:34,252 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 16:16:26,637 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:16:26,639 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 16:16:26,642 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:16:26,644 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 16:16:26,647 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:16:26,649 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 16:16:26,654 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:16:26,658 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 16:16:26,661 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:16:26,663 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 16:16:26,665 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:16:26,667 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 16:16:26,668 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:16:26,669 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 16:16:26,670 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:16:26,671 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 16:17:00,211 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:17:00,212 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 16:17:00,215 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:17:00,216 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 16:17:00,218 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:17:00,220 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 16:17:00,222 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:17:00,224 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 16:17:00,227 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:17:00,228 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 16:17:00,232 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:17:00,234 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 16:17:00,235 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:17:00,236 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 16:17:00,237 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 16:17:00,238 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 17:26:01,947 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:26:01,950 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 17:26:01,953 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:26:01,955 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 17:26:01,958 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:26:01,959 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 17:26:01,964 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:26:01,968 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 17:26:01,973 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:26:01,974 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 17:26:01,977 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:26:01,979 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 17:26:01,980 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:26:01,991 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 17:26:01,992 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:26:01,993 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 17:28:40,704 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:28:40,706 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 17:28:40,709 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:28:40,710 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 17:28:40,713 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:28:40,714 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 17:28:40,718 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:28:40,722 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 17:28:40,726 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:28:40,727 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 17:28:40,729 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:28:40,731 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 17:28:40,731 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:28:40,733 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 17:28:40,734 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:28:40,735 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 17:29:11,709 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:29:11,710 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 17:29:11,713 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:29:11,715 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 17:29:11,719 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:29:11,721 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 17:29:11,725 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:29:11,729 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 17:29:11,733 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:29:11,734 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 17:29:11,739 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:29:11,741 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 17:29:11,742 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:29:11,743 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 17:29:11,744 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:29:11,745 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 17:30:19,530 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:30:19,532 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 17:30:19,536 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:30:19,538 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 17:30:19,541 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:30:19,543 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 17:30:19,546 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:30:19,548 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 17:30:19,552 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:30:19,554 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 17:30:19,557 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:30:19,559 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 17:30:19,560 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:30:19,561 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 17:30:19,562 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:30:19,563 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 17:31:17,583 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:31:17,585 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 17:31:17,589 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:31:17,590 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 17:31:17,593 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:31:17,595 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 17:31:17,599 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:31:17,602 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 17:31:17,606 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:31:17,620 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 17:31:17,624 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:31:17,626 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 17:31:17,627 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:31:17,629 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 17:31:17,630 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:31:17,631 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 17:32:54,578 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:32:54,580 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 17:32:54,583 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:32:54,584 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 17:32:54,588 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:32:54,589 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 17:32:54,593 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:32:54,604 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 17:32:54,607 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:32:54,608 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 17:32:54,611 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:32:54,612 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 17:32:54,613 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:32:54,614 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 17:32:54,614 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:32:54,615 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 17:34:51,550 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:34:51,553 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 17:34:51,557 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:34:51,558 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 17:34:51,561 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:34:51,562 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 17:34:51,565 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:34:51,567 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 17:34:51,571 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:34:51,578 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 17:34:51,582 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:34:51,583 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 17:34:51,584 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:34:51,585 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 17:34:51,586 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 17:34:51,587 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
