@@ -7,6 +7,7 @@ from src.core.game.state import GameState
 from src.core.player import Player
 from src.core.player.state import PlayerState
 from src.core.tile import Tile, TileSuit
+from src.core.yaku.judger import YakuJudger
 
 def test_action_priority():
     """测试操作优先级"""
@@ -234,3 +235,134 @@ def test_player_action():
     tile = Tile(TileSuit.MAN, 1)
     player.hand.add_tile(tile)
     assert flow.handle_discard(player, tile) is True
+
+def test_win_with_riichi():
+    """测试立直和牌"""
+    game = Game()
+    flow = GameFlow(game)
+    game.set_state(GameState.PLAYING)
+    
+    # 添加玩家
+    for i in range(4):
+        game.table.add_player(Player(f"Player_{i}"))
+    
+    # 设置玩家立直状态和手牌
+    player = game.table.players[0]
+    player.is_riichi = True
+    player.set_state(PlayerState.THINKING)
+    
+    # 设置一个和牌型
+    tiles = [        
+        Tile(TileSuit.SOU, 2), Tile(TileSuit.SOU, 3),
+        Tile(TileSuit.SOU, 4), Tile(TileSuit.SOU, 5),
+        Tile(TileSuit.SOU, 6), Tile(TileSuit.SOU, 7),
+        Tile(TileSuit.SOU, 8), Tile(TileSuit.SOU, 9),
+        Tile(TileSuit.MAN, 1), Tile(TileSuit.MAN, 1),
+        Tile(TileSuit.MAN, 1), Tile(TileSuit.PIN, 1),
+        Tile(TileSuit.PIN, 1)
+    ]
+    for tile in tiles:
+        player.hand.add_tile(tile)
+        
+    # 添加自摸牌
+    winning_tile = Tile(TileSuit.SOU, 1)
+    player.hand.add_tile(winning_tile)
+    
+    # 记录初始里宝牌数量
+    initial_uradora_count = len(game.table.wall.uradora_indicators)
+    
+    # 测试自摸和牌
+    assert flow.handle_win(player)
+    assert len(game.table.wall.uradora_indicators) == initial_uradora_count + 1
+    assert game.get_state() == GameState.FINISHED
+
+def test_win_handling():
+    """测试和牌处理"""
+    game = Game()
+    flow = GameFlow(game)
+    game.set_state(GameState.PLAYING)  # 设置游戏状态
+    
+    # 添加玩家
+    for i in range(4):
+        game.table.add_player(Player(f"Player_{i}"))
+    
+    # 设置玩家状态和手牌
+    player = game.table.players[0]
+    player.is_riichi = True
+    player.set_state(PlayerState.THINKING)
+    
+    # 设置完整的七对子和牌型（14张）
+    tiles = [
+        Tile(TileSuit.MAN, 1), Tile(TileSuit.MAN, 1),
+        Tile(TileSuit.MAN, 2), Tile(TileSuit.MAN, 2),
+        Tile(TileSuit.MAN, 3), Tile(TileSuit.MAN, 3),
+        Tile(TileSuit.MAN, 4), Tile(TileSuit.MAN, 4),
+        Tile(TileSuit.MAN, 5), Tile(TileSuit.MAN, 5),
+        Tile(TileSuit.MAN, 6), Tile(TileSuit.MAN, 6),
+        Tile(TileSuit.MAN, 7), Tile(TileSuit.MAN, 7)
+    ]
+    for tile in tiles:
+        player.hand.add_tile(tile)
+    
+    # 记录初始里宝牌数量
+    initial_uradora_count = len(game.table.wall.uradora_indicators)
+    
+    # 测试自摸和牌
+    assert flow.handle_win(player)
+    assert len(game.table.wall.uradora_indicators) == initial_uradora_count + 1
+    assert game.get_state() == GameState.FINISHED
+    assert player.state == PlayerState.WIN
+
+def test_win_score_calculation():
+    """测试和牌点数计算"""
+    game = Game()
+    flow = GameFlow(game)
+    game.set_state(GameState.PLAYING)
+
+    judger = YakuJudger()
+    # 添加玩家
+    for i in range(4):
+        player = Player(f"Player_{i}")
+        player.points = 25000
+        game.table.add_player(player)
+    
+    # 设置庄家
+    dealer = game.table.players[0]
+    game.table.dealer = dealer
+    
+    # 设置自摸玩家
+    winner = game.table.players[1]
+    winner.set_state(PlayerState.THINKING)
+    
+    # 设置和牌型
+    tiles = [
+        Tile(TileSuit.MAN, 1), Tile(TileSuit.MAN, 1),
+        Tile(TileSuit.MAN, 2), Tile(TileSuit.MAN, 2),
+        Tile(TileSuit.MAN, 3), Tile(TileSuit.MAN, 3),
+        Tile(TileSuit.MAN, 4), Tile(TileSuit.MAN, 4),
+        Tile(TileSuit.MAN, 5), Tile(TileSuit.MAN, 5),
+        Tile(TileSuit.MAN, 6), Tile(TileSuit.MAN, 6),
+        Tile(TileSuit.MAN, 7), Tile(TileSuit.MAN, 7)
+    ]
+    for tile in tiles:
+        winner.hand.add_tile(tile)
+    
+    # 添加自摸牌
+    win_tile = Tile(TileSuit.MAN, 7)
+    result = judger.judge(tiles=tiles, win_tile=win_tile)
+    
+    # 记录初始点数
+    initial_points = {p.name: p.points for p in game.table.players}
+    
+    # 测试自摸和牌
+    assert flow.handle_win(winner)
+    
+    # 验证点数变化
+    assert winner.points > initial_points[winner.name]  # 赢家点数增加
+    assert dealer.points < initial_points[dealer.name]  # 庄家点数减少
+    assert game.table.players[2].points < initial_points["Player_2"]  # 闲家点数减少
+    assert game.table.players[3].points < initial_points["Player_3"]  # 闲家点数减少
+    
+    # 验证游戏状态
+    assert game.get_state() == GameState.FINISHED
+    assert winner.state == PlayerState.WIN

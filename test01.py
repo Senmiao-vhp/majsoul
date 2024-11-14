@@ -3,10 +3,23 @@ from mahjong.tile import TilesConverter
 from mahjong.hand_calculating.hand_config import HandConfig
 from mahjong.meld import Meld
 
-# 门清
+#示例
+'''calculator = HandCalculator()
+tiles = TilesConverter.string_to_136_array(man='22444', pin='333567', sou='444')
+in_tile = TilesConverter.string_to_136_array(sou='4')[0]
+print(tiles)
+print(win_tile)
+
+result = calculator.estimate_hand_value(tiles, win_tile)
+print(result.han, result.fu)
+print(result.cost['main'])
+print(result.yaku)
+for fu_item in result.fu_details:
+    print(fu_item)'''
+
 calculator = HandCalculator()
-tiles = TilesConverter.string_to_136_array(man='22345', pin='333678', sou='456')
-win_tile = TilesConverter.string_to_136_array(pin='8')[0]
+tiles = TilesConverter.string_to_136_array(man='11223344556677')
+win_tile = TilesConverter.string_to_136_array(man='7')[0]
 print(tiles)
 print(win_tile)
 result = calculator.estimate_hand_value(tiles, win_tile)

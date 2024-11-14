@@ -53,6 +53,7 @@ class YakuJudger:
         """
         try:
             self.logger.info(f"开始判定役种: 手牌数={len(tiles)}, 副露数={len(melds) if melds else 0}")
+            self.logger.debug(f"手牌详情: {[str(t) for t in tiles]}")
             
             # 1. 将手牌Tile对象转换为字符串格式
             man, pin, sou, honors = '', '', '', ''
@@ -66,10 +67,12 @@ class YakuJudger:
                 elif tile.suit == TileSuit.HONOR:
                     honors += str(tile.value)
             
+            self.logger.debug(f"转换后的手牌字符串: man={man}, pin={pin}, sou={sou}, honors={honors}")
+            
             # 2. 按照万筒索字的顺序转换手牌为136格式
             tiles_136 = []
             # 万子
-            if man:
+            if man:            
                 tiles_136.extend(sorted(TilesConverter.string_to_136_array(man=man)))
             # 筒子
             if pin:

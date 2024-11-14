@@ -39,11 +39,21 @@ class Table:
         self.dealer_index = (self.dealer_index + 1) % len(self.players)
         self.current_player_index = self.dealer_index
         
-    def get_dealer(self) -> Optional[Player]:
-        """获取庄家"""
+    @property
+    def dealer(self) -> Optional[Player]:
+        """获取当前庄家"""
         if not self.players:
             return None
         return self.players[self.dealer_index]
+    
+    @dealer.setter
+    def dealer(self, player: Player):
+        """设置庄家
+        Args:
+            player: 要设置为庄家的玩家
+        """
+        if player in self.players:
+            self.dealer_index = self.players.index(player)
         
     def get_current_player(self) -> Optional[Player]:
         """获取当前玩家"""
@@ -115,3 +125,7 @@ class Table:
                 else:
                     return False
         return True
+
+    def next_dealer(self):
+        """移交庄家"""
+        self.dealer_index = (self.dealer_index + 1) % len(self.players)

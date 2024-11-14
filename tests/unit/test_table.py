@@ -25,12 +25,12 @@ def test_table_initialization():
 def test_wall_operations():
     """测试牌山操作"""
     table = Table()
-    assert table.wall.get_remaining_count() == 136  # 初始136张牌
+    assert table.wall.get_remaining_count() == 122
     
     # 测试发牌
     tile = table.wall.draw()
     assert tile is not None
-    assert table.wall.get_remaining_count() == 135
+    assert table.wall.get_remaining_count() == 121
 
 def test_add_player():
     """测试添加玩家"""

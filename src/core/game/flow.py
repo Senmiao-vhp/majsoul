@@ -5,6 +5,7 @@ from src.core.player.state import PlayerState
 from src.core.game.state import GameState
 from src.core.tile import Tile, TileSuit
 from src.core.game.score import ScoreCalculator
+from src.core.yaku.judger import YakuJudger
 
 class GameFlow:
     """游戏流程控制类"""
@@ -16,6 +17,8 @@ class GameFlow:
             raise TypeError("game must be an instance of Game")
         self.game = game
         self.controller = game.controller
+        self.score_calculator = ScoreCalculator()
+        self.yaku_judger = YakuJudger()
         
     def start_turn(self, player: Player) -> None:
         """开始玩家回合"""
@@ -159,6 +162,11 @@ class GameFlow:
         # 添加杠到玩副露
         player.hand.add_meld(tiles)
         player.set_state(PlayerState.THINKING)
+        
+        # 翻开新的宝牌指示牌
+        if len(self.game.table.wall.dora_indicators) < 5:  # 最多5个宝牌指示牌
+            self.game.table.wall.add_dora_indicator()
+        
         return True
     
     def is_next_player(self, current: Player, target: Player) -> bool:
@@ -450,3 +458,69 @@ class GameFlow:
         self.game.events.emit("game_end", final_scores)
         
         return final_scores
+    
+    def handle_win(self, player: Player, tile: Optional[Tile] = None) -> bool:
+        """处理和牌
+        Args:
+            player: 和牌的玩家
+            tile: 和牌的牌，如果是自摸则为None
+        Returns:
+            bool: 是否和牌成功
+        """
+        if self.game.get_state() != GameState.PLAYING:
+            return False
+        
+        # 检查是否可以和牌
+        if tile:  # 荣和
+            if not self._check_ron(player, tile):
+                return False
+            win_tile = tile
+        else:  # 自摸
+            if not self._check_tsumo(player):
+                return False
+            win_tile = player.hand.tiles[-1]  # 使用最后一张牌作为和牌
+        
+        # 如果是立直玩家，翻开里宝牌
+        if player.is_riichi:
+            self.game.table.wall.reveal_uradora()
+        
+        # 计算得分
+        is_dealer = player == self.game.table.dealer
+        result = self.yaku_judger.judge(
+            tiles=player.hand.tiles,
+            win_tile=win_tile,  # 使用确定的和牌
+            is_tsumo=tile is None,
+            is_riichi=player.is_riichi
+        )
+        
+        scores = self.score_calculator.calculate_win_score(
+            base_score=result['score'],
+            is_dealer=is_dealer,
+            is_tsumo=tile is None
+        )
+        
+        # 处理连庄
+        if is_dealer:
+            self.score_calculator.handle_dealer_win()
+        else:
+            self.score_calculator.handle_dealer_lose()
+            self.game.table.next_dealer()  # 移交庄家
+        
+        # 执行点数移动
+        if tile:  # 荣和
+            discarder = next(p for p in self.game.table.players if p.last_discard == tile)
+            discarder.points -= scores['total']
+            player.points += scores['total']
+        else:  # 自摸
+            for other in self.game.table.players:
+                if other != player:
+                    if other == self.game.table.dealer:
+                        other.points -= scores['dealer']
+                    else:
+                        other.points -= scores['child']
+            player.points += sum(scores.values())
+        
+        # 设置和牌状态
+        player.set_state(PlayerState.WIN)
+        self.game.set_state(GameState.FINISHED)
+        return True
