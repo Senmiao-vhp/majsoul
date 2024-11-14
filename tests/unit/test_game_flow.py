@@ -366,3 +366,29 @@ def test_win_score_calculation():
     # 验证游戏状态
     assert game.get_state() == GameState.FINISHED
     assert winner.state == PlayerState.WIN
+
+def test_furiten():
+    """测试振听判定"""
+    game = Game()
+    flow = GameFlow(game)
+    player = Player("Test")
+    game.table.add_player(player)
+    
+    # 设置听牌状态
+    tiles = [
+        Tile(TileSuit.MAN, 1), Tile(TileSuit.MAN, 1),
+        Tile(TileSuit.MAN, 2), Tile(TileSuit.MAN, 3),
+        Tile(TileSuit.PIN, 2), Tile(TileSuit.PIN, 3), 
+        Tile(TileSuit.PIN, 4), Tile(TileSuit.SOU, 2),
+        Tile(TileSuit.SOU, 3), Tile(TileSuit.SOU, 4),
+        Tile(TileSuit.HONOR, 1), Tile(TileSuit.HONOR, 1)
+    ]
+    for tile in tiles:
+        player.hand.add_tile(tile)
+    
+    # 打出一张听牌
+    discard = Tile(TileSuit.MAN, 4)
+    player.add_discard(discard)
+    
+    # 测试振听判定
+    assert flow._is_furiten(player, discard)

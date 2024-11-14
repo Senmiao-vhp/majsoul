@@ -69,18 +69,18 @@ def test_add_dora_indicator():
     wall = Wall()
     
     # 测试初始状态
-    assert len(wall.dora_indicators) == 1
+    assert len(wall.dora_manager.dora_indicators) == 1
     
     # 测试翻开新宝牌
     for _ in range(4):  # 再翻4张，总共5张
         wall.add_dora_indicator()
     
     # 验证最终状态
-    assert len(wall.dora_indicators) == 5
+    assert len(wall.dora_manager.dora_indicators) == 5
     
     # 测试超出限制
     wall.add_dora_indicator()  # 尝试再翻一张
-    assert len(wall.dora_indicators) == 5  # 仍然是5张
+    assert len(wall.dora_manager.dora_indicators) == 5  # 仍然是5张
 
 def test_kan_dora():
     """测试杠宝牌"""

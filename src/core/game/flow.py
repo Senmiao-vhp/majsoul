@@ -35,7 +35,7 @@ class GameFlow:
             self.game.set_state(GameState.FINISHED)
     
     def get_current_player(self) -> Optional[Player]:
-        """获取当前玩"""
+        """获取当前玩家"""
         return self.game.get_current_player() 
     
     def process_discard(self, player: Player, tile_index: int) -> None:
@@ -284,6 +284,10 @@ class GameFlow:
         Returns:
             bool: 是否可以荣和
         """
+        # 检查振听
+        if self._is_furiten(player, tile):
+            return False
+            
         # 检查是否可以和牌
         if player.hand.check_win(tile):
             return True
@@ -293,12 +297,32 @@ class GameFlow:
         """检查是否可以自摸"""
         return player.hand.check_win()
     
-    def _is_furiten(self, player: Player, tile: Tile) -> bool:
-        """检查是否振听"""
-        # 检查最近一巡的打牌记录
-        for discard in player.discards[-4:]:
-            if discard == tile:
-                return True
+    def _is_furiten(self, player: Player, tile: Optional[Tile] = None) -> bool:
+        """检查是否振听
+        Args:
+            player: 要检查的玩家
+            tile: 当前打出的牌(可选)
+        """
+        # 获取听牌列表
+        waiting_tiles = player.hand.check_tenpai()
+        
+        # 没有听牌则不是振听
+        if not waiting_tiles:
+            return False
+            
+        # 检查全局振听
+        if player.furiten.is_furiten:
+            return True
+            
+        # 检查立直振听
+        if player.is_riichi and player.furiten.is_riichi_furiten:
+            return True
+            
+        # 检查同巡振听
+        if tile and tile in waiting_tiles:
+            player.furiten.is_temporary_furiten = True
+            return True
+            
         return False
     
     def _clear_waiting_players(self, except_player: Optional[Player] = None) -> None:

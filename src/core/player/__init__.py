@@ -4,6 +4,7 @@ from ..hand import Hand
 from .state import PlayerState
 from dataclasses import dataclass
 from ..common.wind import Wind
+from src.core.player.furiten import FuritenState
 
 @dataclass
 class Player:
@@ -22,6 +23,7 @@ class Player:
         self.points = 25000
         self.seat_wind = None
         self.selected_tile_index = -1  # 初始化为-1表示未选中
+        self.furiten = FuritenState()
         
     def set_points(self, points: int) -> None:
         """设置分数"""
@@ -55,6 +57,12 @@ class Player:
         tile = self.hand.discard_tile(index)
         if tile:
             self.discards.append(tile)
+            self.furiten.current_turn_tiles.append(tile)
+            
+            # 检查振听
+            if self.hand.waiting_tiles:
+                self.furiten.check_furiten(self.hand.waiting_tiles, self.discards)
+        
         return tile
         
     def __hash__(self) -> int:
@@ -71,3 +79,16 @@ class Player:
         """处理牌的点击"""
         if 0 <= index < len(self.hand.tiles):
             self.selected_tile_index = index
+        
+    def add_discard(self, tile: Tile):
+        """添加打出的牌"""
+        self.discards.append(tile)
+        self.furiten.current_turn_tiles.append(tile)
+        
+        # 检查振听
+        if self.hand.waiting_tiles:
+            self.furiten.check_furiten(self.hand.waiting_tiles, self.discards)
+            
+    def clear_turn(self):
+        """清除当前巡状态"""
+        self.furiten.clear_temporary_furiten()

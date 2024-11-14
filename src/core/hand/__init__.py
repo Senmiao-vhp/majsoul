@@ -65,14 +65,6 @@ class Hand:
         if tile:
             test_tiles.append(tile)
             
-        # 检查国士无双
-        if len(test_tiles) == 13 and self._check_thirteen_orphans(test_tiles):
-            return True
-            
-        # 检查七对子
-        if len(test_tiles) == 14 and self._check_seven_pairs(test_tiles):
-            return True
-            
         # 检查普通和牌型
         if len(test_tiles) == 14:
             tiles_34 = self._convert_tiles_to_34_array(test_tiles)
@@ -130,38 +122,8 @@ class Hand:
         
         self.logger.debug(f"听牌检查完成，进张数: {len(waiting_tiles)}")
         return waiting_tiles
-        
-    def _check_thirteen_orphans(self, tiles: List[Tile]) -> bool:
-        """检查国士无双"""
-        if len(tiles) != 13:
-            return False
-            
-        # 幺九牌和字牌列表
-        required_tiles = [
-            (TileSuit.MAN, 1), (TileSuit.MAN, 9),
-            (TileSuit.PIN, 1), (TileSuit.PIN, 9),
-            (TileSuit.SOU, 1), (TileSuit.SOU, 9),
-            (TileSuit.HONOR, 1), (TileSuit.HONOR, 2),
-            (TileSuit.HONOR, 3), (TileSuit.HONOR, 4),
-            (TileSuit.HONOR, 5), (TileSuit.HONOR, 6),
-            (TileSuit.HONOR, 7)
-        ]
-        
-        # 检查每种幺九牌是否都存在
-        for suit, value in required_tiles:
-            if not any(t.suit == suit and t.value == value for t in tiles):
-                return False
-                
-        return True
-        
-    def _check_seven_pairs(self, tiles: List[Tile]) -> bool:
-        """检查七对子"""
-        if len(tiles) != 14:
-            return False
-            
-        counter = Counter(tiles)
-        return all(count == 2 for count in counter.values()) and len(counter) == 7
-        
+    
+
     def check_yaku(self, win_tile: Tile, is_tsumo: bool = False) -> Dict:
         """检查和牌役种
         
@@ -178,6 +140,8 @@ class Hand:
             melds=self.melds,
             win_tile=win_tile,
             is_tsumo=is_tsumo,
-            is_riichi=self.player.is_riichi if self.player else False
+            is_riichi=self.player.is_riichi if self.player else False,
+            dora_tiles=self.player.game.table.wall.dora_manager.get_dora_tiles() if self.player and self.player.game else None,
+            uradora_tiles=self.player.game.table.wall.dora_manager.get_uradora_tiles() if self.player and self.player.game else None
         )
         return result if result is not None else {}  # 如果没有役种返回空字典

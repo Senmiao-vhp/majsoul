@@ -38,7 +38,8 @@ class YakuJudger:
 
     def judge(self, tiles: List[Tile], melds: Optional[List[List[Tile]]] = None, 
              win_tile: Optional[Tile] = None, is_tsumo: bool = False, 
-             is_riichi: bool = False) -> Dict:
+             is_riichi: bool = False, dora_tiles: List[Tile] = None, 
+             uradora_tiles: List[Tile] = None) -> Dict:
         """判断和牌役种
         
         Args:
@@ -47,6 +48,8 @@ class YakuJudger:
             win_tile: 和牌张
             is_tsumo: 是否自摸
             is_riichi: 是否立直
+            dora_tiles: 表宝牌列表
+            uradora_tiles: 里宝牌列表
             
         Returns:
             Dict: 役种信息，包含 yaku(役种列表)、han(番数)、fu(符数)、score(点数)
@@ -131,23 +134,51 @@ class YakuJudger:
                     elif len(meld_tiles) == 4:  # 四张相同的牌
                         melds_136.append(Meld(meld_type=Meld.KAN, tiles=meld_tiles))
             
-            # 5. 设置规则配置
+            # 转换宝牌为136格式
+            dora_136 = []
+            if dora_tiles:
+                for dora in dora_tiles:
+                    if dora.suit == TileSuit.MAN:
+                        dora_136.extend(TilesConverter.string_to_136_array(man=str(dora.value)))
+                    elif dora.suit == TileSuit.PIN:
+                        dora_136.extend(TilesConverter.string_to_136_array(pin=str(dora.value)))
+                    elif dora.suit == TileSuit.SOU:
+                        dora_136.extend(TilesConverter.string_to_136_array(sou=str(dora.value)))
+                    elif dora.suit == TileSuit.HONOR:
+                        dora_136.extend(TilesConverter.string_to_136_array(honors=str(dora.value)))
+            
+            # 转换里宝牌为136格式
+            uradora_136 = []
+            if is_riichi and uradora_tiles:
+                for uradora in uradora_tiles:
+                    if uradora.suit == TileSuit.MAN:
+                        uradora_136.extend(TilesConverter.string_to_136_array(man=str(uradora.value)))
+                    elif uradora.suit == TileSuit.PIN:
+                        uradora_136.extend(TilesConverter.string_to_136_array(pin=str(uradora.value)))
+                    elif uradora.suit == TileSuit.SOU:
+                        uradora_136.extend(TilesConverter.string_to_136_array(sou=str(uradora.value)))
+                    elif uradora.suit == TileSuit.HONOR:
+                        uradora_136.extend(TilesConverter.string_to_136_array(honors=str(uradora.value)))
+            
+            # 设置规则配置
             config = HandConfig(
                 is_tsumo=is_tsumo,
                 is_riichi=is_riichi,
                 options=OptionalRules(
-                    has_open_tanyao=True,  # 允许副露断幺
-                    has_aka_dora=True,     # 允许赤宝牌
-                )
+                    has_open_tanyao=True,
+                    has_aka_dora=True,
+                ),
+                
             )
             
-            # 6. 计算役种
-            calculator = HandCalculator()
-            result = calculator.estimate_hand_value(
+            # 计算役种
+            result = self.calculator.estimate_hand_value(
                 tiles=tiles_136,
                 win_tile=win_tile_136,
                 melds=melds_136,
-                config=config
+                config=config,
+                dora_indicators=dora_136 if dora_136 else None,
+                #TODO uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
             )
             
             # 7. 返回结果时转换役种名称

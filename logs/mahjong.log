@@ -4548,3 +4548,949 @@ TypeError: 'NoneType' object is not subscriptable
 2024-11-14 20:00:50,967 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
 2024-11-14 20:00:50,967 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
 2024-11-14 20:00:50,968 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 21:41:29,677 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:41:29,678 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-14 21:41:29,678 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-14 21:41:29,680 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-14 21:41:29,685 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:41:29,686 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:41:29,686 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:41:29,843 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-14 21:41:29,848 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:41:29,849 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:41:29,849 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:41:30,018 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-14 21:41:30,018 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:41:30,028 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:41:30,028 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:41:30,198 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-14 21:41:34,000 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:41:34,001 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-14 21:41:34,002 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-14 21:41:34,003 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 21:41:34,007 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:41:34,008 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-14 21:41:34,008 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-14 21:41:34,009 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 21:41:34,013 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:41:34,013 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-14 21:41:34,014 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-14 21:41:34,014 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 21:41:34,018 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:41:34,019 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-14 21:41:34,019 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-14 21:41:34,022 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 21:41:34,026 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:41:34,028 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-14 21:41:34,028 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-14 21:41:34,029 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 21:41:34,032 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:41:34,033 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:41:34,033 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:41:34,034 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 21:41:34,035 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:41:34,035 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:41:34,035 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:41:34,036 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 21:41:34,037 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:41:34,038 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:41:34,038 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:41:34,039 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 21:42:58,616 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:42:58,618 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-14 21:42:58,619 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-14 21:42:58,622 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-14 21:42:58,627 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:42:58,628 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:42:58,628 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:42:58,793 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-14 21:42:58,798 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:42:58,798 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:42:58,799 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:42:58,984 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-14 21:42:58,984 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:42:58,985 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:42:58,985 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:42:59,165 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-14 21:43:02,892 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:43:02,893 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-14 21:43:02,893 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-14 21:43:02,894 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 21:43:02,898 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:43:02,899 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-14 21:43:02,900 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-14 21:43:02,900 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 21:43:02,904 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:43:02,905 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-14 21:43:02,905 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-14 21:43:02,906 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 21:43:02,909 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:43:02,910 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-14 21:43:02,910 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-14 21:43:02,912 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 21:43:02,916 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:43:02,917 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-14 21:43:02,918 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-14 21:43:02,918 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 21:43:02,922 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:43:02,923 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:43:02,923 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:43:02,924 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 21:43:02,925 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:43:02,925 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:43:02,925 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:43:02,926 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 21:43:02,927 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:43:02,927 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:43:02,927 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:43:02,928 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 21:44:31,177 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:44:31,178 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-14 21:44:31,178 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-14 21:44:31,180 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-14 21:44:31,184 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:44:31,186 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:44:31,186 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:44:31,344 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-14 21:44:31,350 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:44:31,351 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:44:31,351 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:44:31,504 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-14 21:44:31,505 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:44:31,513 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:44:31,513 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:44:31,666 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-14 21:44:34,174 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:44:34,175 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-14 21:44:34,175 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-14 21:44:34,176 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 21:44:34,179 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:44:34,180 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-14 21:44:34,180 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-14 21:44:34,181 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 21:44:34,185 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:44:34,186 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-14 21:44:34,186 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-14 21:44:34,187 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 21:44:34,190 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:44:34,192 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-14 21:44:34,192 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-14 21:44:34,194 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 21:44:34,196 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:44:34,197 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-14 21:44:34,197 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-14 21:44:34,198 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 21:44:34,202 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:44:34,202 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:44:34,202 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:44:34,203 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 21:44:34,204 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:44:34,204 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:44:34,204 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:44:34,205 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 21:44:34,206 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:44:34,207 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:44:34,207 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:44:34,208 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 21:44:34,211 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=13, 副露数=0
+2024-11-14 21:44:34,212 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2']
+2024-11-14 21:44:34,212 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1123422, pin=234, sou=234, honors=
+2024-11-14 21:44:34,213 - src.core.yaku.judger - INFO - 未找到任何役种
+2024-11-14 21:46:43,004 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:46:43,005 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-14 21:46:43,006 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-14 21:46:43,010 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-14 21:46:43,014 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:46:43,015 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:46:43,016 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:46:43,175 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-14 21:46:43,179 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:46:43,179 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:46:43,180 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:46:43,335 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-14 21:46:43,336 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:46:43,337 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:46:43,337 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:46:43,489 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-14 21:46:47,278 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:46:47,280 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-14 21:46:47,280 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-14 21:46:47,282 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 21:46:47,287 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:46:47,288 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-14 21:46:47,289 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-14 21:46:47,291 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 21:46:47,296 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:46:47,298 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-14 21:46:47,298 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-14 21:46:47,299 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 21:46:47,304 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:46:47,305 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-14 21:46:47,306 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-14 21:46:47,308 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 21:46:47,313 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:46:47,314 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-14 21:46:47,314 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-14 21:46:47,315 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 21:46:47,319 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:46:47,321 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:46:47,321 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:46:47,322 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 21:46:47,323 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:46:47,324 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:46:47,324 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:46:47,326 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 21:46:47,326 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:46:47,327 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:46:47,327 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:46:47,328 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 21:46:47,332 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=12, 副露数=0
+2024-11-14 21:46:47,333 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2']
+2024-11-14 21:46:47,333 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=112342, pin=234, sou=234, honors=
+2024-11-14 21:46:47,333 - src.core.yaku.judger - INFO - 未找到任何役种
+2024-11-14 21:54:24,549 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:54:24,550 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-14 21:54:24,550 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-14 21:54:24,553 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-14 21:54:24,558 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:54:24,560 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:54:24,561 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:54:24,717 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-14 21:54:24,722 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:54:24,723 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:54:24,723 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:54:24,872 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-14 21:54:24,873 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:54:24,883 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:54:24,884 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:54:25,055 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-14 21:54:28,832 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:54:28,832 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-14 21:54:28,833 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-14 21:54:28,834 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 21:54:28,837 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:54:28,837 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-14 21:54:28,838 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-14 21:54:28,839 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 21:54:28,842 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:54:28,844 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-14 21:54:28,844 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-14 21:54:28,845 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 21:54:28,848 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:54:28,849 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-14 21:54:28,849 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-14 21:54:28,852 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 21:54:28,855 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:54:28,856 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-14 21:54:28,856 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-14 21:54:28,857 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 21:54:28,861 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:54:28,862 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:54:28,863 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:54:28,863 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 21:54:28,864 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:54:28,864 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:54:28,864 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:54:28,866 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 21:54:28,866 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:54:28,867 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:54:28,867 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:54:28,868 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 21:54:28,870 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=13, 副露数=0
+2024-11-14 21:54:28,871 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2']
+2024-11-14 21:54:28,872 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1123422, pin=234, sou=234, honors=
+2024-11-14 21:54:28,872 - src.core.yaku.judger - INFO - 未找到任何役种
+2024-11-14 21:55:23,817 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:23,818 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-14 21:55:23,818 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-14 21:55:23,822 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-14 21:55:23,826 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:23,827 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:55:23,828 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:55:23,992 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-14 21:55:23,997 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:23,998 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:55:23,998 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:55:24,150 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-14 21:55:24,150 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:24,160 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 21:55:24,161 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 21:55:24,336 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-14 21:55:27,915 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:27,916 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-14 21:55:27,917 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-14 21:55:27,918 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 21:55:27,921 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:27,922 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-14 21:55:27,922 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-14 21:55:27,923 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 21:55:27,926 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:27,928 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-14 21:55:27,928 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-14 21:55:27,929 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 21:55:27,933 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:27,935 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-14 21:55:27,935 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-14 21:55:27,937 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 21:55:27,941 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:27,942 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-14 21:55:27,942 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-14 21:55:27,943 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 21:55:27,947 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:27,947 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:55:27,948 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:55:27,949 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 21:55:27,949 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:27,950 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:55:27,950 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:55:27,951 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 21:55:27,952 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:27,953 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 21:55:27,953 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 21:55:27,954 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 21:55:27,958 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:55:27,959 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-14 21:55:27,959 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-14 21:55:27,961 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun'], 'han': 2, 'fu': 40, 'score': 2600}
+2024-11-14 21:57:49,931 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:57:49,932 - src.core.yaku.judger - DEBUG - 手牌详情: ['0', '1', '4', '5', '6', '7', '8', '12', '40', '44', '48', '76', '80', '84']
+2024-11-14 21:57:49,932 - src.core.yaku.judger - ERROR - 役种判定出错: 'int' object has no attribute 'suit'
+2024-11-14 21:57:49,933 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "d:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 64, in judge
+    if tile.suit == TileSuit.MAN:
+       ^^^^^^^^^
+AttributeError: 'int' object has no attribute 'suit'
+2024-11-14 21:57:54,415 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 21:57:54,416 - src.core.yaku.judger - DEBUG - 手牌详情: ['0', '1', '4', '5', '6', '7', '8', '12', '40', '44', '48', '76', '80', '84']
+2024-11-14 21:57:54,416 - src.core.yaku.judger - ERROR - 役种判定出错: 'int' object has no attribute 'suit'
+2024-11-14 21:57:54,417 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "d:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 64, in judge
+    if tile.suit == TileSuit.MAN:
+       ^^^^^^^^^
+AttributeError: 'int' object has no attribute 'suit'
+2024-11-14 22:15:03,184 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:15:03,185 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-14 22:15:03,186 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-14 22:15:03,186 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:03,187 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:03,194 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:15:03,195 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 22:15:03,195 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 22:15:03,196 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:03,196 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:03,202 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:15:03,203 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 22:15:03,203 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 22:15:03,204 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:03,204 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:03,206 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:15:03,206 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 22:15:03,207 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 22:15:03,207 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:03,207 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,048 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:15:07,049 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-14 22:15:07,049 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-14 22:15:07,050 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,050 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,070 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:15:07,071 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-14 22:15:07,072 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-14 22:15:07,072 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,073 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,088 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:15:07,089 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-14 22:15:07,089 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-14 22:15:07,089 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,090 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,104 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:15:07,105 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-14 22:15:07,105 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-14 22:15:07,106 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,106 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,119 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:15:07,120 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-14 22:15:07,120 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-14 22:15:07,121 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,121 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,137 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:15:07,139 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 22:15:07,139 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 22:15:07,139 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,140 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,141 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:15:07,142 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 22:15:07,142 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 22:15:07,142 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,143 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,157 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:15:07,158 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-14 22:15:07,158 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-14 22:15:07,158 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:15:07,159 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:12,663 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:18:12,664 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-14 22:18:12,664 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-14 22:18:12,664 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:12,665 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:12,673 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:18:12,674 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 22:18:12,674 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 22:18:12,675 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:12,675 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:12,681 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:18:12,682 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 22:18:12,682 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 22:18:12,683 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:12,683 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:12,685 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:18:12,685 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 22:18:12,685 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 22:18:12,686 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:12,686 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,349 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:18:16,350 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-14 22:18:16,351 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-14 22:18:16,351 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,351 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,366 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:18:16,367 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-14 22:18:16,367 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-14 22:18:16,368 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,368 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,389 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:18:16,390 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-14 22:18:16,391 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-14 22:18:16,391 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,392 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,409 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:18:16,410 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-14 22:18:16,410 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-14 22:18:16,410 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,411 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,427 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:18:16,427 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-14 22:18:16,428 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-14 22:18:16,428 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,428 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,444 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:18:16,445 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 22:18:16,445 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 22:18:16,445 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,446 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,447 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:18:16,448 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 22:18:16,448 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 22:18:16,448 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,448 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,467 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 22:18:16,468 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-14 22:18:16,469 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-14 22:18:16,469 - src.core.yaku.judger - ERROR - 役种判定出错: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 22:18:16,469 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 164, in judge
+    config = HandConfig(
+        is_tsumo=is_tsumo,
+    ...<6 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandConfig.__init__() got an unexpected keyword argument 'dora_indicators'
+2024-11-14 23:23:39,577 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:23:39,578 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-14 23:23:39,578 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-14 23:23:39,579 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:39,580 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 175, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<4 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:39,587 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:23:39,589 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 23:23:39,589 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 23:23:39,590 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:39,590 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 175, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<4 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:39,596 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:23:39,596 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 23:23:39,596 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 23:23:39,597 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:39,598 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 175, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<4 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:39,599 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:23:39,599 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 23:23:39,600 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 23:23:39,600 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:39,600 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 175, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<4 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,347 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:23:43,347 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-14 23:23:43,348 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-14 23:23:43,348 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,349 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 175, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<4 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,368 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:23:43,369 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-14 23:23:43,369 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-14 23:23:43,370 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,371 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 175, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<4 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,390 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:23:43,391 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-14 23:23:43,391 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-14 23:23:43,391 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,392 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 175, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<4 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,407 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:23:43,408 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-14 23:23:43,408 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-14 23:23:43,409 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,409 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 175, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<4 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,425 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:23:43,425 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-14 23:23:43,426 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-14 23:23:43,426 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,426 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 175, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<4 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,442 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:23:43,443 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 23:23:43,444 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 23:23:43,444 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,445 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 175, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<4 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,446 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:23:43,446 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 23:23:43,447 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 23:23:43,447 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,447 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 175, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<4 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,464 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:23:43,465 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-14 23:23:43,465 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-14 23:23:43,466 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:23:43,466 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 175, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<4 lines>...
+        uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'uradora_indicators'. Did you mean 'dora_indicators'?
+2024-11-14 23:24:27,280 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:27,280 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-14 23:24:27,280 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-14 23:24:27,282 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-14 23:24:27,287 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:27,288 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 23:24:27,288 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 23:24:27,438 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-14 23:24:27,443 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:27,443 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 23:24:27,444 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 23:24:27,604 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-14 23:24:27,604 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:27,605 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 23:24:27,605 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 23:24:27,761 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-14 23:24:31,599 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:31,599 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-14 23:24:31,600 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-14 23:24:31,601 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 23:24:31,605 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:31,605 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-14 23:24:31,606 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-14 23:24:31,606 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 23:24:31,609 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:31,610 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-14 23:24:31,610 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-14 23:24:31,611 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 23:24:31,614 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:31,615 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-14 23:24:31,615 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-14 23:24:31,617 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 23:24:31,621 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:31,622 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-14 23:24:31,623 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-14 23:24:31,624 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 23:24:31,627 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:31,627 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 23:24:31,628 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 23:24:31,628 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 23:24:31,629 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:31,629 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 23:24:31,629 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 23:24:31,630 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 23:24:31,631 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:31,632 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 23:24:31,632 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 23:24:31,633 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 23:24:31,637 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:24:31,638 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-14 23:24:31,638 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-14 23:24:31,639 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 23:34:12,403 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:34:12,404 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 23:34:12,404 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 23:34:12,560 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-14 23:34:12,561 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:34:12,561 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 23:34:12,562 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 23:34:12,712 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-14 23:34:16,598 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:34:16,599 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-14 23:34:16,599 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-14 23:34:16,600 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 23:34:16,608 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:34:16,609 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-14 23:34:16,610 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-14 23:34:16,610 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 23:34:16,613 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:34:16,614 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-14 23:34:16,614 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-14 23:34:16,615 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 23:34:16,618 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:34:16,619 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-14 23:34:16,619 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-14 23:34:16,620 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 23:34:16,623 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:34:16,624 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-14 23:34:16,624 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-14 23:34:16,624 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 23:34:16,627 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:34:16,627 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 23:34:16,627 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 23:34:16,628 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 23:34:16,629 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:34:16,629 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 23:34:16,629 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 23:34:16,630 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 23:34:16,630 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:34:16,630 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 23:34:16,630 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 23:34:16,631 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 23:34:16,644 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:34:16,645 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-14 23:34:16,645 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-14 23:34:16,647 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 23:34:16,647 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:34:16,647 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-14 23:34:16,647 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-14 23:34:16,649 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 23:36:15,173 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:15,174 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-14 23:36:15,175 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-14 23:36:15,178 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-14 23:36:15,182 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:15,192 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 23:36:15,192 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 23:36:15,350 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-14 23:36:15,354 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:15,355 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 23:36:15,355 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 23:36:15,512 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-14 23:36:15,513 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:15,514 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-14 23:36:15,514 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-14 23:36:15,673 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-14 23:36:19,350 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:19,351 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-14 23:36:19,351 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-14 23:36:19,353 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-14 23:36:19,357 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:19,358 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-14 23:36:19,358 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-14 23:36:19,359 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-14 23:36:19,361 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:19,362 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-14 23:36:19,362 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-14 23:36:19,363 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-14 23:36:19,366 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:19,366 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-14 23:36:19,367 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-14 23:36:19,369 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-14 23:36:19,373 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:19,378 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-14 23:36:19,379 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-14 23:36:19,380 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-14 23:36:19,383 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:19,384 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 23:36:19,384 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 23:36:19,385 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-14 23:36:19,386 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:19,386 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 23:36:19,386 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 23:36:19,388 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-14 23:36:19,388 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:19,389 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-14 23:36:19,389 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-14 23:36:19,390 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 23:36:19,394 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:19,395 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-14 23:36:19,395 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-14 23:36:19,397 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-14 23:36:19,397 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-14 23:36:19,398 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-14 23:36:19,398 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-14 23:36:19,399 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 4, 'fu': 40, 'score': 8000}

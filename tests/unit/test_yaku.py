@@ -139,3 +139,48 @@ def test_yaku_judge():
     result = judger.judge(tiles=tiles, win_tile=win_tile, is_riichi=True)
     assert result is not None
     assert 'riichi' in result['yaku']
+
+def test_dora_calculation():
+    """测试宝牌计算"""
+    judger = YakuJudger()
+    
+    # 创建手牌
+    tiles = [
+        Tile(TileSuit.MAN, 1), Tile(TileSuit.MAN, 1),  # 雀头
+        Tile(TileSuit.MAN, 2), Tile(TileSuit.MAN, 3), Tile(TileSuit.MAN, 4),
+        Tile(TileSuit.PIN, 2), Tile(TileSuit.PIN, 3), Tile(TileSuit.PIN, 4),
+        Tile(TileSuit.SOU, 2), Tile(TileSuit.SOU, 3), Tile(TileSuit.SOU, 4),
+        Tile(TileSuit.MAN, 2), Tile(TileSuit.MAN, 2), Tile(TileSuit.MAN, 2)  # 13张
+    ]
+    
+    # 和牌张
+    win_tile = Tile(TileSuit.MAN, 2)  # 和2m
+    
+    # 设置宝牌指示牌
+    dora_indicators = [Tile(TileSuit.MAN, 1)]  # 指示牌1m，宝牌是2m
+    uradora_indicators = [Tile(TileSuit.PIN, 1)]  # 指示牌1p，里宝牌是2p
+    
+    # 获取实际宝牌
+    dora_tiles = [Tile(TileSuit.MAN, 2)]  # 2m
+    uradora_tiles = [Tile(TileSuit.PIN, 2)]  # 2p
+    
+    # 测试普通和牌
+    result = judger.judge(
+        tiles=tiles,
+        win_tile=win_tile,
+        dora_tiles=dora_tiles
+    )
+    assert result['han'] >= 1  # 应该有宝牌番数
+    assert 'Dora' in result['yaku']  # 应该有1番宝牌
+    
+    # 测试立直和牌
+    result = judger.judge(
+        tiles=tiles,
+        win_tile=win_tile,
+        is_riichi=True,
+        dora_tiles=dora_tiles,
+        uradora_tiles=uradora_tiles
+    )
+    assert result['han'] >= 2  # 应该有宝牌和里宝牌番数
+    assert 'Dora' in result['yaku']  # 应该有1番宝牌
+    #TODO assert 'UraDora' in result['yaku']  # 应该有1番里宝牌
