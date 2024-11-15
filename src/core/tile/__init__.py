@@ -30,11 +30,9 @@ class Tile:
     @property
     def is_valid(self) -> bool:
         """检查牌是否合法"""
-        if self.suit in [TileSuit.MAN, TileSuit.PIN, TileSuit.SOU]:
-            return 1 <= self.value <= 9
-        elif self.suit == TileSuit.HONOR:
-            return 1 <= self.value <= 7
-        return False
+        if not self._validate():
+            return False
+        return True
         
     def __eq__(self, other):
         if not isinstance(other, Tile):
@@ -89,3 +87,24 @@ class Tile:
                 return self.value - 1 + 27
                 
         return None
+        
+    def _validate_aka_dora(self) -> bool:
+        """验证赤宝牌的合法性"""
+        if not self.is_red:
+            return True
+        # 赤宝牌只能是5万、5筒、5索
+        return (self.value == 5 and 
+                self.suit in [TileSuit.MAN, TileSuit.PIN, TileSuit.SOU])
+
+    def _validate(self) -> bool:
+        """验证牌的合法性"""
+        # 首先验证基本的数值范围
+        if self.suit in [TileSuit.MAN, TileSuit.PIN, TileSuit.SOU]:
+            basic_valid = 1 <= self.value <= 9
+        elif self.suit == TileSuit.HONOR:
+            basic_valid = 1 <= self.value <= 7
+        else:
+            return False
+        
+        # 然后验证赤宝牌
+        return basic_valid and self._validate_aka_dora()

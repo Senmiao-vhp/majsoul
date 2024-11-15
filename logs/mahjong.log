@@ -5494,3 +5494,1180 @@ TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argume
 2024-11-14 23:36:19,398 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
 2024-11-14 23:36:19,398 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
 2024-11-14 23:36:19,399 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 09:24:55,523 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:24:55,524 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 09:24:55,525 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-15 09:24:55,526 - src.core.yaku.judger - ERROR - 役种判定出错: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:55,527 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 174, in judge
+    dora_indicators=(dora_136 if dora_136 else None) + (uradora_136 if is_riichi and uradora_136 else None)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:55,535 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:24:55,536 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:24:55,536 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:24:55,536 - src.core.yaku.judger - ERROR - 役种判定出错: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:55,537 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 174, in judge
+    dora_indicators=(dora_136 if dora_136 else None) + (uradora_136 if is_riichi and uradora_136 else None)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:55,542 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:24:55,543 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:24:55,544 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:24:55,544 - src.core.yaku.judger - ERROR - 役种判定出错: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:55,545 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 174, in judge
+    dora_indicators=(dora_136 if dora_136 else None) + (uradora_136 if is_riichi and uradora_136 else None)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:55,548 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:24:55,549 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:24:55,549 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:24:55,549 - src.core.yaku.judger - ERROR - 役种判定出错: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:55,550 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 174, in judge
+    dora_indicators=(dora_136 if dora_136 else None) + (uradora_136 if is_riichi and uradora_136 else None)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:58,913 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:24:58,914 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 09:24:58,914 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-15 09:24:58,915 - src.core.yaku.judger - ERROR - 役种判定出错: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:58,915 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 174, in judge
+    dora_indicators=(dora_136 if dora_136 else None) + (uradora_136 if is_riichi and uradora_136 else None)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:58,929 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:24:58,931 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 09:24:58,931 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-15 09:24:58,931 - src.core.yaku.judger - ERROR - 役种判定出错: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:58,932 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 174, in judge
+    dora_indicators=(dora_136 if dora_136 else None) + (uradora_136 if is_riichi and uradora_136 else None)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:58,948 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:24:58,949 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 09:24:58,949 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-15 09:24:58,950 - src.core.yaku.judger - ERROR - 役种判定出错: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:58,951 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 174, in judge
+    dora_indicators=(dora_136 if dora_136 else None) + (uradora_136 if is_riichi and uradora_136 else None)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:58,965 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:24:58,966 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 09:24:58,967 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-15 09:24:58,967 - src.core.yaku.judger - ERROR - 役种判定出错: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:58,968 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 174, in judge
+    dora_indicators=(dora_136 if dora_136 else None) + (uradora_136 if is_riichi and uradora_136 else None)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:58,984 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:24:58,985 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 09:24:58,985 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-15 09:24:58,986 - src.core.yaku.judger - ERROR - 役种判定出错: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:58,986 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 174, in judge
+    dora_indicators=(dora_136 if dora_136 else None) + (uradora_136 if is_riichi and uradora_136 else None)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:58,999 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:24:58,999 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:24:59,000 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:24:59,000 - src.core.yaku.judger - ERROR - 役种判定出错: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:59,000 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 174, in judge
+    dora_indicators=(dora_136 if dora_136 else None) + (uradora_136 if is_riichi and uradora_136 else None)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:59,001 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:24:59,001 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:24:59,002 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:24:59,002 - src.core.yaku.judger - ERROR - 役种判定出错: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:59,002 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 174, in judge
+    dora_indicators=(dora_136 if dora_136 else None) + (uradora_136 if is_riichi and uradora_136 else None)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2024-11-15 09:24:59,017 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:24:59,018 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 09:24:59,019 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 09:24:59,019 - src.core.yaku.judger - ERROR - 役种判定出错: can only concatenate list (not "NoneType") to list
+2024-11-15 09:24:59,020 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 174, in judge
+    dora_indicators=(dora_136 if dora_136 else None) + (uradora_136 if is_riichi and uradora_136 else None)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: can only concatenate list (not "NoneType") to list
+2024-11-15 09:27:03,160 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:03,162 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 09:27:03,162 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-15 09:27:03,165 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-15 09:27:03,169 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:03,170 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:27:03,170 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:27:03,347 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-15 09:27:03,351 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:03,352 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:27:03,352 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:27:03,534 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-15 09:27:03,535 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:03,544 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:27:03,545 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:27:03,716 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 09:27:07,464 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:07,465 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 09:27:07,465 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-15 09:27:07,466 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 09:27:07,469 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:07,470 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 09:27:07,470 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-15 09:27:07,471 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-15 09:27:07,474 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:07,475 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 09:27:07,475 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-15 09:27:07,476 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-15 09:27:07,480 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:07,481 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 09:27:07,481 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-15 09:27:07,484 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 09:27:07,487 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:07,488 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 09:27:07,489 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-15 09:27:07,489 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-15 09:27:07,492 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:07,493 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:27:07,494 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:27:07,495 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-15 09:27:07,496 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:07,496 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:27:07,496 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:27:07,497 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-15 09:27:07,498 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:07,498 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:27:07,498 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:27:07,499 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 09:27:07,502 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:07,503 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 09:27:07,503 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 09:27:07,504 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 09:27:07,505 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:27:07,505 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 09:27:07,505 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 09:27:07,507 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 5, 'fu': 40, 'score': 8000}
+2024-11-15 09:32:33,579 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:33,581 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 09:32:33,581 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-15 09:32:33,585 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-15 09:32:33,589 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:33,590 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:32:33,590 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:32:33,743 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-15 09:32:33,746 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:33,747 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:32:33,747 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:32:33,908 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-15 09:32:33,909 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:33,910 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:32:33,910 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:32:34,069 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 09:32:37,920 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:37,921 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 09:32:37,922 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-15 09:32:37,923 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 09:32:37,926 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:37,927 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 09:32:37,927 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-15 09:32:37,928 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-15 09:32:37,932 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:37,933 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 09:32:37,933 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-15 09:32:37,934 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-15 09:32:37,936 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:37,937 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 09:32:37,937 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-15 09:32:37,939 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 09:32:37,942 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:37,943 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 09:32:37,943 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-15 09:32:37,944 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-15 09:32:37,948 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:37,949 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:32:37,949 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:32:37,950 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-15 09:32:37,950 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:37,950 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:32:37,951 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:32:37,951 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-15 09:32:37,952 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:37,952 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:32:37,953 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:32:37,954 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 09:32:37,957 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:32:37,958 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 09:32:37,958 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 09:32:37,959 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 09:37:36,713 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:36,714 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 09:37:36,714 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-15 09:37:36,715 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 09:37:36,718 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-15 09:37:36,732 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:36,733 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:37:36,734 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:37:36,734 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 09:37:36,903 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-15 09:37:36,908 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:36,909 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:37:36,909 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:37:36,909 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 09:37:37,076 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-15 09:37:37,076 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:37,077 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:37:37,077 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:37:37,077 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 09:37:37,240 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 09:37:40,735 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:40,736 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 09:37:40,737 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-15 09:37:40,737 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 09:37:40,739 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 09:37:40,742 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:40,743 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 09:37:40,743 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-15 09:37:40,743 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 09:37:40,744 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-15 09:37:40,747 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:40,748 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 09:37:40,748 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-15 09:37:40,749 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 09:37:40,750 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-15 09:37:40,754 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:40,755 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 09:37:40,755 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-15 09:37:40,755 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 09:37:40,757 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 09:37:40,761 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:40,762 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 09:37:40,762 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-15 09:37:40,763 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 09:37:40,764 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-15 09:37:40,768 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:40,769 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:37:40,769 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:37:40,769 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 09:37:40,770 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-15 09:37:40,771 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:40,771 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:37:40,772 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:37:40,772 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 09:37:40,773 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-15 09:37:40,774 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:40,774 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:37:40,774 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:37:40,775 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 09:37:40,776 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 09:37:40,780 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:37:40,780 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 09:37:40,781 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 09:37:40,781 - src.core.yaku.judger - INFO - 宝牌指示牌: [4]
+2024-11-15 09:37:40,783 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 09:43:54,696 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:54,697 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 09:43:54,698 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-15 09:43:54,699 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:43:54,702 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-15 09:43:54,707 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:54,708 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:43:54,708 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:43:54,709 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:43:54,870 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-15 09:43:54,875 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:54,879 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:43:54,880 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:43:54,880 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:43:55,077 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-15 09:43:55,078 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:55,078 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:43:55,078 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:43:55,079 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:43:55,238 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 09:43:59,015 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:59,016 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 09:43:59,016 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-15 09:43:59,017 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:43:59,018 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 09:43:59,024 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:59,025 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 09:43:59,025 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-15 09:43:59,025 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:43:59,026 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-15 09:43:59,029 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:59,030 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 09:43:59,030 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-15 09:43:59,030 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:43:59,031 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-15 09:43:59,034 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:59,035 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 09:43:59,036 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-15 09:43:59,036 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:43:59,038 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 09:43:59,041 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:59,041 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 09:43:59,041 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-15 09:43:59,042 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:43:59,042 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-15 09:43:59,046 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:59,047 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:43:59,047 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:43:59,047 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:43:59,048 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-15 09:43:59,049 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:59,049 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:43:59,049 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:43:59,050 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:43:59,050 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-15 09:43:59,051 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:59,052 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:43:59,052 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:43:59,052 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:43:59,053 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 09:43:59,059 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:59,060 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 09:43:59,061 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 09:43:59,061 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0]
+2024-11-15 09:43:59,063 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 6, 'fu': 40, 'score': 12000}
+2024-11-15 09:43:59,063 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:43:59,064 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 09:43:59,064 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 09:43:59,065 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0, 36]
+2024-11-15 09:43:59,067 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 8, 'fu': 40, 'score': 16000}
+2024-11-15 09:47:19,745 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:19,746 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 09:47:19,746 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-15 09:47:19,747 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:47:19,749 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-15 09:47:19,755 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:19,756 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:47:19,756 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:47:19,756 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:47:19,906 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-15 09:47:19,910 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:19,911 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:47:19,911 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:47:19,911 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:47:20,071 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-15 09:47:20,071 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:20,072 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 09:47:20,072 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 09:47:20,073 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:47:20,235 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 09:47:23,767 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:23,768 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 09:47:23,768 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-15 09:47:23,769 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:47:23,770 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 09:47:23,774 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:23,775 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 09:47:23,775 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-15 09:47:23,776 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:47:23,776 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-15 09:47:23,781 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:23,782 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 09:47:23,782 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-15 09:47:23,782 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:47:23,783 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-15 09:47:23,786 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:23,788 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 09:47:23,788 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-15 09:47:23,788 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:47:23,790 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 09:47:23,793 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:23,794 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 09:47:23,794 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-15 09:47:23,795 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:47:23,795 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-15 09:47:23,799 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:23,800 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:47:23,800 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:47:23,800 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:47:23,801 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-15 09:47:23,801 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:23,802 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:47:23,802 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:47:23,802 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:47:23,803 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-15 09:47:23,804 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:23,804 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 09:47:23,805 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 09:47:23,805 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 09:47:23,806 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 09:47:23,809 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:23,810 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 09:47:23,811 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 09:47:23,811 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0]
+2024-11-15 09:47:23,812 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 6, 'fu': 40, 'score': 12000}
+2024-11-15 09:47:23,813 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 09:47:23,813 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 09:47:23,813 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 09:47:23,814 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0, 36]
+2024-11-15 09:47:23,815 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 8, 'fu': 40, 'score': 16000}
+2024-11-15 12:56:57,005 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:56:57,006 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 12:56:57,007 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-15 12:56:57,008 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:56:57,011 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-15 12:56:57,017 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:56:57,018 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 12:56:57,018 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 12:56:57,019 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:56:57,178 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-15 12:56:57,181 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:56:57,182 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 12:56:57,182 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 12:56:57,183 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:56:57,340 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-15 12:56:57,341 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:56:57,341 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 12:56:57,342 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 12:56:57,342 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:56:57,493 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 12:57:00,976 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:57:00,977 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 12:57:00,977 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-15 12:57:00,978 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:57:00,979 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 12:57:00,982 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:57:00,983 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 12:57:00,983 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-15 12:57:00,983 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:57:00,984 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-15 12:57:00,987 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:57:00,988 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 12:57:00,988 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-15 12:57:00,989 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:57:00,990 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-15 12:57:00,993 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:57:00,995 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 12:57:00,996 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-15 12:57:00,996 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:57:00,998 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 12:57:01,002 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:57:01,002 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 12:57:01,003 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-15 12:57:01,003 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:57:01,004 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-15 12:57:01,006 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:57:01,007 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 12:57:01,007 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 12:57:01,008 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:57:01,008 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-15 12:57:01,009 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:57:01,010 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 12:57:01,010 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 12:57:01,010 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:57:01,011 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-15 12:57:01,012 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:57:01,013 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 12:57:01,013 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 12:57:01,014 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:57:01,014 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 12:57:01,017 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:57:01,018 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 12:57:01,018 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 12:57:01,019 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0]
+2024-11-15 12:57:01,020 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 6, 'fu': 40, 'score': 12000}
+2024-11-15 12:57:01,020 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:57:01,021 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 12:57:01,021 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 12:57:01,021 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0, 36]
+2024-11-15 12:57:01,022 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 8, 'fu': 40, 'score': 16000}
+2024-11-15 12:58:59,183 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:58:59,184 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 12:58:59,185 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-15 12:58:59,185 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:58:59,187 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-15 12:58:59,202 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:58:59,203 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 12:58:59,204 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 12:58:59,204 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:58:59,400 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-15 12:58:59,404 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:58:59,405 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 12:58:59,405 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 12:58:59,406 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:58:59,592 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-15 12:58:59,592 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:58:59,593 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 12:58:59,594 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 12:58:59,594 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:58:59,790 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 12:59:03,228 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:59:03,229 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 12:59:03,230 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-15 12:59:03,230 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:59:03,231 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 12:59:03,236 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:59:03,236 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 12:59:03,237 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-15 12:59:03,237 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:59:03,238 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-15 12:59:03,241 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:59:03,242 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 12:59:03,243 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-15 12:59:03,244 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:59:03,246 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-15 12:59:03,249 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:59:03,250 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 12:59:03,251 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-15 12:59:03,251 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:59:03,253 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 12:59:03,257 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:59:03,258 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 12:59:03,258 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-15 12:59:03,259 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:59:03,260 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-15 12:59:03,264 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:59:03,265 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 12:59:03,266 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 12:59:03,266 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:59:03,267 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-15 12:59:03,268 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:59:03,268 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 12:59:03,268 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 12:59:03,269 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:59:03,270 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-15 12:59:03,270 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:59:03,270 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 12:59:03,271 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 12:59:03,271 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 12:59:03,272 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 12:59:03,277 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:59:03,279 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 12:59:03,280 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 12:59:03,280 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0]
+2024-11-15 12:59:03,281 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 6, 'fu': 40, 'score': 12000}
+2024-11-15 12:59:03,282 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 12:59:03,282 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 12:59:03,283 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 12:59:03,283 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0, 36]
+2024-11-15 12:59:03,285 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 8, 'fu': 40, 'score': 16000}
+2024-11-15 13:05:42,740 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:42,741 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 13:05:42,741 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111, pin=11, sou=123456789, honors=
+2024-11-15 13:05:42,741 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:42,743 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-15 13:05:42,749 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:42,750 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:05:42,750 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 13:05:42,750 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:42,909 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-15 13:05:42,912 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:42,913 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:05:42,913 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 13:05:42,914 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:43,085 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-15 13:05:43,085 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:43,086 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:05:43,086 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11223344556677, pin=, sou=, honors=
+2024-11-15 13:05:43,086 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:43,240 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 13:05:46,787 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:46,788 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 13:05:46,788 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=22345, pin=678333, sou=456, honors=
+2024-11-15 13:05:46,789 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:46,790 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 13:05:46,794 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:46,795 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 13:05:46,796 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234, pin=34599, sou=567, honors=666
+2024-11-15 13:05:46,796 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:46,797 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-15 13:05:46,801 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:46,802 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 13:05:46,802 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=1133, pin=99, sou=5577, honors=1155
+2024-11-15 13:05:46,803 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:46,803 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-15 13:05:46,806 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:46,807 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 13:05:46,808 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=234567789, pin=, sou=, honors=11155
+2024-11-15 13:05:46,808 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:46,810 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 13:05:46,815 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:46,816 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 13:05:46,817 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=12355, pin=234789, sou=456, honors=
+2024-11-15 13:05:46,817 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:46,818 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-15 13:05:46,822 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:46,823 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:05:46,823 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 13:05:46,823 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:46,824 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-15 13:05:46,824 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:46,825 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:05:46,825 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 13:05:46,825 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:46,826 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-15 13:05:46,826 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:46,827 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:05:46,827 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=111234, pin=345, sou=567, honors=11
+2024-11-15 13:05:46,827 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:46,828 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 13:05:46,833 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:46,834 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:05:46,834 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 13:05:46,834 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0]
+2024-11-15 13:05:46,836 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 6, 'fu': 40, 'score': 12000}
+2024-11-15 13:05:46,836 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:05:46,837 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:05:46,837 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=11234222, pin=234, sou=234, honors=
+2024-11-15 13:05:46,837 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0, 36]
+2024-11-15 13:05:46,839 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 8, 'fu': 40, 'score': 16000}
+2024-11-15 13:05:46,842 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=13, 副露数=0
+2024-11-15 13:05:46,843 - src.core.yaku.judger - DEBUG - 手牌详情: ['万5红', '万1', '万1', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2', '万3']
+2024-11-15 13:05:46,843 - src.core.yaku.judger - DEBUG - 转换后的手牌字符串: man=5112223, pin=234, sou=234, honors=
+2024-11-15 13:05:46,844 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:05:46,844 - src.core.yaku.judger - INFO - 未找到任何役种
+2024-11-15 13:11:34,814 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:34,817 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 13:11:34,817 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:34,820 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-15 13:11:34,824 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:34,826 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:11:34,826 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:34,996 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-15 13:11:35,000 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:35,001 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:11:35,002 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:35,145 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-15 13:11:35,146 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:35,154 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:11:35,155 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:35,306 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 13:11:38,736 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:38,737 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 13:11:38,737 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:38,739 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 13:11:38,742 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:38,743 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 13:11:38,743 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:38,744 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-15 13:11:38,747 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:38,748 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 13:11:38,749 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:38,750 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-15 13:11:38,752 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:38,755 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 13:11:38,755 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:38,757 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 13:11:38,761 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:38,762 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 13:11:38,762 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:38,763 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-15 13:11:38,768 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:38,769 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:11:38,770 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:38,771 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-15 13:11:38,771 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:38,772 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:11:38,772 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:38,773 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-15 13:11:38,774 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:38,774 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:11:38,775 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:38,775 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 13:11:38,779 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:38,781 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:11:38,781 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0]
+2024-11-15 13:11:38,784 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 6, 'fu': 40, 'score': 12000}
+2024-11-15 13:11:38,784 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:11:38,785 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:11:38,785 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0, 36]
+2024-11-15 13:11:38,787 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 8, 'fu': 40, 'score': 16000}
+2024-11-15 13:11:38,790 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=13, 副露数=0
+2024-11-15 13:11:38,791 - src.core.yaku.judger - DEBUG - 手牌详情: ['万5红', '万1', '万1', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2', '万3']
+2024-11-15 13:11:38,791 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:11:38,792 - src.core.yaku.judger - INFO - 未找到任何役种
+2024-11-15 13:12:45,982 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:12:45,983 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 13:12:45,984 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:12:45,984 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:45,985 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:45,993 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:12:45,994 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:12:45,995 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:12:45,995 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:45,995 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:46,001 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:12:46,003 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:12:46,003 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:12:46,003 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:46,004 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:46,005 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:12:46,006 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:12:46,006 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:12:46,006 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:46,007 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,690 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:12:49,691 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 13:12:49,691 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:12:49,692 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,692 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,709 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:12:49,710 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 13:12:49,711 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:12:49,711 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,711 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,731 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:12:49,732 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 13:12:49,733 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:12:49,733 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,734 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,747 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:12:49,748 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 13:12:49,749 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:12:49,749 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,750 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,764 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:12:49,766 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 13:12:49,766 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:12:49,767 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,767 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,781 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:12:49,782 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:12:49,782 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:12:49,783 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,783 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,785 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:12:49,785 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:12:49,786 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:12:49,786 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,786 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,801 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:12:49,802 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:12:49,802 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0]
+2024-11-15 13:12:49,803 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,803 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,818 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=13, 副露数=0
+2024-11-15 13:12:49,820 - src.core.yaku.judger - DEBUG - 手牌详情: ['万5红', '万1', '万1', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2', '万3']
+2024-11-15 13:12:49,820 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:12:49,821 - src.core.yaku.judger - ERROR - 役种判定出错: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:12:49,823 - src.core.yaku.judger - ERROR - 详细错误信息:
+Traceback (most recent call last):
+  File "D:\游戏开发\游戏开发项目\立直麻将游戏平台\majsoul\src\core\yaku\judger.py", line 108, in judge
+    result = self.calculator.estimate_hand_value(
+        tiles=tiles_136,
+    ...<5 lines>...
+    
+    )
+TypeError: HandCalculator.estimate_hand_value() got an unexpected keyword argument 'has_aka_dora'
+2024-11-15 13:14:25,726 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:25,727 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 13:14:25,728 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:25,730 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-15 13:14:25,733 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:25,734 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:14:25,735 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:25,894 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-15 13:14:25,898 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:25,899 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:14:25,899 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:26,058 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-15 13:14:26,059 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:26,060 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:14:26,060 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:26,226 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 13:14:29,554 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:29,555 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 13:14:29,555 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:29,556 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 13:14:29,559 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:29,559 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 13:14:29,560 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:29,560 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-15 13:14:29,563 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:29,573 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 13:14:29,574 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:29,575 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-15 13:14:29,578 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:29,579 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 13:14:29,580 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:29,581 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 13:14:29,585 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:29,586 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 13:14:29,587 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:29,587 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-15 13:14:29,591 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:29,592 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:14:29,592 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:29,593 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-15 13:14:29,593 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:29,594 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:14:29,594 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:29,595 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-15 13:14:29,596 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:29,596 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:14:29,597 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:29,598 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 13:14:29,603 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:29,603 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:14:29,604 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0]
+2024-11-15 13:14:29,606 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 6, 'fu': 40, 'score': 12000}
+2024-11-15 13:14:29,606 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:14:29,607 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:14:29,607 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0, 36]
+2024-11-15 13:14:29,608 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 8, 'fu': 40, 'score': 16000}
+2024-11-15 13:14:29,611 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=13, 副露数=0
+2024-11-15 13:14:29,612 - src.core.yaku.judger - DEBUG - 手牌详情: ['万5红', '万1', '万1', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2', '万3']
+2024-11-15 13:14:29,613 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:14:29,613 - src.core.yaku.judger - INFO - 未找到任何役种
+2024-11-15 13:16:02,710 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:02,711 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 13:16:02,712 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:02,714 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-15 13:16:02,718 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:02,719 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:16:02,720 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:02,912 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-15 13:16:02,916 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:02,917 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:16:02,917 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:03,072 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-15 13:16:03,073 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:03,081 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:16:03,082 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:03,243 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 13:16:06,879 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:06,880 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 13:16:06,881 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:06,882 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 13:16:06,887 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:06,889 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 13:16:06,890 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:06,891 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-15 13:16:06,899 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:06,900 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 13:16:06,901 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:06,902 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-15 13:16:06,906 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:06,907 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 13:16:06,908 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:06,910 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 13:16:06,912 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:06,913 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 13:16:06,914 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:06,915 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-15 13:16:06,919 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:06,920 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:16:06,920 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:06,921 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-15 13:16:06,922 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:06,931 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:16:06,931 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:06,932 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-15 13:16:06,933 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:06,933 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:16:06,933 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:06,935 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 13:16:06,939 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:06,940 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:16:06,941 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0]
+2024-11-15 13:16:06,942 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 6, 'fu': 40, 'score': 12000}
+2024-11-15 13:16:06,942 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:06,942 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:16:06,943 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0, 36]
+2024-11-15 13:16:06,944 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 8, 'fu': 40, 'score': 16000}
+2024-11-15 13:16:06,947 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:16:06,948 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2', '万3', '万4', '万5红']
+2024-11-15 13:16:06,948 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:16:06,949 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 1, 'fu': 40, 'score': 0}
+2024-11-15 13:20:22,734 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:22,735 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 13:20:22,736 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:22,738 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu', 'aka_dora'], 'han': 5, 'fu': 30, 'score': 4000}
+2024-11-15 13:20:22,742 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:22,743 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:20:22,743 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:22,897 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 13, 'fu': 20, 'score': 16000}
+2024-11-15 13:20:22,907 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:22,908 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:20:22,908 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:23,065 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 11, 'fu': 30, 'score': 24000}
+2024-11-15 13:20:23,066 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:23,074 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:20:23,074 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:23,238 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu', 'aka_dora'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 13:20:26,792 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:26,793 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 13:20:26,794 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:26,795 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao', 'aka_dora'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 13:20:26,798 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:26,799 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 13:20:26,800 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:26,800 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 4000}
+2024-11-15 13:20:26,813 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:26,813 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 13:20:26,814 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:26,814 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu', 'aka_dora'], 'han': 4, 'fu': 25, 'score': 3200}
+2024-11-15 13:20:26,817 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:26,818 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 13:20:26,819 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:26,821 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu', 'aka_dora'], 'han': 4, 'fu': 40, 'score': 8000}
+2024-11-15 13:20:26,824 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:26,825 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 13:20:26,825 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:26,826 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'aka_dora'], 'han': 4, 'fu': 20, 'score': 2600}
+2024-11-15 13:20:26,829 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:26,829 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:20:26,830 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:26,830 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['aka_dora'], 'han': 2, 'fu': 40, 'score': 0}
+2024-11-15 13:20:26,831 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:26,831 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:20:26,831 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:26,832 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'aka_dora'], 'han': 3, 'fu': 30, 'score': 2000}
+2024-11-15 13:20:26,832 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:26,833 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:20:26,833 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:26,834 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'aka_dora'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 13:20:26,846 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:26,847 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:20:26,847 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0]
+2024-11-15 13:20:26,849 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 6, 'fu': 40, 'score': 12000}
+2024-11-15 13:20:26,849 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:26,849 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:20:26,850 - src.core.yaku.judger - DEBUG - 宝牌指示牌: [0, 36]
+2024-11-15 13:20:26,851 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 8, 'fu': 40, 'score': 16000}
+2024-11-15 13:20:26,855 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:20:26,856 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2', '万3', '万4', '万5红']
+2024-11-15 13:20:26,856 - src.core.yaku.judger - DEBUG - 宝牌指示牌: []
+2024-11-15 13:20:26,857 - src.core.yaku.judger - INFO - 未找到任何役种
+2024-11-15 13:35:34,470 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:34,471 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 13:35:34,472 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:34,475 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 13:35:34,479 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:34,480 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:35:34,481 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:34,633 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 13:35:34,639 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:34,640 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:35:34,640 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:34,794 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu'], 'han': 10, 'fu': 30, 'score': 16000}
+2024-11-15 13:35:34,795 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:34,803 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:35:34,803 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:34,956 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu'], 'han': 11, 'fu': 20, 'score': 12000}
+2024-11-15 13:35:38,473 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:38,474 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 13:35:38,474 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:38,475 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao'], 'han': 2, 'fu': 30, 'score': 1000}
+2024-11-15 13:35:38,478 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:38,479 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 13:35:38,480 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:38,480 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu'], 'han': 2, 'fu': 40, 'score': 1300}
+2024-11-15 13:35:38,483 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:38,484 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 13:35:38,485 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:38,486 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu'], 'han': 3, 'fu': 25, 'score': 1600}
+2024-11-15 13:35:38,489 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:38,489 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 13:35:38,490 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:38,492 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 13:35:38,505 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:38,505 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 13:35:38,506 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:38,506 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu'], 'han': 2, 'fu': 20, 'score': 700}
+2024-11-15 13:35:38,511 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:38,512 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:35:38,513 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:38,514 - src.core.yaku.judger - INFO - 未找到任何役种
+2024-11-15 13:35:38,514 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:38,515 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:35:38,515 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:38,517 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo'], 'han': 1, 'fu': 30, 'score': 500}
+2024-11-15 13:35:38,517 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:38,518 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:35:38,518 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:38,519 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi'], 'han': 1, 'fu': 40, 'score': 1300}
+2024-11-15 13:35:38,521 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:38,521 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:35:38,522 - src.core.yaku.judger - INFO - 宝牌指示牌: [0]
+2024-11-15 13:35:38,523 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 6, 'fu': 40, 'score': 12000}
+2024-11-15 13:35:38,523 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:38,524 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:35:38,524 - src.core.yaku.judger - INFO - 宝牌指示牌: [0, 36]
+2024-11-15 13:35:38,525 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 8, 'fu': 40, 'score': 16000}
+2024-11-15 13:35:38,528 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:35:38,529 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2', '万3', '万4', '万5红']
+2024-11-15 13:35:38,529 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:35:38,530 - src.core.yaku.judger - INFO - 未找到任何役种
+2024-11-15 13:38:56,223 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:38:56,231 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '筒1', '筒1', '索1', '索2', '索3', '索4', '索5', '索6', '索7', '索8', '索9']
+2024-11-15 13:38:56,232 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:38:56,233 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'Ittsu'], 'han': 4, 'fu': 30, 'score': 3900}
+2024-11-15 13:38:56,238 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:38:56,238 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:38:56,239 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:38:56,470 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'riichi', 'pinfu', 'Ryanpeikou', 'Chinitsu'], 'han': 12, 'fu': 20, 'score': 12000}
+2024-11-15 13:38:56,480 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:38:56,481 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:38:56,482 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:38:56,645 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['pinfu', 'Ryanpeikou', 'Chinitsu'], 'han': 10, 'fu': 30, 'score': 16000}
+2024-11-15 13:38:56,646 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:38:56,647 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万2', '万3', '万3', '万4', '万4', '万5', '万5', '万6', '万6', '万7', '万7']
+2024-11-15 13:38:56,647 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:38:56,822 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu', 'Ryanpeikou', 'Chinitsu'], 'han': 11, 'fu': 20, 'score': 12000}
+2024-11-15 13:39:00,579 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:39:00,580 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万2', '万3', '万4', '万5', '索4', '索5', '索6', '筒6', '筒7', '筒8', '筒3', '筒3', '筒3']
+2024-11-15 13:39:00,580 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:39:00,582 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'tanyao'], 'han': 2, 'fu': 30, 'score': 1000}
+2024-11-15 13:39:00,585 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:39:00,586 - src.core.yaku.judger - DEBUG - 手牌详情: ['字6', '字6', '字6', '万2', '万3', '万4', '索5', '索6', '索7', '筒3', '筒4', '筒5', '筒9', '筒9']
+2024-11-15 13:39:00,586 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:39:00,587 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'yakuhai_hatsu'], 'han': 2, 'fu': 40, 'score': 1300}
+2024-11-15 13:39:00,590 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:39:00,591 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万3', '万3', '索5', '索5', '索7', '索7', '筒9', '筒9', '字1', '字1', '字5', '字5']
+2024-11-15 13:39:00,591 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:39:00,592 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'chiitoitsu'], 'han': 3, 'fu': 25, 'score': 1600}
+2024-11-15 13:39:00,595 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:39:00,596 - src.core.yaku.judger - DEBUG - 手牌详情: ['万2', '万3', '万4', '万5', '万6', '万7', '万7', '万8', '万9', '字1', '字1', '字1', '字5', '字5']
+2024-11-15 13:39:00,596 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:39:00,598 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['honitsu'], 'han': 3, 'fu': 40, 'score': 5200}
+2024-11-15 13:39:00,606 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:39:00,607 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万2', '万3', '索4', '索5', '索6', '筒2', '筒3', '筒4', '筒7', '筒8', '筒9', '万5', '万5']
+2024-11-15 13:39:00,608 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:39:00,608 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo', 'pinfu'], 'han': 2, 'fu': 20, 'score': 700}
+2024-11-15 13:39:00,612 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:39:00,613 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:39:00,613 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:39:00,614 - src.core.yaku.judger - INFO - 未找到任何役种
+2024-11-15 13:39:00,615 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:39:00,616 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:39:00,616 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:39:00,617 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['tsumo'], 'han': 1, 'fu': 30, 'score': 500}
+2024-11-15 13:39:00,618 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:39:00,618 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万1', '万2', '万3', '万4', '筒3', '筒4', '筒5', '索5', '索6', '索7', '字1', '字1']
+2024-11-15 13:39:00,618 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:39:00,619 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi'], 'han': 1, 'fu': 40, 'score': 1300}
+2024-11-15 13:39:00,623 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:39:00,624 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:39:00,624 - src.core.yaku.judger - INFO - 宝牌指示牌: [0]
+2024-11-15 13:39:00,626 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['Sanshoku Doujun', 'Dora'], 'han': 6, 'fu': 40, 'score': 12000}
+2024-11-15 13:39:00,626 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:39:00,626 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '万2', '万3', '万4', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2']
+2024-11-15 13:39:00,627 - src.core.yaku.judger - INFO - 宝牌指示牌: [0, 36]
+2024-11-15 13:39:00,629 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi', 'Sanshoku Doujun', 'Dora'], 'han': 8, 'fu': 40, 'score': 16000}
+2024-11-15 13:39:00,643 - src.core.yaku.judger - INFO - 开始判定役种: 手牌数=14, 副露数=0
+2024-11-15 13:39:00,644 - src.core.yaku.judger - DEBUG - 手牌详情: ['万1', '万1', '筒2', '筒3', '筒4', '索2', '索3', '索4', '万2', '万2', '万2', '万3', '万4', '万5红']
+2024-11-15 13:39:00,644 - src.core.yaku.judger - INFO - 宝牌指示牌: []
+2024-11-15 13:39:00,646 - src.core.yaku.judger - INFO - 和牌判定结果: {'yaku': ['riichi'], 'han': 1, 'fu': 40, 'score': 1300}

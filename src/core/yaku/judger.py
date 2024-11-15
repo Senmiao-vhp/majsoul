@@ -6,6 +6,7 @@ from mahjong.hand_calculating.hand_config import HandConfig, OptionalRules
 from mahjong.meld import Meld
 from src.core.tile import Tile, TileSuit
 from src.core.utils.logger import setup_logger
+from src.core.converter import TileConverter
 
 class YakuJudger:
     def __init__(self):
@@ -39,7 +40,7 @@ class YakuJudger:
     def judge(self, tiles: List[Tile], melds: Optional[List[List[Tile]]] = None, 
              win_tile: Optional[Tile] = None, is_tsumo: bool = False, 
              is_riichi: bool = False, dora_tiles: List[Tile] = None, 
-             uradora_tiles: List[Tile] = None) -> Dict:
+             uradora_tiles: List[Tile] = None, has_aka_dora: bool = False) -> Dict:
         """判断和牌役种
         
         Args:
@@ -48,9 +49,10 @@ class YakuJudger:
             win_tile: 和牌张
             is_tsumo: 是否自摸
             is_riichi: 是否立直
-            dora_tiles: 表宝牌列表
-            uradora_tiles: 里宝牌列表
-            
+            dora_tiles: 表宝牌指示牌列表
+            uradora_tiles: 里宝牌指示牌列表
+            has_aka_dora: 是否包含赤宝牌
+
         Returns:
             Dict: 役种信息，包含 yaku(役种列表)、han(番数)、fu(符数)、score(点数)
         """
@@ -58,118 +60,67 @@ class YakuJudger:
             self.logger.info(f"开始判定役种: 手牌数={len(tiles)}, 副露数={len(melds) if melds else 0}")
             self.logger.debug(f"手牌详情: {[str(t) for t in tiles]}")
             
-            # 1. 将手牌Tile对象转换为字符串格式
-            man, pin, sou, honors = '', '', '', ''
-            for tile in tiles:
-                if tile.suit == TileSuit.MAN:
-                    man += str(tile.value)
-                elif tile.suit == TileSuit.PIN:
-                    pin += str(tile.value)
-                elif tile.suit == TileSuit.SOU:
-                    sou += str(tile.value)
-                elif tile.suit == TileSuit.HONOR:
-                    honors += str(tile.value)
+            # 转换手牌为136格式
+            tiles_136 = TileConverter.to_136_array(tiles, has_aka_dora)
             
-            self.logger.debug(f"转换后的手牌字符串: man={man}, pin={pin}, sou={sou}, honors={honors}")
-            
-            # 2. 按照万筒索字的顺序转换手牌为136格式
-            tiles_136 = []
-            # 万子
-            if man:            
-                tiles_136.extend(sorted(TilesConverter.string_to_136_array(man=man)))
-            # 筒子
-            if pin:
-                tiles_136.extend(sorted(TilesConverter.string_to_136_array(pin=pin)))
-            # 索子
-            if sou:
-                tiles_136.extend(sorted(TilesConverter.string_to_136_array(sou=sou)))
-            # 字牌
-            if honors:
-                tiles_136.extend(sorted(TilesConverter.string_to_136_array(honors=honors)))
-            
-            # 3. 转换和牌张为136格式 (同样按照万筒索字的顺序)
+            # 转换和牌为136格式
+            win_tile_136 = None
             if win_tile:
-                win_tile_136 = None
-                if win_tile.suit == TileSuit.MAN:
-                    win_tile_136 = TilesConverter.string_to_136_array(man=str(win_tile.value))[0]
-                elif win_tile.suit == TileSuit.PIN:
-                    win_tile_136 = TilesConverter.string_to_136_array(pin=str(win_tile.value))[0]
-                elif win_tile.suit == TileSuit.SOU:
-                    win_tile_136 = TilesConverter.string_to_136_array(sou=str(win_tile.value))[0]
-                elif win_tile.suit == TileSuit.HONOR:
-                    win_tile_136 = TilesConverter.string_to_136_array(honors=str(win_tile.value))[0]
-            else:
-                win_tile_136 = None
+                win_tile_136 = TileConverter.to_136_array([win_tile], has_aka_dora)[0]
             
-            # 4. 转换副露为Meld对象
+            # 转换副露为136格式
             melds_136 = []
             if melds:
                 for meld in melds:
-                    # 将每个副露的牌转换为字符串格式
-                    meld_man, meld_pin, meld_sou, meld_honors = '', '', '', ''
-                    for tile in meld:
-                        if tile.suit == TileSuit.MAN:
-                            meld_man += str(tile.value)
-                        elif tile.suit == TileSuit.PIN:
-                            meld_pin += str(tile.value)
-                        elif tile.suit == TileSuit.SOU:
-                            meld_sou += str(tile.value)
-                        elif tile.suit == TileSuit.HONOR:
-                            meld_honors += str(tile.value)
-                    
-                    # 转换为136格式
-                    meld_tiles = TilesConverter.string_to_136_array(
-                        man=meld_man if meld_man else '',
-                        pin=meld_pin if meld_pin else '',
-                        sou=meld_sou if meld_sou else '',
-                        honors=meld_honors if meld_honors else ''
-                    )
-                    
-                    # 根据副露类型和牌的数量判断副露种类
-                    if len(meld_tiles) == 3:
-                        if len(set(meld_tiles)) == 1:  # 三张相同的牌
-                            melds_136.append(Meld(meld_type=Meld.PON, tiles=meld_tiles))
-                        else:  # 三张连续的牌
-                            melds_136.append(Meld(meld_type=Meld.CHI, tiles=meld_tiles))
-                    elif len(meld_tiles) == 4:  # 四张相同的牌
-                        melds_136.append(Meld(meld_type=Meld.KAN, tiles=meld_tiles))
+                    meld_136 = TileConverter.to_136_array(meld, has_aka_dora)
+                    melds_136.append(Meld(mel_type=self._get_meld_type(meld), tiles=meld_136))
             
-            # 转换宝牌为136格式
+            # 转换宝牌指示牌为136格式
             dora_136 = []
             if dora_tiles:
-                for dora in dora_tiles:
-                    if dora.suit == TileSuit.MAN:
-                        dora_136.extend(TilesConverter.string_to_136_array(man=str(dora.value)))
-                    elif dora.suit == TileSuit.PIN:
-                        dora_136.extend(TilesConverter.string_to_136_array(pin=str(dora.value)))
-                    elif dora.suit == TileSuit.SOU:
-                        dora_136.extend(TilesConverter.string_to_136_array(sou=str(dora.value)))
-                    elif dora.suit == TileSuit.HONOR:
-                        dora_136.extend(TilesConverter.string_to_136_array(honors=str(dora.value)))
+                dora_136 = TileConverter.to_136_array(dora_tiles)
             
-            # 转换里宝牌为136格式
+            # 转换里宝牌指示牌为136格式
             uradora_136 = []
             if is_riichi and uradora_tiles:
-                for uradora in uradora_tiles:
-                    if uradora.suit == TileSuit.MAN:
-                        uradora_136.extend(TilesConverter.string_to_136_array(man=str(uradora.value)))
-                    elif uradora.suit == TileSuit.PIN:
-                        uradora_136.extend(TilesConverter.string_to_136_array(pin=str(uradora.value)))
-                    elif uradora.suit == TileSuit.SOU:
-                        uradora_136.extend(TilesConverter.string_to_136_array(sou=str(uradora.value)))
-                    elif uradora.suit == TileSuit.HONOR:
-                        uradora_136.extend(TilesConverter.string_to_136_array(honors=str(uradora.value)))
+                uradora_136 = TileConverter.to_136_array(uradora_tiles, has_aka_dora)
             
             # 设置规则配置
             config = HandConfig(
                 is_tsumo=is_tsumo,
                 is_riichi=is_riichi,
+                is_ippatsu=False,           # 是否一发
+                is_rinshan=False,           # 是否岭上开花
+                is_chankan=False,           # 是否抢杠
+                is_haitei=False,           # 是否海底摸月
+                is_houtei=False,           # 是否河底捞鱼
+                is_daburu_riichi=False,    # 是否双立直
+                is_nagashi_mangan=False,   # 是否流局满贯
+                is_tenhou=False,           # 是否天和
+                is_renhou=False,           # 是否人和
+                is_chiihou=False,          # 是否地和
+                is_open_riichi=False,      # 是否开立直
+                player_wind=None,          # 自风
+                round_wind=None,           # 场风
+                kyoutaku_number=0,         # 供托数
+                tsumi_number=0,           # 积棒数
+                paarenchan=0,             # 连庄数
                 options=OptionalRules(
                     has_open_tanyao=True,
-                    has_aka_dora=True,
+                    has_aka_dora=has_aka_dora,
+                    has_double_yakuman=False,  # 不使用双倍役满
+                    kazoe_limit=None,          # 不限制累计役满
                 ),
                 
             )
+            
+            # 添加宝牌指示牌
+            dora_indicators = []
+            if dora_136:
+                dora_indicators.extend(dora_136)
+            if is_riichi and uradora_136:
+                dora_indicators.extend(uradora_136)
+            self.logger.info(f"宝牌指示牌: {dora_indicators}")
             
             # 计算役种
             result = self.calculator.estimate_hand_value(
@@ -177,8 +128,8 @@ class YakuJudger:
                 win_tile=win_tile_136,
                 melds=melds_136,
                 config=config,
-                dora_indicators=dora_136 if dora_136 else None,
-                #TODO uradora_indicators=uradora_136 if is_riichi and uradora_136 else None
+                dora_indicators=dora_indicators if dora_indicators else None
+                
             )
             
             # 7. 返回结果时转换役种名称
@@ -209,3 +160,13 @@ class YakuJudger:
                 'fu': 0,
                 'score': 0
             }
+
+    def _get_meld_type(self, meld: List[Tile]) -> str:
+        """根据副露类型和牌的数量判断副露种类"""
+        if len(meld) == 3:
+            if len(set(meld)) == 1:  # 三张相同的牌
+                return Meld.PON
+            else:  # 三张连续的牌
+                return Meld.CHI
+        elif len(meld) == 4:  # 四张相同的牌
+            return Meld.KAN

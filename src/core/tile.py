@@ -9,7 +9,6 @@ class TileSuit(Enum):
     CIRCLES = "筒"     # 筒子
     BAMBOO = "索"      # 索子
     HONOR = "字"       # 字牌
-    # BONUS = "花"     # 移除 BONUS，因为当前规则不需要花牌
 
 @total_ordering
 class Tile:
@@ -52,3 +51,9 @@ class Tile:
         if not isinstance(other, Tile):
             return NotImplemented
         return self.value < other.value
+        
+    def is_aka_dora(self) -> bool:
+        """判断是否为赤宝牌"""
+        return (self.suit == TileSuit.CHARACTERS and self.value == 5 and self.is_red) or \
+               (self.suit == TileSuit.CIRCLES and self.value == 5 and self.is_red) or \
+               (self.suit == TileSuit.BAMBOO and self.value == 5 and self.is_red)

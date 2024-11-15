@@ -75,3 +75,14 @@ def test_tile_34_index():
     # 测试非法牌
     with pytest.raises(ValueError):
         Tile(TileSuit.HONOR, 8).get_34_index() 
+
+def test_aka_dora_validation():
+    """测试赤宝牌验证"""
+    # 有效的赤宝牌
+    assert Tile(TileSuit.MAN, 5, True).is_valid  # 赤5万
+    assert Tile(TileSuit.PIN, 5, True).is_valid  # 赤5筒
+    assert Tile(TileSuit.SOU, 5, True).is_valid  # 赤5索
+    
+    # 无效的赤宝牌
+    assert not Tile(TileSuit.MAN, 1, True).is_valid  # 非5的赤牌
+    assert not Tile(TileSuit.HONOR, 5, True).is_valid  # 字牌不能是赤牌

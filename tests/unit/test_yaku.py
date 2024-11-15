@@ -3,6 +3,7 @@ from src.core.hand import Hand
 from src.core.player import Player
 from src.core.tile import Tile, TileSuit
 from src.core.yaku.judger import YakuJudger
+from src.core.converter import TileConverter
 
 def test_tanyao():
     """测试断幺九"""
@@ -157,23 +158,22 @@ def test_dora_calculation():
     win_tile = Tile(TileSuit.MAN, 2)  # 和2m
     
     # 设置宝牌指示牌
-    dora_indicators = [Tile(TileSuit.MAN, 1)]  # 指示牌1m，宝牌是2m
-    uradora_indicators = [Tile(TileSuit.PIN, 1)]  # 指示牌1p，里宝牌是2p
+    dora_tiles = [Tile(TileSuit.MAN, 1)]  # 指示牌1m，宝牌是2m
+    uradora_tiles = [Tile(TileSuit.PIN, 1)]  # 指示牌1p，里宝牌是2p
     
-    # 获取实际宝牌
-    dora_tiles = [Tile(TileSuit.MAN, 2)]  # 2m
-    uradora_tiles = [Tile(TileSuit.PIN, 2)]  # 2p
     
-    # 测试普通和牌
+    # 测试普通和牌 门清三色两番，dora4番
     result = judger.judge(
         tiles=tiles,
         win_tile=win_tile,
-        dora_tiles=dora_tiles
+        dora_tiles=dora_tiles,
+        uradora_tiles=uradora_tiles
+
     )
-    assert result['han'] >= 1  # 应该有宝牌番数
-    assert 'Dora' in result['yaku']  # 应该有1番宝牌
+    assert result['han'] >= 6  # 应该有宝牌番数
+    assert 'Dora' in result['yaku']  # 应该有4番宝牌
     
-    # 测试立直和牌
+    # 测试立直和牌 门清三色两番，立直一番，dora4四番，uradora1一番，共8番
     result = judger.judge(
         tiles=tiles,
         win_tile=win_tile,
@@ -181,6 +181,26 @@ def test_dora_calculation():
         dora_tiles=dora_tiles,
         uradora_tiles=uradora_tiles
     )
-    assert result['han'] >= 2  # 应该有宝牌和里宝牌番数
-    assert 'Dora' in result['yaku']  # 应该有1番宝牌
+    assert result['han'] >= 8  # 应该有宝牌和里宝牌番数
+    assert 'Dora' in result['yaku']  # 应该有4番宝牌
     #TODO assert 'UraDora' in result['yaku']  # 应该有1番里宝牌
+
+def test_aka_dora():
+    """测试赤宝牌"""
+    judger = YakuJudger()
+    
+    # 创建包含赤5万的手牌
+    tiles = [
+        Tile(TileSuit.MAN, 1), Tile(TileSuit.MAN, 1),
+        Tile(TileSuit.PIN, 2), Tile(TileSuit.PIN, 3), Tile(TileSuit.PIN, 4),
+        Tile(TileSuit.SOU, 2), Tile(TileSuit.SOU, 3), Tile(TileSuit.SOU, 4),
+        Tile(TileSuit.MAN, 2), Tile(TileSuit.MAN, 2), Tile(TileSuit.MAN, 2),
+        Tile(TileSuit.MAN, 3), Tile(TileSuit.MAN, 4), 
+        Tile(TileSuit.MAN, 5, True)  # 赤5万
+    ]
+    
+    win_tile = Tile(TileSuit.MAN, 3)
+    result = judger.judge(tiles=tiles, win_tile=win_tile, is_riichi=True, has_aka_dora=True)
+    
+    assert result is not None
+    assert result['han'] >= 1  # 赤宝牌1番
