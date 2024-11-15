@@ -14,15 +14,46 @@ class YakuJudger:
         self.logger = setup_logger(__name__)
         # 添加役种名称映射
         self.yaku_name_mapping = {
-            'Menzen Tsumo': 'tsumo',
-            'Riichi': 'riichi',
-            'Tanyao': 'tanyao',
-            'Yakuhai (hatsu)': 'yakuhai_hatsu',
-            'Chiitoitsu': 'chiitoitsu',
-            'Honitsu': 'honitsu',
-            'Pinfu': 'pinfu',
-            'Aka Dora': 'aka_dora'
-            # 可以继续添加其他役种的映射
+            '门清自摸': 'Menzen Tsumo',
+            '立直': 'Riichi',
+            '一发': 'Ippatsu',
+            '断幺九': 'Tanyao',
+            '平和': 'Pinfu',
+            '一杯口': 'Iipeiko',
+            '三色同顺': 'Sanshoku',
+            '一气通贯': 'Ittsu',
+            '混全带幺九': 'Chanta',
+            '白': 'Yakuhai (haku)',
+            '發': 'Yakuhai (hatsu)',
+            '中': 'Yakuhai (chun)',
+            '自风': 'Yakuhai (wind of place)',
+            '场风': 'Yakuhai (wind of round)',
+            '七对子': 'Chiitoitsu',
+            '混一色': 'Honitsu',
+            '清一色': 'Chinitsu',
+            '对对和': 'Toitoi',
+            '三暗刻': 'Sanankou',
+            '三杠子': 'Sankantsu',
+            '三色同刻': 'Sanshoku Douko',
+            '四暗刻': 'Suuankou',
+            '大三元': 'Daisangen',
+            '字一色': 'tsuuiisou',
+            '绿一色': 'Ryuuiisou',
+            '清老头': 'Chinroutou',
+            '国士无双': 'Kokushi',
+            '小四喜': 'Shousuushii',
+            '大四喜': 'Daisuushii',
+            '天和': 'Tenhou',
+            '地和': 'Chiihou',
+            '人和': 'Renhou',
+            '岭上开花': 'Rinshan Kaihou',
+            '海底摸月': 'Haitei',
+            '河底捞鱼': 'Houtei',
+            '抢杠': 'Chankan',
+            '双立直': 'Daburu Riichi',
+            '宝牌': 'dora',
+            '里宝牌': 'uradora',
+            '赤宝牌': 'aka dora'
         }
 
     def _get_suit_char(self, suit: TileSuit) -> str:
@@ -40,21 +71,57 @@ class YakuJudger:
     def judge(self, tiles: List[Tile], melds: Optional[List[List[Tile]]] = None, 
              win_tile: Optional[Tile] = None, is_tsumo: bool = False, 
              is_riichi: bool = False, dora_tiles: List[Tile] = None, 
-             uradora_tiles: List[Tile] = None, has_aka_dora: bool = False) -> Dict:
-        """判断和牌役种
-        
+             uradora_tiles: List[Tile] = None, has_aka_dora: bool = False,
+             is_ippatsu: bool = False,
+             is_rinshan: bool = False,
+             is_chankan: bool = False,
+             is_haitei: bool = False,
+             is_houtei: bool = False,
+             is_daburu_riichi: bool = False,
+             is_nagashi_mangan: bool = False,
+             is_tenhou: bool = False,
+             is_renhou: bool = False,
+             is_chiihou: bool = False,
+             is_open_riichi: bool = False,
+             player_wind: Optional[int] = None,
+             round_wind: Optional[int] = None,
+             kyoutaku_number: int = 0,
+             tsumi_number: int = 0,
+             paarenchan: int = 0) -> Dict:
+        """判定和牌役种
+
         Args:
-            tiles: 手牌字符串
-            melds: 副露列表
-            win_tile: 和牌张
-            is_tsumo: 是否自摸
-            is_riichi: 是否立直
-            dora_tiles: 表宝牌指示牌列表
-            uradora_tiles: 里宝牌指示牌列表
-            has_aka_dora: 是否包含赤宝牌
+            tiles (List[Tile]): 手牌列表
+            melds (Optional[List[List[Tile]]], optional): 副露牌组列表. Defaults to None.
+            win_tile (Optional[Tile], optional): 和牌张. Defaults to None.
+            is_tsumo (bool, optional): 是否自摸. Defaults to False.
+            is_riichi (bool, optional): 是否立直. Defaults to False.
+            dora_tiles (List[Tile], optional): 表宝牌指示牌列表. Defaults to None.
+            uradora_tiles (List[Tile], optional): 里宝牌指示牌列表. Defaults to None.
+            has_aka_dora (bool, optional): 是否启用赤宝牌规则. Defaults to False.
+            is_ippatsu (bool, optional): 是否一发. Defaults to False.
+            is_rinshan (bool, optional): 是否岭上开花. Defaults to False.
+            is_chankan (bool, optional): 是否抢杠. Defaults to False.
+            is_haitei (bool, optional): 是否海底摸月. Defaults to False.
+            is_houtei (bool, optional): 是否河底捞鱼. Defaults to False.
+            is_daburu_riichi (bool, optional): 是否双立直. Defaults to False.
+            is_nagashi_mangan (bool, optional): 是否流局满贯. Defaults to False.
+            is_tenhou (bool, optional): 是否天和. Defaults to False.
+            is_renhou (bool, optional): 是否人和. Defaults to False.
+            is_chiihou (bool, optional): 是否地和. Defaults to False.
+            is_open_riichi (bool, optional): 是否开立直. Defaults to False.
+            player_wind (Optional[int], optional): 自风(0-3:东南西北). Defaults to None.
+            round_wind (Optional[int], optional): 场风(0-3:东南西北). Defaults to None.
+            kyoutaku_number (int, optional): 供托数. Defaults to 0.
+            tsumi_number (int, optional): 积棒数. Defaults to 0.
+            paarenchan (int, optional): 连庄数. Defaults to 0.
 
         Returns:
-            Dict: 役种信息，包含 yaku(役种列表)、han(番数)、fu(符数)、score(点数)
+            Dict: 判定结果，包含:
+                - yaku: 役种列表
+                - han: 总番数
+                - fu: 符数
+                - score: 基本点数
         """
         try:
             self.logger.info(f"开始判定役种: 手牌数={len(tiles)}, 副露数={len(melds) if melds else 0}")
@@ -72,8 +139,16 @@ class YakuJudger:
             melds_136 = []
             if melds:
                 for meld in melds:
-                    meld_136 = TileConverter.to_136_array(meld, has_aka_dora)
-                    melds_136.append(Meld(mel_type=self._get_meld_type(meld), tiles=meld_136))
+                    if isinstance(meld, Meld):
+                        melds_136.append(meld)  # 如果已经是Meld对象，直接添加
+                    else:
+                        # 如果是普通的牌列表，才需要转换
+                        meld_136 = TileConverter.to_136_array(meld, has_aka_dora)
+                        melds_136.append(Meld(
+                            meld_type=self._get_meld_type(meld), 
+                            tiles=meld_136,
+                            opened=True
+                        ))
             
             # 转换宝牌指示牌为136格式
             dora_136 = []
@@ -89,22 +164,22 @@ class YakuJudger:
             config = HandConfig(
                 is_tsumo=is_tsumo,
                 is_riichi=is_riichi,
-                is_ippatsu=False,           # 是否一发
-                is_rinshan=False,           # 是否岭上开花
-                is_chankan=False,           # 是否抢杠
-                is_haitei=False,           # 是否海底摸月
-                is_houtei=False,           # 是否河底捞鱼
-                is_daburu_riichi=False,    # 是否双立直
-                is_nagashi_mangan=False,   # 是否流局满贯
-                is_tenhou=False,           # 是否天和
-                is_renhou=False,           # 是否人和
-                is_chiihou=False,          # 是否地和
-                is_open_riichi=False,      # 是否开立直
-                player_wind=None,          # 自风
-                round_wind=None,           # 场风
-                kyoutaku_number=0,         # 供托数
-                tsumi_number=0,           # 积棒数
-                paarenchan=0,             # 连庄数
+                is_ippatsu=is_ippatsu,
+                is_rinshan=is_rinshan,
+                is_chankan=is_chankan,
+                is_haitei=is_haitei,
+                is_houtei=is_houtei,
+                is_daburu_riichi=is_daburu_riichi,
+                is_nagashi_mangan=is_nagashi_mangan,
+                is_tenhou=is_tenhou,
+                is_renhou=is_renhou,
+                is_chiihou=is_chiihou,
+                is_open_riichi=is_open_riichi,
+                player_wind=player_wind,
+                round_wind=round_wind,
+                kyoutaku_number=kyoutaku_number,
+                tsumi_number=tsumi_number,
+                paarenchan=paarenchan,
                 options=OptionalRules(
                     has_open_tanyao=True,
                     has_aka_dora=has_aka_dora,

@@ -28,8 +28,8 @@ def test_player_discards():
     
     # 添加并打出一张牌
     player.hand.add_tile(tile)
-    discarded = player.discard_tile(0)
+    discarded = player.discard_tile(tile)  # 直接传入牌对象
     
     assert discarded == tile
-    assert len(player.discards) == 1
-    assert player.discards[0] == tile
+    assert len(player.river.get_tiles()) == 1
+    assert player.river.get_tiles()[0] == tile
