@@ -13,7 +13,7 @@ class ActionPriority(IntEnum):
     """玩家操作优先级"""
     RON = 4      # 荣和
     KAN = 3      # 杠
-    PON = 2      
+    PON = 2      # 碰
     CHI = 1      # 吃
     NONE = 0     # 无操作
 
@@ -158,6 +158,11 @@ class GameController:
         player.is_riichi = True
         self.score_calculator.add_riichi_stick()
         self.events.emit("riichi_declared", player)
+        
+        # 检查是否四家立直
+        if self.check_special_draw() == 'four_riichi':
+            self.handle_exhaustive_draw()
+            
         return True
         
     def handle_kan(self, player: Player, tiles: List[Tile]) -> bool:

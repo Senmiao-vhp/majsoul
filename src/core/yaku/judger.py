@@ -6,7 +6,7 @@ from mahjong.hand_calculating.hand_config import HandConfig, OptionalRules
 from mahjong.meld import Meld
 from src.core.tile import Tile, TileSuit
 from src.core.utils.logger import setup_logger
-from src.core.converter import TileConverter
+from src.core.utils.converter import TileConverter
 
 class YakuJudger:
     def __init__(self):

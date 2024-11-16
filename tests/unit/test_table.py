@@ -1,5 +1,6 @@
 import pytest
-from src.core.table import Table, Wind
+from src.core.table import Table
+from src.core.common import Wind
 from src.core.player import Player
 
 def test_table_seat_assignment():

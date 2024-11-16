@@ -187,9 +187,17 @@ class GameFlow:
         if player.points < 1000:
             return False
         
-        # 除立直点数
+        # 扣除立直点数
         player.points -= 1000
         player.is_riichi = True
+        self.score_calculator.add_riichi_stick()
+        
+        # 立即检查四家立直
+        if self.game.controller.check_special_draw() == 'four_riichi':
+            self.game.controller.handle_exhaustive_draw()
+            # 发送特殊流局事件
+            self.game.events.emit("special_draw", "four_riichi")
+        
         return True
     
     def check_exhaustive_draw(self) -> bool:
@@ -337,20 +345,27 @@ class GameFlow:
                 player.set_state(PlayerState.WAITING)
     
     def start_dealing(self) -> None:
-        """开始发牌阶段"""
-        if self.game.get_state() != GameState.WAITING:
-            return
-        
-        self.game.set_state(GameState.DEALING)
+        """开始发牌"""
+        # 发牌
         for player in self.game.table.players:
-            player.set_state(PlayerState.DEALING)
-            # 发13张牌
             for _ in range(13):
                 tile = self.game.table.wall.draw()
                 if tile:
                     player.hand.add_tile(tile)
-        
-        # 发牌完成后进入游戏阶段
+    
+        # 检查开局九种九牌
+        for player in self.game.table.players:
+            terminals = set()
+            for tile in player.hand.tiles:
+                if tile.is_terminal():
+                    terminals.add(tile)
+            if len(terminals) >= 9:
+                # 发送九种九牌询问事件
+                self.game.events.emit("nine_terminals_check", player)
+                self.game.set_state(GameState.WAITING)
+                return
+    
+        # 设置游戏状态
         self.game.set_state(GameState.PLAYING)
         self.game.table.get_current_player().set_state(PlayerState.THINKING)
     
@@ -548,3 +563,16 @@ class GameFlow:
         player.set_state(PlayerState.WIN)
         self.game.set_state(GameState.FINISHED)
         return True
+    
+    def check_nine_terminals(self, player: Player) -> bool:
+        """检查是否九种九牌
+        Args:
+            player: 要检查的玩家
+        Returns:
+            bool: 是否满足九种九牌条件
+        """
+        terminals = set()
+        for tile in player.hand.tiles:
+            if tile.is_terminal():
+                terminals.add(tile)
+        return len(terminals) >= 9

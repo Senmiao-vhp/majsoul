@@ -208,3 +208,20 @@ class GameRenderer:
             text_rect.center = (x + width//2, y + height//2)
         
         self.screen.blit(text_surface, text_rect)
+
+    def render_special_draw(self, draw_type: str) -> None:
+        """渲染特殊流局提示
+        Args:
+            draw_type: 流局类型
+        """
+        if draw_type == 'four_riichi':
+            message = "四家立直"
+        elif draw_type == 'four_kans':
+            message = "四杠散了"
+        elif draw_type == 'nine_terminals':
+            message = "九种九牌"
+        
+        # 在屏幕中央显示提示
+        x = (self.width - len(message) * self.FONT_SIZE) // 2
+        y = self.height // 2
+        self.screen.addstr(y, x, message)

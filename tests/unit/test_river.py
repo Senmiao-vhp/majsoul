@@ -1,5 +1,5 @@
 from src.core.tile import Tile, TileSuit
-from src.core.river import River
+from src.core.player.river import River
 
 def test_river():
     """测试牌河功能"""

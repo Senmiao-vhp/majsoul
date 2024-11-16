@@ -1,5 +1,5 @@
 from src.core.tile import Tile, TileSuit
-from src.core.converter import TileConverter
+from src.core.utils.converter import TileConverter
 
 
 def test_tile_converter():

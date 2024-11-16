@@ -2,6 +2,7 @@ import pytest
 from src.core.game import Game
 from src.core.game.state import GameState
 from src.core.player.state import PlayerState
+from src.core.rules import Rules
 
 def test_game_initialization():
     """测试Game类初始化"""
@@ -85,3 +86,17 @@ def test_skip_current_action():
     game.set_state(GameState.PLAYING)
     game.skip_current_action()
     assert game.table.get_current_player() != initial_player 
+
+def test_rules_init():
+    """测试Rules类初始化"""
+    rules = Rules()
+    assert isinstance(rules.config, dict)
+    assert rules.get_tile_count() == 136
+
+def test_validate_points():
+    """测试点数验证"""
+    rules = Rules()
+    assert rules.validate_points(1) is True
+    assert rules.validate_points(13) is True
+    assert rules.validate_points(0) is False
+    assert rules.validate_points(14) is False 

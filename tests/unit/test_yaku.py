@@ -3,7 +3,7 @@ from src.core.hand import Hand
 from src.core.player import Player
 from src.core.tile import Tile, TileSuit
 from src.core.yaku.judger import YakuJudger
-from src.core.converter import TileConverter
+from src.core.utils.converter import TileConverter
 from mahjong.meld import Meld
 from mahjong.constants import EAST, SOUTH, WEST, NORTH
 
