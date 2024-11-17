@@ -47,7 +47,7 @@ class Player:
         
     def discard_tile(self, tile_or_index: Union[Tile, int], is_tsumogiri: bool = False) -> Optional[Tile]:
         """打出一张牌
-        
+
         Args:
             tile_or_index: 要打出的牌或其在手牌中的索引
             is_tsumogiri: 是否为摸切

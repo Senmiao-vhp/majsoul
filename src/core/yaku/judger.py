@@ -9,6 +9,32 @@ from src.core.utils.logger import setup_logger
 from src.core.utils.converter import TileConverter
 
 class YakuJudger:
+    # 添加错误代码常量
+    ERR_NO_WINNING_TILE = "winning_tile_not_in_hand"
+    ERR_OPEN_HAND_RIICHI = "open_hand_riichi_not_allowed"
+    ERR_HAND_NOT_WINNING = "hand_not_winning"
+    ERR_NO_YAKU = "no_yaku"
+    ERR_TENHOU_NOT_AS_DEALER = "tenhou_not_as_dealer_not_allowed"
+    ERR_TENHOU_WITHOUT_TSUMO = "tenhou_without_tsumo_not_allowed"
+    ERR_TENHOU_WITH_MELD = "tenhou_with_meld_not_allowed"
+    ERR_CHIIHOU_AS_DEALER = "chiihou_as_dealer_not_allowed"
+    ERR_CHIIHOU_WITHOUT_TSUMO = "chiihou_without_tsumo_not_allowed"
+    ERR_CHIIHOU_WITH_MELD = "chiihou_with_meld_not_allowed"
+    
+    # 添加错误信息映射
+    ERROR_MESSAGES = {
+        ERR_NO_WINNING_TILE: "和牌不在手牌中",
+        ERR_OPEN_HAND_RIICHI: "副露状态下不能立直",
+        ERR_HAND_NOT_WINNING: "不是和牌型",
+        ERR_NO_YAKU: "无役",
+        ERR_TENHOU_NOT_AS_DEALER: "非庄家不能天和",
+        ERR_TENHOU_WITHOUT_TSUMO: "天和必须自摸",
+        ERR_TENHOU_WITH_MELD: "天和不能有副露",
+        ERR_CHIIHOU_AS_DEALER: "庄家不能地和",
+        ERR_CHIIHOU_WITHOUT_TSUMO: "地和必须自摸",
+        ERR_CHIIHOU_WITH_MELD: "地和不能有副露"
+    }
+
     def __init__(self):
         self.calculator = HandCalculator()
         self.logger = setup_logger(__name__)
@@ -66,7 +92,7 @@ class YakuJudger:
             return 's'
         elif suit == TileSuit.HONOR:
             return 'z'
-        return ''
+        
 
     def judge(self, tiles: List[Tile], melds: Optional[List[List[Tile]]] = None, 
              win_tile: Optional[Tile] = None, is_tsumo: bool = False, 
@@ -88,8 +114,9 @@ class YakuJudger:
              kyoutaku_number: int = 0,
              tsumi_number: int = 0,
              paarenchan: int = 0) -> Dict:
+        self.logger.debug(f"开始判定役种: 手牌数={len(tiles)}, 副露数={len(melds) if melds else 0}, 和牌={win_tile}, 自摸={is_tsumo}, 立直={is_riichi}, 表宝牌={dora_tiles}, 里宝牌={uradora_tiles}, 赤宝牌={has_aka_dora}, 一发={is_ippatsu}, 岭上开花={is_rinshan}, 抢杠={is_chankan}, 海底摸月={is_haitei}, 河底捞鱼={is_houtei}, 双立直={is_daburu_riichi}, 流局满贯={is_nagashi_mangan}, 天和={is_tenhou}, 人和={is_renhou}, 地和={is_chiihou}, 开立直={is_open_riichi}, 自风={player_wind}, 场风={round_wind}, 供托数={kyoutaku_number}, 积棒数={tsumi_number}, 连庄数={paarenchan}")
         """判定和牌役种
-
+    
         Args:
             tiles (List[Tile]): 手牌列表
             melds (Optional[List[List[Tile]]], optional): 副露牌组列表. Defaults to None.
@@ -124,8 +151,9 @@ class YakuJudger:
                 - score: 基本点数
         """
         try:
-            self.logger.info(f"开始判定役种: 手牌数={len(tiles)}, 副露数={len(melds) if melds else 0}")
+            self.logger.debug(f"开始判定役种: 手牌数={len(tiles)}, 副露数={len(melds) if melds else 0}")
             self.logger.debug(f"手牌详情: {[str(t) for t in tiles]}")
+            self.logger.debug(f"和牌: {win_tile}")
             
             # 转换手牌为136格式
             tiles_136 = TileConverter.to_136_array(tiles, has_aka_dora)
@@ -195,7 +223,7 @@ class YakuJudger:
                 dora_indicators.extend(dora_136)
             if is_riichi and uradora_136:
                 dora_indicators.extend(uradora_136)
-            self.logger.info(f"宝牌指示牌: {dora_indicators}")
+            self.logger.debug(f"宝牌指示牌: {dora_indicators}")
             
             # 计算役种
             result = self.calculator.estimate_hand_value(
@@ -207,24 +235,41 @@ class YakuJudger:
                 
             )
             
-            # 7. 返回结果时转换役种名称
-            if result.yaku:  # 如果有役种（可以和牌）
-                response = {
-                    'yaku': [self.yaku_name_mapping.get(yaku.name, yaku.name) for yaku in result.yaku],
-                    'han': result.han,
-                    'fu': result.fu,
-                    'score': result.cost['main'] if result.cost else 0  # 添加空值检查
-                }
-                self.logger.info(f"和牌判定结果: {response}")
-                return response
+            # 基本检查
+            if not win_tile:
+                return self._error_response(self.ERR_NO_WINNING_TILE)
+                
+            # 立直检查
+            if is_riichi and melds:
+                return self._error_response(self.ERR_OPEN_HAND_RIICHI)
+                
+            # 天和检查
+            if is_tenhou:
+                if not is_tsumo:
+                    return self._error_response(self.ERR_TENHOU_WITHOUT_TSUMO)
+                if melds:
+                    return self._error_response(self.ERR_TENHOU_WITH_MELD)
+                    
+            # 地和检查
+            if is_chiihou:
+                if not is_tsumo:
+                    return self._error_response(self.ERR_CHIIHOU_WITHOUT_TSUMO)
+                if melds:
+                    return self._error_response(self.ERR_CHIIHOU_WITH_MELD)
             
-            self.logger.info("未找到任何役种")
-            return {
-                'yaku': [],
-                'han': 0,
-                'fu': 0,
-                'score': 0
+            if not result.yaku:
+                return self._error_response(self.ERR_NO_YAKU)
+                
+            # 7. 返回结果时转换役种名称
+            response = {
+                'yaku': [self.yaku_name_mapping.get(yaku.name, yaku.name) for yaku in result.yaku],
+                'han': result.han,
+                'fu': result.fu,
+                'score': result.cost['main'] if result.cost else 0,
+                'error': None  # 表示没有错误
             }
+           
+            return response
             
         except Exception as e:
             self.logger.error(f"役种判定出错: {str(e)}")
@@ -233,8 +278,11 @@ class YakuJudger:
                 'yaku': [],
                 'han': 0,
                 'fu': 0,
-                'score': 0
+                'score': 0,
+                'error': str(e)  # 返回具体错误信息
             }
+            self.logger.debug(f"和牌判定结果: {response}")
+            return response 
 
     def _get_meld_type(self, meld: List[Tile]) -> str:
         """根据副露类型和牌的数量判断副露种类"""
@@ -245,3 +293,16 @@ class YakuJudger:
                 return Meld.CHI
         elif len(meld) == 4:  # 四张相同的牌
             return Meld.KAN
+
+    def _error_response(self, error_code: str) -> Dict:
+        """生成错误响应"""
+        return {
+            'yaku': [],
+            'han': 0,
+            'fu': 0,
+            'score': 0,
+            'error': {
+                'code': error_code,
+                'message': self.ERROR_MESSAGES.get(error_code, "未知错误")
+            }
+        }

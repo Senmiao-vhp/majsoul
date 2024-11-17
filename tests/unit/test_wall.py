@@ -110,15 +110,23 @@ def test_reveal_uradora():
     wall = Wall()
     
     # 测试初始状态
-    assert len(wall.uradora_indicators) == 1
+    assert len(wall.uradora_indicators) == 0  # 初始应该没有里宝牌
+    
+    # 先添加宝牌指示牌
+    wall.add_dora_indicator()
     
     # 测试翻开新里宝牌
-    for _ in range(4):  # 再翻4张，总共5张
-        wall.reveal_uradora()
+    wall.reveal_uradora()
+    assert len(wall.uradora_indicators) == 1
+    
+    # 测试翻开更多里宝牌
+    for _ in range(3):  # 再翻3张，总共4张
+        wall.add_dora_indicator()  # 先添加宝牌
+        wall.reveal_uradora()      # 再添加对应的里宝牌
     
     # 验证最终状态
-    assert len(wall.uradora_indicators) == 5
+    assert len(wall.uradora_indicators) == 4
     
     # 测试超出限制
     wall.reveal_uradora()  # 尝试再翻一张
-    assert len(wall.uradora_indicators) == 5  # 仍然是5张
+    assert len(wall.uradora_indicators) == 4  # 不应超过宝牌数量

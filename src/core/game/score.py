@@ -1,6 +1,5 @@
-from typing import Dict, List, Optional
+from typing import Dict, List
 from src.core.player import Player
-from src.core.game.state import GameState
 
 class ScoreCalculator:
     """点数计算器"""
@@ -10,39 +9,76 @@ class ScoreCalculator:
         self.honba_sticks = 0   # 本场数
         self.is_dealer_win = False  # 是否庄家和牌
         
-    def calculate_win_score(self, base_score: int, is_dealer: bool, 
-                          is_tsumo: bool) -> Dict[str, int]:
+    def calculate_win_score(self, total: int, is_dealer: bool, is_tsumo: bool, players: List[Player]) -> Dict[str, int]:
         """计算和牌点数
         Args:
-            base_score: 基础点数
+            total: 实际支付的总点数
             is_dealer: 是否庄家
             is_tsumo: 是否自摸
+            players: 所有玩家列表
         Returns:
-            Dict: 包含各家应付点数
+            Dict[str, int]: 点数字典，包含：
+                - 'dealer': 庄家支付点数
+                - 'non_dealer': 闲家支付点数
+                - 'total': 总点数
         """
-        # 计算本场和立直棒点数
-        extra = (self.honba_sticks * 300) + (self.riichi_sticks * 1000)
+        initial_points = sum(player.points for player in players) + self.honba_sticks * 300 + self.riichi_sticks * 1000
+        print(f"计算初始点数: {initial_points}")  # 调试输出
         
         if is_tsumo:
             if is_dealer:
-                # 庄家自摸,闲家各付基础点数的2倍
-                point = base_score * 2
+                # 庄家自摸，所有人支付相同点数
+                payment = total / 3  # 三家支付相同的点数
+                # 收取立直棒并清零
+                total += self.collect_riichi_sticks() * 1000  # 收取立直棒
+                self.riichi_sticks = 0  # 清零立直棒
                 return {
-                    'child': point + extra // 3,
-                    'dealer': 0
+                    'dealer': 0,
+                    'non_dealer': payment,
+                    'total': total
                 }
             else:
-                # 闲家自摸,庄家付基础点数的2倍,闲家付基础点数
+                # 闲家自摸，庄家支付2倍
+                dealer_payment = total / 2
+                non_dealer_payment = total / 4
+                # 收取立直棒并清零
+                total += self.collect_riichi_sticks() * 1000  # 收取立直棒
+                self.riichi_sticks = 0  # 清零立直棒
                 return {
-                    'child': base_score + extra // 3,
-                    'dealer': base_score * 2 + extra // 3
+                    'dealer': dealer_payment,
+                    'non_dealer': non_dealer_payment,
+                    'total': total
                 }
         else:
-            # 荣和直接付基础点数
-            return {
-                'total': base_score + extra
-            }
+            # 荣和，放铳者支付全部点数
+            payment = total
+            # 收取立直棒和场棒并清零
+            total += self.collect_riichi_sticks() * 1000  # 收取立直棒
+            total += self.honba_sticks * 300  # 收取场棒
+            self.honba_sticks = 0  # 清零场棒
             
+            # 计算点数
+            current_points = sum(player.points for player in players) + self.honba_sticks * 300 + self.riichi_sticks * 1000
+            print(f"计算当前点数: {current_points}")  # 调试输出
+
+            # 返回点数
+            return {
+                'dealer': payment,
+                'non_dealer': payment,
+                'total': total  # 总点数
+            }
+
+    def validate_points(self, players: List[Player], initial_points: int, total: int):
+        """验证点数是否正确
+        Args:
+            players: 所有玩家列表
+            initial_points: 初始点数总和
+            total: 当前点数总和
+        """
+        current_points = sum(player.points for player in players) + self.honba_sticks * 300 + self.riichi_sticks * 1000
+        if current_points != initial_points:
+            raise ValueError(f"点数验证失败: 初始点数总和 {initial_points} 与当前点数总和 {current_points} 不一致。计算点数{total}")
+
     def calculate_final_scores(self, players: List[Player], is_dealer_win: bool = False) -> Dict[str, int]:
         """计算终局顺位点
         Args:
@@ -96,31 +132,33 @@ class ScoreCalculator:
         """添加立直棒"""
         self.riichi_sticks += 1
         
+    def add_honba_stick(self):
+        """添加本场棒"""
+        self.honba_sticks += 1
+        
     def collect_riichi_sticks(self) -> int:
         """收集立直棒
         Returns:
-            int: 立直棒数量
+            int: 收集到的立直棒数量
         """
         sticks = self.riichi_sticks
-        self.riichi_sticks = 0
+        self.riichi_sticks = 0  # 清零立直棒
         return sticks
         
-    def handle_exhaustive_draw_riichi(self, tenpai_players: List[Player]):
-        """处理流局时的立直棒
+    def handle_exhaustive_draw_riichi(self, players: List[Player]):
+        """处理流局时的立直棒分配
         Args:
-            tenpai_players: 听牌的玩家列表
+            players: 参与分配的玩家列表
         """
-        # 如果有人立直,立直棒保留到下一局
-        if any(p.is_riichi for p in tenpai_players):
+        if not players:
             return
             
-        # 否则立直棒平分给听牌的玩家
-        if tenpai_players:
-            sticks_per_player = (self.riichi_sticks * 1000) // len(tenpai_players)
-            for player in tenpai_players:
-                player.points += sticks_per_player
-            self.riichi_sticks = 0
-            
+        # 平分立直棒
+        sticks = self.collect_riichi_sticks()
+        points_per_player = (sticks * 1000) // len(players)
+        for player in players:
+            player.points += points_per_player
+        
     def handle_special_draw(self, draw_type: str, players: List[Player]):
         """处理特殊流局
         Args:

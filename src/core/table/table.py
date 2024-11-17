@@ -14,13 +14,17 @@ class Table:
         self.max_players = player_count
         self.wind_assignments: Dict[str, Wind] = {}
         self.wall: Optional[Wall] = None
+        self.round_wind: int = 0  # 0=东, 1=南, 2=西, 3=北
         self.initialize_wall()
         
     def add_player(self, player: Player) -> bool:
-        """添加玩家到牌桌"""
+        """添加玩家"""
         if len(self.players) >= self.max_players:
             return False
+        
         self.players.append(player)
+        # 设置玩家风位
+        player.seat_wind = Wind(27 + len(self.players) - 1)  # 东南西北依次分配
         return True
         
     def assign_seats(self) -> None:
@@ -129,3 +133,10 @@ class Table:
     def next_dealer(self):
         """移交庄家"""
         self.dealer_index = (self.dealer_index + 1) % len(self.players)
+
+    def next_round(self) -> None:
+        """进入下一轮"""
+        self.round += 1
+        if self.round > 4:
+            self.round = 1
+            self.round_wind = (self.round_wind + 1) % 4

@@ -8,14 +8,7 @@ from enum import IntEnum
 from src.core.hand import Hand
 from src.core.game.score import ScoreCalculator
 import logging
-
-class ActionPriority(IntEnum):
-    """玩家操作优先级"""
-    RON = 4      # 荣和
-    KAN = 3      # 杠
-    PON = 2      # 碰
-    CHI = 1      # 吃
-    NONE = 0     # 无操作
+from src.core.game.state import ActionPriority
 
 class GameController:
     def __init__(self, table):
@@ -153,16 +146,17 @@ class GameController:
         if player.points < 1000:
             return False
             
-        # 扣除立直点数并添加立直棒
+        # 扣除立直点数
         player.points -= 1000
         player.is_riichi = True
         self.score_calculator.add_riichi_stick()
-        self.events.emit("riichi_declared", player)
         
-        # 检查是否四家立直
+        # 立即检查四家立直
         if self.check_special_draw() == 'four_riichi':
             self.handle_exhaustive_draw()
-            
+            # 发送特殊流局事件
+            self.events.emit("special_draw", "four_riichi")
+        
         return True
         
     def handle_kan(self, player: Player, tiles: List[Tile]) -> bool:
@@ -288,48 +282,8 @@ class GameController:
         if self.state != GameState.PLAYING:
             return False
             
-        # 获取基础点数
-        result = self.yaku_judger.judge(
-            tiles=winner.hand.tiles,
-            win_tile=loser.last_discard if loser else None,
-            is_tsumo=loser is None,
-            is_riichi=winner.is_riichi
-        )
-        
-        # 计算实际点数
-        is_dealer = winner == self.table.dealer
-        scores = self.score_calculator.calculate_win_score(
-            base_score=result['score'],
-            is_dealer=is_dealer,
-            is_tsumo=loser is None
-        )
-        
-        # 处理连庄
-        if is_dealer:
-            self.score_calculator.handle_dealer_win()
-        else:
-            self.score_calculator.handle_dealer_lose()
-            self.table.next_dealer()  # 移交庄家
-        
-        # 执行点数移动
-        if loser:  # 荣和
-            loser.points -= scores['total']
-            winner.points += scores['total']
-        else:  # 自摸
-            for player in self.table.players:
-                if player != winner:
-                    if player == self.table.dealer:
-                        player.points -= scores['dealer']
-                    else:
-                        player.points -= scores['child']
-            winner.points += sum(scores.values())
-        
-        # 处理立直棒和本场数
-        winner.points += (self.score_calculator.riichi_sticks * 1000)
-        winner.points += (self.score_calculator.honba_sticks * 300)
-        self.score_calculator.riichi_sticks = 0
-        
-        self.events.emit("win", winner, scores)
+        # 只负责状态检查和事件发送
+        self.events.emit("win", winner)
         return True
         
     def check_special_draw(self) -> Optional[str]:
@@ -367,24 +321,16 @@ class GameController:
         # 检查特殊流局
         special_draw = self.check_special_draw()
         if special_draw:
-            self.score_calculator.handle_special_draw(special_draw, self.table.players)
+            # 发送特殊流局事件
             self.events.emit("special_draw", special_draw)
-            self.state = GameState.FINISHED
-            return True
-            
-        # 普通流局处理
-        tenpai_players = [p for p in self.table.players if p.is_tenpai()]
-        dealer_tenpai = self.table.dealer in tenpai_players
+            # 增加本场数
+            self.score_calculator.add_honba_stick()
+        else:
+            # 发送普通流局事件
+            self.events.emit("exhaustive_draw")
+            # 增加本场数
+            self.score_calculator.add_honba_stick()
         
-        # 处理立直棒
-        self.score_calculator.handle_exhaustive_draw_riichi(tenpai_players)
-        
-        # 处理连庄
-        self.score_calculator.handle_exhaustive_draw(dealer_tenpai)
-        
-        if not dealer_tenpai:
-            self.table.next_dealer()
-            
+        # 状态转换
         self.state = GameState.FINISHED
-        self.events.emit("exhaustive_draw", tenpai_players)
         return True

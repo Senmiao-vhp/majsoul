@@ -5,20 +5,21 @@ from src.core.player import Player
 def test_score_calculation():
     """测试点数计算"""
     calculator = ScoreCalculator()
+    players = [Player("测试玩家")]  # 创建一个玩家列表
     
     # 测试荣和点数计算
-    scores = calculator.calculate_win_score(2000, False, False)
+    scores = calculator.calculate_win_score(2000, False, False, players)
     assert scores['total'] == 2000
     
     # 测试庄家自摸
-    scores = calculator.calculate_win_score(2000, True, True)
-    assert scores['child'] == 4000
+    scores = calculator.calculate_win_score(12000, True, True, players)
+    assert scores['non_dealer'] == 4000  # 修改为 'non_dealer'
     
     # 测试立直棒和本场数
     calculator.riichi_sticks = 2
     calculator.honba_sticks = 1
-    scores = calculator.calculate_win_score(2000, False, False)
-    assert scores['total'] == 4300  # 2000 + 2000 + 300 
+    scores = calculator.calculate_win_score(2000, False, False, players)
+    assert scores['total'] == 2000 + 2000 + 300  # 2000 + 2000 + 300
 
 
 def test_final_score_calculation():

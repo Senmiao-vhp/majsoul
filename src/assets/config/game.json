@@ -1,0 +1,19 @@
+{
+    "version": "1.0.0",
+    "player_count": 4,
+    "initial_points": 25000,
+    "min_points": 0,
+    "riichi_cost": 1000,
+    "honba_value": 300,
+    "uma_values": [15000, 5000, -5000, -15000],
+    "round_names": ["東", "南", "西", "北"],
+    "max_rounds": 4,
+    "max_games_per_round": 4,
+    "min_players": 4,
+    "max_players": 4,
+    "wall_tiles": 136,
+    "hand_size": 13,
+    "dora_indicators": 1,
+    "max_dora_indicators": 5,
+    "max_kan": 4
+}

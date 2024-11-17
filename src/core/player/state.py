@@ -1,13 +1,12 @@
-from enum import Enum
+from enum import IntEnum
 
-class PlayerState(Enum):
+class PlayerState(IntEnum):
     """玩家状态"""
-    WAITING = "waiting"       # 等待
-    THINKING = "thinking"     # 思考中
-    WAITING_CHI = "waiting_chi"   # 等待吃
-    WAITING_PON = "waiting_pon"   # 等待碰
-    WAITING_KAN = "waiting_kan"   # 等待杠
-    WAITING_RON = "waiting_ron"   # 等待荣和
-    DEALING = "dealing"       # 发牌中
-    DISCARDING = "discarding" # 出牌中
-    WIN = "win"              # 胜利状态
+    WAITING = 0         # 等待
+    THINKING = 1        # 思考中
+    DISCARDING = 2      # 出牌中
+    WAITING_CHI = 3     # 等待吃
+    WAITING_PON = 4     # 等待碰
+    WAITING_KAN = 5     # 等待杠
+    WAITING_RON = 6     # 等待荣和
+    WIN = 7            # 和牌

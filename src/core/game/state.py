@@ -1,13 +1,13 @@
-from enum import Enum, auto
+from enum import IntEnum
 
-class GameState(Enum):
+class GameState(IntEnum):
     """游戏状态"""
-    WAITING = auto()    # 等待开始
-    DEALING = auto()    # 发牌中
-    PLAYING = auto()    # 游戏进行中
-    FINISHED = auto()   # 游戏结束
+    WAITING = 0     # 等待开始
+    DEALING = 1     # 发牌中
+    PLAYING = 2     # 游戏进行中
+    FINISHED = 3    # 游戏结束
 
-class ActionPriority(Enum):
+class ActionPriority(IntEnum):
     """操作优先级"""
     NONE = 0
     CHI = 1    # 吃

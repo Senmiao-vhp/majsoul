@@ -22,9 +22,8 @@ class Wall:
         
         # 初始化第一张宝牌指示牌
         first_dora = self.dead_wall_tiles[8]  # 第9张作为宝牌指示牌
-        first_uradora = self.dead_wall_tiles[9]  # 第10张作为里宝牌指示牌
         self.dora_manager.add_dora_indicator(first_dora)
-        self.dora_manager.add_uradora_indicator(first_uradora)
+        # 不在初始化时添加里宝牌指示牌
     
     def _create_tiles(self) -> List[Tile]:
         """创建所有牌"""
@@ -103,7 +102,11 @@ class Wall:
     
     def reveal_uradora(self) -> None:
         """翻开里宝牌指示牌"""
-        if len(self.uradora_indicators) >= 5:
+        MAX_URADORA = 4  # 设置最大里宝牌数量为4
+        
+        # 检查数量限制
+        if (len(self.uradora_indicators) >= len(self.dora_indicators) or 
+            len(self.uradora_indicators) >= MAX_URADORA):
             return
             
         # 计算下一个里宝牌指示牌的位置
@@ -112,3 +115,8 @@ class Wall:
         if next_index >= 0 and next_index < len(self.dead_wall_tiles):
             next_indicator = self.dead_wall_tiles[next_index]
             self.dora_manager.add_uradora_indicator(next_indicator)
+    
+    def add_uradora_indicator(self) -> None:
+        """添加里宝牌指示牌"""
+        if len(self.tiles) > 0 and len(self.uradora_indicators) < len(self.dora_indicators):
+            self.uradora_indicators.append(self.tiles.pop())

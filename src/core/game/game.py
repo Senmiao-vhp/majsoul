@@ -9,6 +9,7 @@ from .controller import GameController
 from .flow import GameFlow
 from ..player.state import PlayerState
 from ..events import EventEmitter
+import os
 
 class Game:
     def __init__(self):
@@ -28,7 +29,9 @@ class Game:
     def _load_config(self) -> None:
         """加载游戏配置"""
         try:
-            config_path = Path(__file__).parent.parent.parent / 'assets' / 'config' / 'game.json'
+            # 获取assets/config目录的路径
+            config_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 
+                                      'assets', 'config', 'rule.json')
             with open(config_path, 'r', encoding='utf-8') as f:
                 self.config = json.load(f)
         except Exception as e:
@@ -37,7 +40,12 @@ class Game:
             self.config = {
                 "version": "1.0.0",
                 "player_count": 4,
-                "initial_points": 25000
+                "initial_points": 25000,
+                "rules": {
+                    "has_aka_dora": True,
+                    "has_open_tanyao": True,
+                    "has_double_yakuman": False
+                }
             }
             
     def get_player_count(self) -> int:
